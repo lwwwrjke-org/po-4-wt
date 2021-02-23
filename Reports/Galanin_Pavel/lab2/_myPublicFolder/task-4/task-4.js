@@ -1,12 +1,3 @@
-function isNumber(x) {
-    if (x.replace(/\d/g, '').length) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
-
 function getWeekDay(date) {
     var days = [
         'Sunday (Воскресенье)',
@@ -25,18 +16,20 @@ function getWeekDay(date) {
 while (1) {
     //input year
     let year = prompt("Year (год): ", 2016);
-    if (isNumber(year)) {
+    if (isNaN(year)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
+    year = parseInt(year);
 
     //input month
     let month = prompt("Month (месяц)", 1);
-    if (isNumber(month)) {
+    if (isNaN(month)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    else if (!(1 <= month && month <= 12)) {
+    month = parseInt(month);
+    if (!(1 <= month && month <= 12)) {
         alert(
             "Month not in set [1; 12]\n"
             + "(Месяц не во множестве [1; 12])"
@@ -46,11 +39,12 @@ while (1) {
 
     //input day
     let day = prompt("Day (день)", 1);
-    if (isNumber(day)) {
+    if (isNaN(day)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    else if (!(1 <= day && day <= 31)) {
+    day = parseInt(day);
+    if (!(1 <= day && day <= 31)) {
         alert(
             "Day not in set [1; 31]\n"
             + "(День не во множестве [1; 31])"
