@@ -82,6 +82,54 @@ body
     color: #b388ff;
 }
 
+/* report button */
+
+.content__report
+{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 20px;
+    height: 16px;
+    margin: 16px 8px;
+    padding: 4px;
+    background-color: #6d6a71;
+    border-radius: 4px;
+    border: 2px solid #6d6a71;
+}
+
+.content__report a
+{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.content__report::before
+{
+    content: '';
+    border: 6px solid transparent;
+    border-left: 6px solid #6d6a71;
+    position: absolute;
+    left: -2px;
+    top: 20px;
+}
+
+.content__report:hover
+{
+    background-color: transparent;
+}
+
+.content__report:hover a
+{
+    color: #6d6a71;
+}
+
+.content__report:hover::before
+{
+    border: none;
+}
+
 /* Form */
 
 .content__form
