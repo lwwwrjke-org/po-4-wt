@@ -104,6 +104,16 @@ body
     color: #4285f4;
 }
 
+.content__form-file
+{
+    display: none;
+}
+
+.content__form-file-label
+{
+    color: #4285f4;
+}
+
 /* Footer */
 
 .page__footer > div
