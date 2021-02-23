@@ -129,6 +129,15 @@ body
     border-bottom: 1px solid #e1e1e1;
 }
 
+.content__form-select
+{
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    color: #848395;
+    appearance: none;
+}
+
 /* Footer */
 
 .page__footer > div
