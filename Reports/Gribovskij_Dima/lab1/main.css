@@ -119,13 +119,3 @@ input[type="file"] {
     position: absolute;
     z-index: -1;
 }
-
-#date::-moz-placeholder {
-    color: black;
-    font-weight: 600;
-}
-
-#date::-webkit-input-placeholder {
-    color: black;
-    font-weight: 600;
-}
