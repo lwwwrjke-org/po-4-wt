@@ -123,6 +123,12 @@ body
     font-size: 1em;
 }
 
+.content__form-date
+{
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+
 /* Footer */
 
 .page__footer > div
