@@ -1,12 +1,3 @@
-function isNumber(x) {
-    if (x.replace(/\d/g, '').length) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
-
 while (1) {
     //input number of storeys
     let NumOfStoreys = prompt(
@@ -15,11 +6,12 @@ while (1) {
         + "(1-25)",
         10
     );
-    if (isNumber(NumOfStoreys)) {
+    if (isNaN(NumOfStoreys)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    else if (!(1 <= NumOfStoreys && NumOfStoreys <= 25)) {
+    NumOfStoreys = parseInt(NumOfStoreys);
+    if (!(1 <= NumOfStoreys && NumOfStoreys <= 25)) {
         alert(
             "Number of storeys not in set [1; 25]\n"
             + "(Количество этажей не во множестве [1; 25])"
@@ -34,11 +26,12 @@ while (1) {
         + "(1-10)",
         3
     );
-    if (isNumber(NumOfEntrances)) {
+    if (isNaN(NumOfEntrances)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    else if (!(1 <= NumOfEntrances && NumOfEntrances <= 10)) {
+    NumOfEntrances = parseInt(NumOfEntrances);
+    if (!(1 <= NumOfEntrances && NumOfEntrances <= 10)) {
         alert(
             "Number of entrances not in set [1; 10]\n"
             + "(Количество подъездов не во множестве [1; 10])"
@@ -53,11 +46,12 @@ while (1) {
         + "(1-20)",
         4
     );
-    if (isNumber(NumOfApartmentOnTheSite)) {
+    if (isNaN(NumOfApartmentOnTheSite)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    else if (!(1 <= NumOfApartmentOnTheSite && NumOfApartmentOnTheSite <= 20)) {
+    NumOfApartmentOnTheSite = parseInt(NumOfApartmentOnTheSite);
+    if (!(1 <= NumOfApartmentOnTheSite && NumOfApartmentOnTheSite <= 20)) {
         alert(
             "Number of entrances on the site not in set [1; 20]\n"
             + "(Количество квартир на площадке не во множестве [1; 20])"
@@ -67,10 +61,11 @@ while (1) {
 
     //input apartment number
     let ApartmentNumber = prompt("Apartment number\n(номер квартиры)", 51);
-    if (isNumber(ApartmentNumber)) {
+    if (isNaN(ApartmentNumber)) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
+    ApartmentNumber = parseInt(ApartmentNumber);
 
     //task
     let result = ApartmentNumber / NumOfStoreys / NumOfApartmentOnTheSite;
