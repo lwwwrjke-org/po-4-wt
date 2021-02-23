@@ -114,6 +114,15 @@ body
     color: #4285f4;
 }
 
+.content__form-input-name
+{
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+    color: #e1e1e1;
+    background-color: transparent;
+    font-size: 1em;
+}
+
 /* Footer */
 
 .page__footer > div
