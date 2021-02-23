@@ -1,5 +1,6 @@
 ---
 layout: compress
+title: Lab 1
 ---
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ layout: compress
     <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
     <meta name="theme-color" content="#673AB7" />
 
-    <title>{{ page.title }}{% if page.title %}|{% else %}Some page{% endif %}{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}Some page{% endif %} | {{ site.title }}</title>
 
     {% if jekyll.environment == "production" %}
     <link rel="stylesheet" href="style.css?ver={{ site.time | date: '%Y-%m-%d_%H-%M' }}" />

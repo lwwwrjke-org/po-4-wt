@@ -7,5 +7,5 @@ collections:
     output: true
     permalink: /:path
 # variables
-title: Web Technologies (lab 1)
+title: Web Technologies
 description: ...
