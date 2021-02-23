@@ -89,6 +89,21 @@ body
     color: rgba(0,0,0,0.66);
 }
 
+.content__form-button
+{
+    background-color: #4285f4;
+    color: white;
+    border: 1px solid #4285f4;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.content__form-button:hover
+{
+    background-color: white;
+    color: #4285f4;
+}
+
 /* Footer */
 
 .page__footer > div
