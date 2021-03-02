@@ -1,0 +1,158 @@
+body{
+	background-color: rgb(240,235,248);
+	
+}
+
+.purple-block{
+position: absolute;
+background-color: rgb(103,58,183); 
+width: 99%;
+height:300px;
+left:9px;
+z-index: 1;
+}
+
+
+
+.buttonRightTopCorner{
+position: absolute;
+background-color: rgb(179, 136, 255) ; 
+background-image: url(scr2.png);
+
+
+
+right:10px;
+width: 52px;
+height: 43px;
+margin:15px;
+z-index: 2;
+}
+
+
+
+.mainBlock{
+position: absolute;
+background-color: white;
+
+margin:0 25% 0 25%;
+width:50%;
+top:210px;
+height: 1480px;
+padding-left: 25px;
+padding: 25px;
+border-top: 10px solid rgb(175, 133, 250);
+
+z-index: 4;
+
+}
+
+.ButtonLeftBottom{
+position: absolute;
+background-image:url(scr1.png); 
+
+top: 1770px;
+width: 30px;
+height: 24px;
+margin:15px;
+z-index: 5;
+}
+
+.centerBottomInformation{
+position: absolute;
+top: 1720px;
+
+margin: 30px 30% 10px 30%;
+width:40%;
+height: 90px; 
+z-index: 6;
+}
+
+p{
+color:black;
+font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+
+
+}
+
+a{
+	color: #4949F2;
+}
+#red{
+	color:red;
+}
+
+.BottomShrift{
+
+	color: rgb(159,160,170);
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+h2{
+	color: rgb(77,73,69);
+	margin-top: 25px;
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	font-size: 30pt;
+}
+
+h3{
+
+	color: rgb(77,73,69);
+	margin-top: 25px;
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	font-size: 20pt;
+}
+
+
+#border{
+	
+	border:0px;
+	border-bottom: 2px solid #e0e0e0;
+	font-size:18px;
+}
+
+#border1{
+border: 0px;
+color: #AFA1A1;
+
+}
+
+.checkboxStyle{
+transform:scale(1.7);
+}
+
+label{
+color:rgb(77,73,69);
+font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+font-size: 12pt;	
+}
+
+.form_button {
+	padding: 10px 20px;
+	border: none; 
+	border-radius: 5px; 
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    background-color: #0071f0; 
+    outline: none; 
+}
+
+
+.inputfile {
+width: 0.1px;
+height: 0.1px;
+opacity: 0;
+overflow: hidden;
+position: absolute;
+z-index: -1;
+}
+
+.blue{
+color: #4285F4;
+font-size: 15px;
+}
+
+.chooseColor{
+color: #AFA1A1;
+}
