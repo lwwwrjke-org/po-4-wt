@@ -6,7 +6,7 @@ while (1) {
         break;
     }
     else {
-        a = parseInt(a);
+        a = parseFloat(a);
     }
 
     //input b
@@ -16,7 +16,7 @@ while (1) {
         break;
     }
     else {
-        b = parseInt(b);
+        b = parseFloat(b);
     }
 
     //task   
