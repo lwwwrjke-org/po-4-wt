@@ -14,7 +14,7 @@ while (1) {
         alert("Input - not a number\n(ввод - не число)");
         break;
     }
-    x = parseInt(x);
+    x = parseFloat(x);
     //task
     alert(`Fibonacci(${x}) = ${getFibonacci(x)}`);
 } //end infinity while
