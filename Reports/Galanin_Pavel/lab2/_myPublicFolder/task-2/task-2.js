@@ -11,7 +11,7 @@ while (1) {
         break;
     }
     NumOfStoreys = parseInt(NumOfStoreys);
-    if (!(1 <= NumOfStoreys && NumOfStoreys <= 25)) {
+    if (!(NumOfStoreys >= 1 && NumOfStoreys <= 25)) {
         alert(
             "Number of storeys not in set [1; 25]\n"
             + "(Количество этажей не во множестве [1; 25])"
@@ -31,7 +31,7 @@ while (1) {
         break;
     }
     NumOfEntrances = parseInt(NumOfEntrances);
-    if (!(1 <= NumOfEntrances && NumOfEntrances <= 10)) {
+    if (!(NumOfEntrances >= 1 && NumOfEntrances <= 10)) {
         alert(
             "Number of entrances not in set [1; 10]\n"
             + "(Количество подъездов не во множестве [1; 10])"
@@ -51,7 +51,7 @@ while (1) {
         break;
     }
     NumOfApartmentOnTheSite = parseInt(NumOfApartmentOnTheSite);
-    if (!(1 <= NumOfApartmentOnTheSite && NumOfApartmentOnTheSite <= 20)) {
+    if (!(NumOfApartmentOnTheSite >= 1 && NumOfApartmentOnTheSite <= 20)) {
         alert(
             "Number of entrances on the site not in set [1; 20]\n"
             + "(Количество квартир на площадке не во множестве [1; 20])"
