@@ -1,0 +1,11 @@
+exclude:
+  - docker*.yml
+  - README*.md
+# other folders
+collections:
+  myPublicFolder:
+    output: true
+    permalink: /:path
+# variables
+title: Web Technologies
+description: ...
