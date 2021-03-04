@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Forms</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<script src="https://kit.fontawesome.com/674d364a09.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="content">
+		<header><div class="header"></div></header>
+		<div class="icon icon-pen">
+			<img src="img/edit.svg"/>
+		</div>
+		<div class="forms">
+			<div class="top"></div>
+			<div class="padding">
+				<span class="title">Password request form</span>
+				<p class="sub">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde voluptate possimus officia nemo, illo sunt, saepe numquam non suscipit dolores ipsa officiis reprehenderit cupiditate aspernatur ducimus corporis quis nostrum vel.
+				</p>
+
+				<p class="sub alert">
+					*Required
+				</p>
+
+				<form method="post" action="#">
+					<div class="form-sector">
+						<label for="password">
+							<p class="title-2">
+								Please fill your name<span class="alert">*</span>
+							</p>
+						</label>
+						<input type="text" id="name" name="name" placeholder="Your Answer" required/>
+					</div>
+
+					<div class="form-sector">
+						<p class="title-2">
+							What color do you like<span class="alert">*</span>
+						</p>
+
+						<p><input type="radio" value="red" name="color" required>Red</p>
+						<p><input type="radio" value="green" name="color" required>Green</p>
+						<p><input type="radio" value="blue" name="color" required>Blue</p>
+						<p><input type="radio" value="black" name="color" required>Black</p>
+						<p><input type="radio" value="red" name="color" required>White</p>
+						<p><input type="radio" value="custom" name="color" required>Other:<input type="text" name="chooseColor"></p>
+					</div>
+
+					<div class="form-sector">
+						<label for="town">
+							<p class="title-2">
+								What town do you like more<span class="alert">*</span>
+							</p>
+						</label>
+						<select id="town" required>
+							<option>Minsk</option>
+							<option>Brest</option>
+							<option>Grodno</option>
+							<option>Gomel</option>
+						</select>
+					</div>
+
+
+					<div class="form-sector">
+						<label for="planguage">
+							<p class="title-2">
+								Please, descripe (at least 50 symbols) your favorite programming language
+								<span class="alert">*</span>
+							</p>
+						</label>
+						<input type="text" id="planguage" placeholder="Your answer" pattern=".{50,}" title="50+ символов" required></textarea>
+					</div>
+
+					<div class="form-sector">
+						<p class="title-2">
+							What years of education did you really like<span class="alert">*</span>
+						</p>
+
+						<p><input type="checkbox" value="first" name="yearOfEducation[]">First</p>
+						<p><input type="checkbox" value="second"name="yearOfEducation[]">Second</p>
+						<p><input type="checkbox" value="third" name="yearOfEducation[]">Third</p>
+						<p><input type="checkbox" value="fourh" name="yearOfEducation[]">Fourth</p>
+
+					</div>
+
+					<div class="form-sector">
+						<label for="image">
+							<p class="title-2">
+								Please send any image<span class="alert">*</span>
+							</p>
+						</label>
+						<label for="image" class="btn btn-link">
+							ADD FILE
+						</label>
+						<input type="file" id="image" name="image" required/>
+					</div>
+
+					<div class="form-sector">
+						<label for="date">
+							<p class="title-2">
+								Set last Monday<span class="alert">*</span>
+							</p>
+							<p class="text-secondary sub">
+								Date
+							</p>
+						</label>
+						<input type="date" id="date" name="date" required/>
+					</div>
+
+					<div class="form-sector">
+						<p>
+							<button type="submit" class="btn btn-primary">SUBMIT</button>
+						</p>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<p class="sub">
+			Lorem ipsum please Lorem ipsum please Lorem ipsum please Lorem ipsum please Lorem ipsum please
+		</p>
+		<p class="title-2">Google Forms</p>
+	</footer>
+	<div class="icon icon-info"><i class="far fa-question-circle" style="font-size: 200%"></i></div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
