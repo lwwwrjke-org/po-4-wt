@@ -47,6 +47,11 @@ header{
     flex: 1 0 auto;
 }
 
+.text-secondary{
+	color: gray;
+	font-size: 100%;
+}
+
 @media(max-width: 700px){
 	.forms{
 		margin-left: -250px;
@@ -156,5 +161,3 @@ input[type=file]{
 	color: #0275d8;
 	border: none;
 }
-
-
