@@ -1,0 +1,132 @@
+
+const Months = {
+  JANUARY: 1,   // 30
+  FEBRUARY: 2,  // 29
+  MARCH: 3,     // 31
+  APRIL: 4,     // 30
+  MAY: 5,       // 31
+  JUNE: 6,      // 30
+  JULY: 7,      // 30
+  AUGUST: 8,    // 31
+  SEPTEMBER: 9, // 30
+  OCTOBER: 10,  // 29
+  NOVEMBER: 11, // 30
+  DECEMBER: 12, // 31
+}
+
+const DaysOfTheWeek = {
+  SUNDAY: 0,
+  MONDAY: 1,
+  TUESDAY: 2,
+  WEDNESDAY: 3,
+  THURSDAY: 4,
+  FRIDAY: 5,
+  SATURDAY: 6,
+}
+
+
+function isNumber(number) {
+  if(!isNaN(number)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function isMonth(month){
+  if(isNumber(month)) {
+    if( Number(month) >= 1 && Number(month) <= 12 ){
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+
+function getAmountOfDaysOfTheMonth(month){
+  if(month == Months.FEBRUARY ||
+     month == Months.OCTOBER) {
+       return 29;
+     } else if(
+       month == Months.JANUARY   ||
+       month == Months.APRIL     ||
+       month == Months.JUNE      ||
+       month == Months.JULY      ||
+       month == Months.SEPTEMBER ||
+       month == Months.NOVEMBER) {
+         return 30;
+     } else if(
+       month == Months.MARCH    ||
+       month == Months.MAY      ||
+       month == Months.AUGUST   ||
+       month == Months.DECEMBER) {
+         return 31;
+     } else {
+       alert("sth went wrong");
+       return 32;
+     }
+}
+
+
+function isDayOfTheMonth(dayOfTheMonth, amountOfDaysOfTheMonth){
+  if(isNumber(dayOfTheMonth)) {
+    if( Number(dayOfTheMonth) >= 1 && Number(dayOfTheMonth) <= amountOfDaysOfTheMonth ){
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+function printDayOfTheWeek(day){
+  switch(day){
+    case DaysOfTheWeek.SUNDAY:
+      alert("Sunday");
+      break;
+    case DaysOfTheWeek.MONDAY:
+      alert("Monday");
+      break;
+    case DaysOfTheWeek.TUESDAY:
+      alert("Tuesday");
+      break;
+    case DaysOfTheWeek.WEDNESDAY:
+      alert("Wednesday");
+      break;
+    case DaysOfTheWeek.THURSDAY:
+      alert("Thursday");
+      break;
+    case DaysOfTheWeek.FRIDAY:
+      alert("Friday");
+      break;
+    case DaysOfTheWeek.SATURDAY:
+      alert("Saturday");
+      break;
+    default:
+      alert("Something went wrong...");
+      break;
+  }
+}
+
+
+let year = 2016;
+
+let month;
+do {
+  month = prompt("Input number of month: ");
+} while(!isMonth(month));
+let amountOfDaysOfTheMonth = getAmountOfDaysOfTheMonth(month);
+
+let dayOfTheMonth;
+do{
+  dayOfTheMonth = prompt("Input day of the month");
+} while(!isDayOfTheMonth(dayOfTheMonth, amountOfDaysOfTheMonth));
+
+
+let date = new Date(year, month, dayOfTheMonth);
+
+printDayOfTheWeek(date.getDay());
