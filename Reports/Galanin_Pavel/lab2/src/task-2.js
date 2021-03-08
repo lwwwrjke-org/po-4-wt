@@ -1,5 +1,5 @@
 function main_task2() {
-    while (1) {
+    for (;;) {
         //input number of storeys
         let NumOfStoreys = prompt(
             "Number of storeys\n" +

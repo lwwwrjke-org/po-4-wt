@@ -7,7 +7,7 @@ function getFibonacci(n) {
 }
 
 function main_task3() {
-    while (1) {
+    for (;;) {
         // input x
         let x = prompt("x := ", 10);
         if (isNaN(x)) {

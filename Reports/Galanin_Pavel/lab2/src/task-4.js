@@ -14,7 +14,7 @@ function getWeekDay(date) {
 }
 
 function main_task4() {
-    while (1) {
+    for (;;) {
         //input year
         let year = prompt("Year (год): ", 2016);
         if (isNaN(year)) {

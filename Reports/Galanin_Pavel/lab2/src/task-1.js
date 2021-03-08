@@ -1,5 +1,5 @@
 function main_task1() {
-    while (1) {
+    for (;;) {
         // input a
         let a = prompt("First number\na := ", 10);
         if (isNaN(a)) {
