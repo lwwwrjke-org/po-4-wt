@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 235, 248);
+}
+
+h1{
+    font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;
+    margin-block-start: 10px;
+    margin-block-end: 0;
+    padding-left: 30px;
+    padding-bottom: 15px;;
+    font-weight: normal;
+}
+h3{
+    padding-left: 30px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+h6 {
+    font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+
+.header{
+    width: 100;
+    height: 200px;
+    background-color: rgb(103, 58, 183);
+}
+
+.purple_border{
+
+    align-items: center;
+    background-color: rgb(183, 58, 183);
+
+    height: 10px;
+    left: -1px;
+    position: relative;
+    top: -1px;
+    width: calc(100% + 2px);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border:  1px;
+    
+    width: 40%;
+    height: 1025px;
+    margin-top: -70px;
+    margin-left: 30%;
+    margin-bottom: 25px;
+}
+
+.red_text{
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 14px;
+    color: #d93025;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 12px;
+}
+
+.input {
+    margin-left: 30px;
+    color: gray;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.form_radio {
+	margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+}
+
+.select {
+
+   background: transparent;
+   width: 80px;
+    margin-left: 30px;
+   font-size: 16px;
+   border: 1px solid white;
+   height: 34px;
+}
+
+.input1 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    width: 85%;
+}
+.fifth_block label{
+    margin-left: 30px;
+    margin-bottom: 15px;
+    display:block;
+    border: whitesmoke;
+}
+.chkbx {
+    margin: 3px 3px;
+    margin-right: 8px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: rgb(12, 153, 247);
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.date {
+    margin-left: 30px;
+    border: 1px solid white;
+}
+
+.btn {
+    margin-top: 30px;
+    margin-left: 30px;
+    color: white;
+    background: rgb(45, 147, 243);
+    width: 100px;
+    height: 35px;
+}
+
+h5 {
+    margin-top: 15px;
+    margin-left: 30px;
+    color: gray;
+    font-size: 10;
+}
+
+.last_part {
+    margin: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer h2{
+    margin-block-start: 0;
+    margin-block-end: 20px;
+    margin-left: 30px;
+    color: gray;
+    font-size: 18;
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    color: red;
+}
