@@ -1,17 +1,17 @@
 
 const Months = {
-  JANUARY: 1,   // 30
-  FEBRUARY: 2,  // 29
-  MARCH: 3,     // 31
-  APRIL: 4,     // 30
-  MAY: 5,       // 31
-  JUNE: 6,      // 30
-  JULY: 7,      // 30
-  AUGUST: 8,    // 31
-  SEPTEMBER: 9, // 30
-  OCTOBER: 10,  // 29
-  NOVEMBER: 11, // 30
-  DECEMBER: 12, // 31
+  JANUARY: 0,   // 30
+  FEBRUARY: 1,  // 29
+  MARCH: 2,     // 31
+  APRIL: 3,     // 30
+  MAY: 4,       // 31
+  JUNE: 5,      // 30
+  JULY: 6,      // 30
+  AUGUST: 7,    // 31
+  SEPTEMBER: 8, // 30
+  OCTOBER: 9,  // 29
+  NOVEMBER: 10, // 30
+  DECEMBER: 11, // 31
 }
 
 const DaysOfTheWeek = {
@@ -35,7 +35,7 @@ function isNumber(number) {
 
 function isMonth(month){
   if(isNumber(month)) {
-    if( Number(month) >= 1 && Number(month) <= 12 ){
+    if( Number(month) >= 0 && Number(month) <= 11 ){
       return true;
     } else {
       return false;
@@ -117,7 +117,7 @@ let year = 2016;
 
 let month;
 do {
-  month = prompt("Input number of month: ");
+  month = Number(prompt("Input number of month: ")) - 1;
 } while(!isMonth(month));
 let amountOfDaysOfTheMonth = getAmountOfDaysOfTheMonth(month);
 
@@ -128,5 +128,4 @@ do{
 
 
 let date = new Date(year, month, dayOfTheMonth);
-
 printDayOfTheWeek(date.getDay());
