@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Password request form</title>
+    </head>
+    <body >
+            <div class="smth">
+                <form class="content_form">
+                    
+                    <h1 style="font-weight: 550; background: none;">Password request form</h1>
+                    <p class="p_description">The name and photo associated with your Google account wiil be
+                        recorded when you upload files and submit this form. Not <b>spas.work@gmail.com? <a href="#">Switch account</a></b>
+                    </p>
+                    <p class="p_description" style="color: red;">*Required</p>
+                  
+                    <h2 class="h2_title">Please fill your name <span class="star">*</span></h2>
+                    <input class="input" type="text" name="name" placeholder="Your answer">
+
+                    <h2 class="h2_title">What color you like <span class="star">*</span></h2>
+                    <p class="p_choose"><input type="radio" name="color" value="red"/> Red</p>
+                    <p class="p_choose"><input type="radio" name="color" value="green"/> Green</p>
+                    <p class="p_choose"><input type="radio" name="color" value="blue"/> Blue</p>
+                    <p class="p_choose"><input type="radio" name="color" value="black"/> Black</p>
+                    <p class="p_choose"><input type="radio" name="color" value="white"/> While</p>
+                    <p class="p_choose"><input type="radio" name="color" value="other"/> Other: <input class="input" type="text" name="other_color"></p>
+
+                    <h2 class="h2_title">What town you like more? <span class="star">*</span></h2>
+                    <p>
+                        <select name="town" style="border: none;">
+                            <option value="default">Choose</option>
+                            <option value="Brest">Brest</option>
+                            <option value="Minsk">Minsk</option>
+                        </select>
+                    </p>
+
+                    <h2 class="h2_title">Please describe (at least 50 symbols on symbols) your favorite programming language <span class="star">*</span></h2>
+                    <p><input class="input" type="text" name="prog_lan" placeholder="Your answer" minlength="50"></p>
+
+                    <h2 class="h2_title">What years of education did you really like? <span class="star">*</span></h2>
+                    <p class="p_choose"><input type="checkbox" name="education" value="First"> First</p>
+                    <p class="p_choose"><input type="checkbox" name="education" value="Second"> Second</p>
+                    <p class="p_choose"><input type="checkbox" name="education" value="Third"> Third</p>
+                    <p class="p_choose"><input type="checkbox" name="education" value="Fourth"> Fourth</p>
+
+                    <h2 class="h2_title">Please send any image <span class="star">*</span></h2>
+                    <p><input type="file" id="input_file" class="file"><label for="input_file" class="add">ADD FILE</label></p>
+
+                    <h2 class="h2_title">Set last Monday Monday <span class="star">*</span></h2>
+                    <p class="small-text">Date</p>
+                    <p><input class="input" style="width: 27%;" type="date" name="monday"></p>
+
+                    <br>
+
+                    <p><input type="button" value="SUBMIT" name="Submit" class="button"></p>
+
+                    <p class="small-text">Never submit passwords throught Google Forms.</p>
+                </form>
+            </div>
+
+            <div class="last_part"> 
+                <h5>The content is neither created
+                     not endrorsed by Google. Report Abuse 
+                     - Teams of Servise - Additional Terms</h5>
+            </div>
+            <div class="footer"><h2>Google Forms</h2></div>
+
+    </body>
+</html>
