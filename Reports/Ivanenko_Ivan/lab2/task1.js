@@ -1,10 +1,3 @@
-function isNumber(input) {
-  if (!isNaN(input)) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function compare(number1, number2) {
   if(number1 > number2) {
@@ -30,12 +23,12 @@ while(true) {
   // Если пользователь ввел не число, срипт просит пользователя ввести число еще раз.
   do{
     input1 = prompt("Input first number: ");
-  } while(!isNumber(input1));
+  } while(isNaN(input1));
   number1 = Number(input1);
 
   do{
     input2 = prompt("Input second number: ");
-  } while(!isNumber(input2));
+  } while(isNaN(input2));
   number2 = Number(input2);
 
   compare(number1, number2);

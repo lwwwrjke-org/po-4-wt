@@ -1,12 +1,3 @@
-
-function isNumber(input) {
-  if (!isNaN(input)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 const apartmentHouse = {
 
   set amountOfFloors(amountOfFloors) {
@@ -75,7 +66,7 @@ const apartmentHouse = {
 let amountOfFloors;
 do {
   amountOfFloors = prompt("Input amount of floors: ");
-} while(!isNumber(amountOfFloors));
+} while(isNaN(amountOfFloors));
 
 apartmentHouse.amountOfFloors = Number(amountOfFloors);
 
@@ -83,7 +74,7 @@ apartmentHouse.amountOfFloors = Number(amountOfFloors);
 let amountOfEntrances;
 do {
   amountOfEntrances = prompt("Input amount of entrances: ");
-} while(!isNumber(amountOfEntrances));
+} while(isNaN(amountOfEntrances));
 
 apartmentHouse.amountOfEntrances = Number(amountOfEntrances);
 
@@ -91,7 +82,7 @@ apartmentHouse.amountOfEntrances = Number(amountOfEntrances);
 let amountOfApartmentsPerFloor;
 do {
   amountOfApartmentsPerFloor = prompt("Input amount of apartments per floor: ");
-} while(!isNumber(amountOfApartmentsPerFloor));
+} while(isNaN(amountOfApartmentsPerFloor));
 
 apartmentHouse.amountOfApartmentsPerFloor = Number(amountOfApartmentsPerFloor);
 
@@ -99,7 +90,7 @@ apartmentHouse.amountOfApartmentsPerFloor = Number(amountOfApartmentsPerFloor);
 let numberOfApartment;
 do {
   numberOfApartment = prompt("Input number of apartment");
-} while(!isNumber(numberOfApartment));
+} while(isNaN(numberOfApartment));
 
 numberOfApartment = Number(numberOfApartment);
 

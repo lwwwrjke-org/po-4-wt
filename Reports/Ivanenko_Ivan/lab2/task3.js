@@ -1,12 +1,3 @@
-function isPositiveNumber(input) {
-  if (!isNaN(input)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-
 //indexing starts with 0
 function fibonacci(index) {
   f_0 = 0;
@@ -14,11 +5,13 @@ function fibonacci(index) {
   f_2 = 1;
   let f_n;
 
-  if(index == 0){
+  if(index === 0){
     return f_0;
-  } else if (index == 1) {
+  } else if (index === 1) {
     return f_1;
-  }else{
+  } else if(index === 2) {
+    return f_2;
+  } else{
     for (let i = 3; i <= index; i++) {
       f_n = f_1 + f_2;
       f_1 = f_2;
@@ -31,5 +24,5 @@ function fibonacci(index) {
 let index;
 do{
   index = prompt("Input index: ");
-} while(!isPositiveNumber(index));
-alert(fibonacci(index));
+} while(Math.sign(index) < 0);
+alert(fibonacci(Number(index)));

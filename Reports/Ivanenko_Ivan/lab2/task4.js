@@ -24,17 +24,8 @@ const DaysOfTheWeek = {
   SATURDAY: 6,
 }
 
-
-function isNumber(number) {
-  if(!isNaN(number)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 function isMonth(month){
-  if(isNumber(month)) {
+  if(!isNaN(month)) {
     if( Number(month) >= 0 && Number(month) <= 11 ){
       return true;
     } else {
@@ -72,7 +63,7 @@ function getAmountOfDaysOfTheMonth(month){
 
 
 function isDayOfTheMonth(dayOfTheMonth, amountOfDaysOfTheMonth){
-  if(isNumber(dayOfTheMonth)) {
+  if(!isNaN(dayOfTheMonth)) {
     if( Number(dayOfTheMonth) >= 1 && Number(dayOfTheMonth) <= amountOfDaysOfTheMonth ){
       return true;
     } else {
