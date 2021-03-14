@@ -1,26 +1,13 @@
----
-layout: compress
-title: Lab 1
----
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ page.description }}{{ site.description }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
-    <meta name="theme-color" content="#673AB7" />
-
-    <title>{% if page.title %}{{ page.title }}{% else %}Some page{% endif %} | {{ site.title }}</title>
-
-    {% if jekyll.environment == "production" %}
-    <link rel="stylesheet" href="style.css?ver={{ site.time | date: '%Y-%m-%d_%H-%M' }}" />
-    {% else %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lab 1..." />
+    <title>Lab 1 | Web Technologies</title>
     <link rel="stylesheet" href="style.css" />
-    {% endif %}
 </head>
 
 <body>
@@ -44,8 +31,7 @@ title: Lab 1
                 <h2>Password request form</h2>
 
 
-                <p>The name and photo associated with your Google account will be recorded when you upload files and
-                    submit this form. Not <b>spas.work@gmail.com</b>? <a href="#">Switch account</a></p>
+                <p>The name and photo associated with your Google account will be recorded when you upload files and submit this form. Not <b>spas.work@gmail.com</b>? <a href="#">Switch account</a></p>
 
 
                 <p style="color: #E65B66;">*Required</p>
@@ -64,29 +50,27 @@ title: Lab 1
                 <p><input type="radio" name="color" value="black" /> Black</p>
                 <p><input type="radio" name="color" value="white" /> White</p>
                 <p>
-                    <input type="radio" name="color" value="other" />
-                    Other: <input class="content__form-input-name" type="text" name="other-color" />
+                    <input type="radio" name="color" value="other" /> Other: <input class="content__form-input-name" type="text" name="other-color" />
                 </p>
 
 
                 <p class="p_head">What town you like more?</p>
                 <p>
-                <div class="content__form-select">
-                    <select name="town">
+                    <div class="content__form-select">
+                        <select name="town">
                         <option value="0">Choose</option>
                         <option value="Stockholm">Stockholm</option>
                         <option value="Praga">Praga</option>
                         <option value="Dresden">Dresden</option>
                     </select>
-                </div>
+                    </div>
                 </p>
 
 
                 <p class="p_head">Please describe (at least 50 symbols on symbols) your favotite programming language
                 </p>
                 <p>
-                    <input class="content__form-input-name" type="text" name="language" placeholder="Your answer"
-                        minlength="50" style="width: 100%;" />
+                    <input class="content__form-input-name" type="text" name="language" placeholder="Your answer" minlength="50" style="width: 100%;" />
                 </p>
 
 
@@ -117,13 +101,10 @@ title: Lab 1
         </div>
         <footer class="page__footer">
             <div class="container">
-                <p class="page__footer-text">This content is neither created nor endorsed by Google. Report Abuse -
-                    Terms of Servise - Additional Terms</p>
+                <p class="page__footer-text">This content is neither created nor endorsed by Google. Report Abuse - Terms of Servise - Additional Terms</p>
                 <p>
-                    <a class="page__footer-link"
-                        href="//www.google.com/forms/about/?utm_source=product&amp;utm_medium=forms_logo&amp;utm_campaign=forms">
-                        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg"
-                            alt="Google" width="74px" height="24px" />
+                    <a class="page__footer-link" href="//www.google.com/forms/about/?utm_source=product&amp;utm_medium=forms_logo&amp;utm_campaign=forms">
+                        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg" alt="Google" width="74px" height="24px" />
                         <span class="page__footer-double-logo">Forms</span>
                     </a>
                 </p>

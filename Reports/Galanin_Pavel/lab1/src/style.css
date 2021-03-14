@@ -1,32 +1,30 @@
 /* HTML tags */
 
-html
-{
+html {
     width: 100%;
     height: 100%;
 }
 
-body
-{
+body {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
+
 /*  */
 
-.container
-{
+.container {
     margin: 0 auto;
     max-width: 90vw;
     width: 640px;
     display: block;
 }
 
+
 /* Footer in bottom alway */
 
-.page__wrapper
-{
+.page__wrapper {
     min-height: 100%;
     font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;
     background-color: #EDE7F6;
@@ -34,29 +32,29 @@ body
     flex-direction: column;
 }
 
-.page__content
-{
+.page__content {
     flex: 1 0 auto;
 }
 
-.page__footer
-{
+.page__footer {
     display: block;
     width: 100%;
     flex: 0 0 auto;
 }
+
+
 /* Header */
 
-.page__header
-{
+.page__header {
     width: 100%;
     height: 220px;
     background-color: #673AB7;
 }
 
+
 /* edit-pencil */
-.content__edit-pencil
-{
+
+.content__edit-pencil {
     display: block;
     position: fixed;
     right: 0;
@@ -70,22 +68,20 @@ body
     border: 2px solid #b388ff;
 }
 
-.content__edit-pencil > svg
-{
+.content__edit-pencil>svg {
     width: 100%;
     height: 100%;
 }
 
-.content__edit-pencil:hover
-{
+.content__edit-pencil:hover {
     background-color: transparent;
     color: #b388ff;
 }
 
+
 /* report button */
 
-.content__report
-{
+.content__report {
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -98,15 +94,13 @@ body
     border: 2px solid #6d6a71;
 }
 
-.content__report a
-{
+.content__report a {
     font-size: 16px;
     text-decoration: none;
     color: white;
 }
 
-.content__report::before
-{
+.content__report::before {
     content: '';
     border: 6px solid transparent;
     border-left: 6px solid #6d6a71;
@@ -115,25 +109,22 @@ body
     top: 20px;
 }
 
-.content__report:hover
-{
+.content__report:hover {
     background-color: transparent;
 }
 
-.content__report:hover a
-{
+.content__report:hover a {
     color: #6d6a71;
 }
 
-.content__report:hover::before
-{
+.content__report:hover::before {
     border: none;
 }
 
+
 /* Form */
 
-.content__form
-{
+.content__form {
     margin: -100px auto 0 auto;
     max-width: 90vw;
     width: 640px;
@@ -143,30 +134,26 @@ body
     border-top: 8px solid #B388FF;
 }
 
-.content__form .p_head
-{
+.content__form .p_head {
     font-weight: bolder;
 }
 
-.content__form .p_head::after
-{
+.content__form .p_head::after {
     content: " *";
-    color:#DB473F;
+    color: #DB473F;
 }
 
-.content__form .content__from-little-text
-{
-    font-family: Roboto,Arial,sans-serif;
+.content__form .content__from-little-text {
+    font-family: Roboto, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: .3px;
     line-height: 16px;
     color: #70757a;
-    color: rgba(0,0,0,0.66);
+    color: rgba(0, 0, 0, 0.66);
 }
 
-.content__form-button
-{
+.content__form-button {
     background-color: #4285f4;
     color: white;
     border: 1px solid #4285f4;
@@ -174,24 +161,20 @@ body
     border-radius: 4px;
 }
 
-.content__form-button:hover
-{
+.content__form-button:hover {
     background-color: white;
     color: #4285f4;
 }
 
-.content__form-file
-{
+.content__form-file {
     display: none;
 }
 
-.content__form-file-label
-{
+.content__form-file-label {
     color: #4285f4;
 }
 
-.content__form-input-name
-{
+.content__form-input-name {
     border: none;
     border-bottom: 1px solid #e1e1e1;
     color: #e1e1e1;
@@ -199,14 +182,12 @@ body
     font-size: 1em;
 }
 
-.content__form-date
-{
+.content__form-date {
     border: none;
     border-bottom: 1px solid #e1e1e1;
 }
 
-.content__form-select > select
-{
+.content__form-select>select {
     background-color: transparent;
     border: none;
     font-size: 1em;
@@ -214,8 +195,7 @@ body
     appearance: none;
 }
 
-.content__form-select::after
-{
+.content__form-select::after {
     border: 4px solid transparent;
     border-top: 4px solid #b4b4b4;
     content: '';
@@ -223,31 +203,28 @@ body
     top: 12px;
 }
 
+
 /* Footer */
 
-.page__footer > div
-{
+.page__footer>div {
     text-align: center;
 }
 
-.page__footer .page__footer-link
-{
+.page__footer .page__footer-link {
     color: black;
     opacity: .26;
     text-decoration: none;
 }
 
-.page__footer .page__footer-double-logo
-{
-    font-family: 'Product Sans',Arial,Helvetica,sans-serif;
+.page__footer .page__footer-double-logo {
+    font-family: 'Product Sans', Arial, Helvetica, sans-serif;
     font-size: 22.1px;
     position: relative;
     top: -6px;
     text-rendering: optimizeLegibility;
 }
 
-.page__footer .page__footer-text
-{
-    font: 400 12px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+.page__footer .page__footer-text {
+    font: 400 12px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     color: rgba(0, 0, 0, 0.66);
 }
