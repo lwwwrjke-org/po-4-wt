@@ -1,7 +1,5 @@
-function getRandom(min, max) {
-    var floatValue = Math.random() * (max + 1 - min) + min;
-    var intValue = Math.trunc(floatValue);
-    return intValue;
+function getIntRandom(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
 }
 
 function createMatrix(numRow, numCol) {
@@ -13,7 +11,7 @@ function createMatrix(numRow, numCol) {
     for (var i = 0; i < numRow; i++) {
         arr.push([]);
         for (var j = 0; j < numCol; j++) {
-            arr[i][j] = getRandom(0, 100);
+            arr[i][j] = getIntRandom(0, 100);
         }
     }
     console.log(arr);
