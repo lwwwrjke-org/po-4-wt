@@ -37,7 +37,6 @@ function getAmountOfDaysOfTheMonth(month){
     ) {
        return 29;
      } else if(
-       month == Months.JANUARY   ||
        month == Months.APRIL     ||
        month == Months.JUNE      ||
        month == Months.JULY      ||
@@ -45,6 +44,7 @@ function getAmountOfDaysOfTheMonth(month){
        month == Months.NOVEMBER) {
          return 30;
      } else if(
+       month == Months.JANUARY  ||
        month == Months.MARCH    ||
        month == Months.MAY      ||
        month == Months.AUGUST   ||
