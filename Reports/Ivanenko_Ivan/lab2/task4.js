@@ -33,8 +33,7 @@ function isMonth(month){
 
 
 function getAmountOfDaysOfTheMonth(month){
-  if(month == Months.FEBRUARY ||
-    ) {
+  if(month == Months.FEBRUARY) {
        return 29;
      } else if(
        month == Months.APRIL     ||
