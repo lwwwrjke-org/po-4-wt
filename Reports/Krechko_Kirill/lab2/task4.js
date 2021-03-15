@@ -18,7 +18,7 @@ if(month == 3 || month == 5 || month == 8 || month == 10){    // месяца п
 		break;
 	}
 }else{														//февраль
-	if (day < 1 || day > 28){
+	if (day < 1 || day > 29){
 		alert("В этом месяце нет столько дней :)");
 		break;
 	}
