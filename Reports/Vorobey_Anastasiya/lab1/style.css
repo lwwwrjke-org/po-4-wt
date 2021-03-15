@@ -1,0 +1,116 @@
+html
+{
+width: 100%;
+}
+
+body
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper
+{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.header
+{
+    width: 100%;
+    height: 200px;
+    background-color: coral;
+}
+
+.header .editor
+{
+    display: flex; 
+    justify-content: flex-end;
+    margin-right: 50px;
+    padding-top: 30px;
+}
+a.button6 
+{ 
+    width: 35px;
+    height: 23px;
+    text-decoration: none; /* нет подчеркивания */
+    padding: 13px; /*размер поля вокруг слова*/
+    border-radius: 3px; /* углы кнопки */
+    background: rgb(189, 90, 32);
+    box-shadow: 0-3px rgb(105, 53, 3) inset;
+}
+a.button6:hover { background: rgb(175, 59, 5); } /* цвет при наведении */
+a.button6:active {
+  background: rgb(165, 28, 10); /* цвет кнопки при нажатии */
+  box-shadow: 0 3px rgb(97, 27, 0) inset;
+}
+
+.content
+{
+    margin-top: -64px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+}
+
+.content .box 
+{
+    width: 600px;
+    background-color: white;
+    border-top: 10px solid orange;
+    padding: 32px;
+    font-weight: lighter;
+    font-family: Arial;
+}
+
+a.button7 {
+    font-weight: 400; /*толщина шрифта*/
+    color: white;
+    text-decoration: none; /* нет подчеркивания */
+    padding: 13px; /*размер поля вокруг слова*/
+    border-radius: 3px; /* углы кнопки */
+    background: rgb(36, 115, 241);
+    box-shadow: 0-3px rgb(3, 68, 121) inset;
+  } 
+  a.button7:hover { background: rgb(16, 106, 209); } /* цвет при наведении */
+  a.button7:active {
+    background: rgb(33, 90, 144); /* цвет кнопки при нажатии */
+    box-shadow: 0 3px rgb(11, 73, 131) inset;
+  }
+
+input {
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+}
+
+.submit
+{
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.footer
+{
+    width: 100%;
+    height: 130px;
+    background-color: bisque;
+    padding-top: 50px;
+}
+
+h3
+{ 
+    padding-top: 30px;
+}
+
+a.button5 
+{ 
+    text-decoration: none; /* нет подчеркивания */
+    padding: 20px; /*размер поля вокруг слова*/
+}
