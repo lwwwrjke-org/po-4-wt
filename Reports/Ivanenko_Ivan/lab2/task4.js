@@ -34,7 +34,7 @@ function isMonth(month){
 
 function getAmountOfDaysOfTheMonth(month){
   if(month == Months.FEBRUARY ||
-     month == Months.OCTOBER) {
+    ) {
        return 29;
      } else if(
        month == Months.JANUARY   ||
@@ -48,7 +48,8 @@ function getAmountOfDaysOfTheMonth(month){
        month == Months.MARCH    ||
        month == Months.MAY      ||
        month == Months.AUGUST   ||
-       month == Months.DECEMBER) {
+       month == Months.DECEMBER
+       month == Months.OCTOBER) {
          return 31;
      } else {
        alert("sth went wrong");
