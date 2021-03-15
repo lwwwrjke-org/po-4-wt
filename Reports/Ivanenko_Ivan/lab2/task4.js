@@ -48,7 +48,7 @@ function getAmountOfDaysOfTheMonth(month){
        month == Months.MARCH    ||
        month == Months.MAY      ||
        month == Months.AUGUST   ||
-       month == Months.DECEMBER
+       month == Months.DECEMBER ||
        month == Months.OCTOBER) {
          return 31;
      } else {
