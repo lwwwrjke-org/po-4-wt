@@ -25,15 +25,10 @@ const DaysOfTheWeek = {
 }
 
 function isMonth(month){
-  if(!isNaN(month)) {
-    if( Number(month) >= 0 && Number(month) <= 11 ){
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return false;
+  if(!isNaN(month) && Number(month) >= 0 && Number(month) <= 11) {
+    return true;
   }
+  return false;
 }
 
 
