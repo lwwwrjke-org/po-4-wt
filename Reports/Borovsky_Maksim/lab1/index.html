@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>Yandex Form</title>
+<meta charset="utf-8">
+</head>
+<body >
+<div class="main">
+<form style="padding: 35px;">
+<h1 class="title">Password request form</h1>
+<p class="disclamer">The name and photo assosiated with your Google account will be recorded when you upload files and submiit this form. Not <strong>spas.work@gmail.com?</strong> <a href="#">Switch account</a></p>
+
+<p style="color: red; font-size: 12px">*Required</p>
+
+<h2>Please fill your name <span style="color: red;">*</span></h2>
+<input type="text" name="input_answer" maxlength="35" placeholder="Your answer" class="input">
+
+<h2>What color you like <span style="color: red;">*</span></h2>
+<div class="krygbuttons">
+<p><input type="radio" name="radiobutton"> Red</p>
+<p><input type="radio" name="radiobutton"> Green</p>
+<p><input type="radio" name="radiobutton"> Blue</p>
+<p><input type="radio" name="radiobutton"> Black</p>
+<p><input type="radio" name="radiobutton"> White</p>
+<p><input type="radio" name="radiobutton"> Other:<input type="text" name="input" class="input"></p>
+</div>
+
+<h2>What town you like more? <span style="color: rgb(139, 0, 0);">*</span></h2>
+<select class="select">
+<option>Брест</option>
+<option>Минск</option>
+<option>Гродно</option>
+</select>
+<h2>Please describe (at least 50 symbols on symbols) your favorite programming language <span style="color: red;">*</span></h2>
+<input type="text" name="input_answer" minlength="50" placeholder="Your answer" class="input">
+
+<h2>What years of education did you really like? <span style="color: red;">*</span></h2>
+
+<div class="radiobuttons">
+<p><input type="checkbox" name="checkbox_answer"> First</p>
+<p><input type="checkbox" name="checkbox_answer"> Second</p>
+<p><input type="checkbox" name="checkbox_answer"> Third</p>
+<p><input type="checkbox" name="checkbox_answer"> Fouth</p>
+</div>
+
+<h2>Please send any image <span style="color: red;">*</span></h2>
+<input type="file" id="input_file" class="file">
+<label for="input_file" class="add">ADD FILE</label>
+
+<h2>Set last Monday Monday <span style="color: red;">*</span></h2>
+<p class="small">Date</p>
+<input class="input" type="Date" name=""><br>
+<p><input class="button" type="button" value="SUBMIT" name="Submit"></p>
+<p class="small">Never submit passwords through Google Forms</p>
+</form>
+</div>
+</body>
+</html>
