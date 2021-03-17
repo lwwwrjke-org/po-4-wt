@@ -1,3 +1,4 @@
+function task1 () {
 while (true) {
 var per1 = Number(prompt('Введите первое число'));
 var per2 = Number(prompt('Введите второе число'));
@@ -27,3 +28,5 @@ else if (per1==per2){
 }
 
 alert ('Цикл завершен из-за неправильных данных');
+return 0;
+}
