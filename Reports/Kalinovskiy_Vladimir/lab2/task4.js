@@ -1,3 +1,4 @@
+function task4 () {
 month=Number(prompt('Введите месяц'));
 day=Number(prompt('Введите день'));
 month--;
@@ -45,4 +46,6 @@ if (Number.isNaN(month)==false && Number.isNaN(day)==false && month>=0&&month<=1
 
 else{
     alert ('Неверные данные!');
+}
+return 0;
 }
