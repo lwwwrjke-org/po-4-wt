@@ -1,3 +1,4 @@
+function lab2_3(){
 function fib(n) {
   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
 }
@@ -7,3 +8,4 @@ alert("Неверные данные");
 throw "Error";
 }
 alert("fib("+i+")= "+fib(i));
+}

@@ -1,3 +1,4 @@
+function lab2_4(){
 while(1){
   var mounth = prompt("Введите номер месяца(1-12):");
   if(mounth < 1 || mounth > 12 || isNaN(mounth)){
@@ -21,4 +22,5 @@ while(1){
   }
   alert(["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"][new Date(2016, mounth-1, date).getDay()]);
   alert(date+' '+ mounth +' '+ 2016 +'\n');
+}
 }
