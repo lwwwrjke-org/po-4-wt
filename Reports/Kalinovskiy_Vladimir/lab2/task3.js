@@ -6,10 +6,13 @@ function Fibonacci (i) {
     return Fibonacci (i-1)+ Fibonacci (i-2);   
 }
 
+function task3 () {
 var i = Number(prompt('Введите необходимое число Фибоначчи'));
-if (Number.isNaN(i)){
+if (Number.isNaN(i) || i<1){
     alert('Неверные данные!');
 }
 else {
     alert(i+'-ое число Фибоначчи: '+Fibonacci (i));
+}
+return 0;
 }
