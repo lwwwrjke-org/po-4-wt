@@ -1,3 +1,4 @@
+function lab3_6(){
 function triple_remove(argument){
 	var arr = [];
 	var del = [];
@@ -16,3 +17,4 @@ function triple_remove(argument){
 }
 alert(triple_remove([3, 1, 5, 3, 7, 3, 1, 4, 1]));
 alert(triple_remove("Helllo world eo"));
+}

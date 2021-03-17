@@ -1,3 +1,4 @@
+function lab3_2(){
 while(1){
 
 var n = prompt("Введите количество элементов массива: ");
@@ -19,4 +20,5 @@ function QuickSort(A){
   return QuickSort(a).concat(p,QuickSort(b));
 }
 alert("B=[" + B + "]\n" + "sortB=[" + QuickSort(B) + "]");
+}
 }

@@ -1,3 +1,4 @@
+function lab3_3(){
 while(1){
 
 var a = prompt("Введите количество строк: "); 
@@ -55,4 +56,5 @@ function summ(nr, nc){
 	alert("SumMatrix"); alert(MatrixForPrint(arr, nr));
 }
 summ(a, b);
+}
 }

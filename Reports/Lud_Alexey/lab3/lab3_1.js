@@ -1,3 +1,4 @@
+function lab3_1(){
 while(1){
   
 function range(start, end, step) {
@@ -23,4 +24,5 @@ var step = prompt("Введите шаг: "); var s = Number(step);
 if(isNaN(step)){ alert("Неверные данные"); throw "Error"; }
 
 alert("range(" + st + "," + e + "," + s + ")= " + "[" + range(st, e, s) + "]");
+}
 }
