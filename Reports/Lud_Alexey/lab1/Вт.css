@@ -73,10 +73,6 @@ body {
 .content__form .p_head {
     font-weight: bolder;
 }
-.content__form .p_head::after {
-    content: " *";
-    color: #DB473F;
-}
 .content__form .content__from-little-text {
     font-family: Roboto, Arial, sans-serif;
     font-size: 12px;
