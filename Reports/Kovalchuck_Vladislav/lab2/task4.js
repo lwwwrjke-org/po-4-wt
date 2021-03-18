@@ -8,7 +8,7 @@ function task4()
 	      if (month < 1 || month > 12) 
 	      {
 	          alert("Где-то ошибка");
-	          continue;
+	          break;
 	      }
 
 	      if (month == 2) 
@@ -18,7 +18,7 @@ function task4()
 	        if (month == 2 && day > 29) 
 	        {
 	            alert("Где-то ошибка");
-	            continue;
+	            break;
 	        }
 	      } 
 	      else
@@ -31,14 +31,14 @@ function task4()
 	          if (day < 1 || day > 31) 
 	          {
 	              alert("Где-то ошибка");
-	              continue;
+	              break;
 	          }
 	        } else
 	         {
 	          if (day < 1 || day > 30) 
 	          {
 	            alert("Где-то ошибка");
-	            continue;
+	            break;
 	          }
 	        }
 	      }
@@ -46,10 +46,10 @@ function task4()
 	      if ((month || day) === null) 
 	      {
 	          alert("Где-то ошибка");
-	          continue;
+	          break;
 	      }
 
-	      let date = new Date(YEAR, month - 1, day);
+	      let date = new Date(YEAR, month-1, day-1);
 
 	      switch (date.getDay()) 
 	      {

@@ -16,9 +16,12 @@ function task1()
 			break;
 		}
 
-		if(num1 > num2)
+		var a = parseInt(num1);
+		var b = parseInt(num2);
+		
+		if(a > b)
 			alert("Второе число меньше");
-		else if(num1 < num2)
+		else if(a < b)
 			alert("Первое число меньше");
 		else
 			alert("Числа равны");
