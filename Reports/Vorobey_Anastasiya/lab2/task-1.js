@@ -3,13 +3,13 @@
     let enterNum = () => { //функции-стрелки
       while (1) {
         x = +prompt('Введите первое число:', 0);
-        if (!Number.isInteger(x)) { //проверка на число
+        if (Number.isNaN(x)) { 
           alert("Первый ввод - не число.");
           return;
         }
   
         y = +prompt('Введите второе число:', 0);
-        if (!Number.isInteger(y)) {
+        if (Number.isNaN(y)) { 
           alert("Второй ввод - не число.");
           return;
         }
