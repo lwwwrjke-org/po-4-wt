@@ -14,6 +14,7 @@
           return;
         }
         sravnenie(x, y);
+        break;
       }
     };
   
