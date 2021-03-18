@@ -1,0 +1,67 @@
+html
+{
+width: 100%;
+
+}
+
+body
+{
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54, 21, 240);
+}
+
+.header
+{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(74, 160, 241);
+}
+
+.content
+{
+    margin-top: -64px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.content .box 
+{
+    width: 600px;
+    background-color: white;
+    border-top: 10px solid rgb(8, 36, 73);
+    padding: 32px;
+
+}
+
+.once 
+{
+    border-color:transparent transparent grey transparent;
+}
+
+#upload-photo {
+    position: absolute;
+    z-index: -1;
+    color: blue;
+    cursor: pointer;
+ }
+
+.wrapper .keke {
+    position: relative;
+    top:100px;
+}
+
+.footer {
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(54, 21, 240);
+}
