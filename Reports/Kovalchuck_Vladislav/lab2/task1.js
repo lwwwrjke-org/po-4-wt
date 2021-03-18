@@ -3,21 +3,21 @@ function task1()
 	while(true)
 	{
 		var num1 = prompt("Введите первое число:");
-		if(!parseInt(num1))
+		if(!parseFloat(num1))
 		{
 			alert("первый ввод - не число");
 			break;
 		}
 
 		var num2 = prompt("Введите второе число:");
-		if(!parseInt(num2))
+		if(!parseFloat(num2))
 		{
 			alert("второй ввод - не число");
 			break;
 		}
 
-		var a = parseInt(num1);
-		var b = parseInt(num2);
+		var a = parseFloat(num1);
+		var b = parseFloat(num2);
 		
 		if(a > b)
 			alert("Второе число меньше");
