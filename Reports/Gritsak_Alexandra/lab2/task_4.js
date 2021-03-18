@@ -1,8 +1,7 @@
-while (true) {
+function task_4() {
+  while(true){
   var month = prompt ("Введите месяц: ");
   var day = prompt ("Введите день: ");
-  month--; //Date начинается с 0-го месяца 
-// проверка на корректность ввода
 if (month >= 1 && month <= 12) { 
   if(  month == 4 || month == 6  || month == 9 || month == 11){    //месяцы, в которых 30 день
     if ( day < 1 || day > 30 ){
@@ -25,7 +24,7 @@ if (month >= 1 && month <= 12) {
     }
   
   
-      var date = new Date(2016, month, day);
+      var date = new Date(2016, month -1, day);
 
     switch (date.getDay()) {
       case 0:
@@ -55,6 +54,7 @@ if (month >= 1 && month <= 12) {
   } else {
     alert('Неверная дата');
   }
+}
   };
   button.addEventListener('click', get);
 
