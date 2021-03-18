@@ -9,7 +9,7 @@ function task4(){
         alert("Ошибка")
         return
     }
-    if((month == 4 || month == 6 || month == 9 || month == 11) && day == 31){
+    if((month == 2 || month == 4 || month == 6 || month == 9 || month == 11) && day == 31){
         alert("Ошибка")
         return
     }

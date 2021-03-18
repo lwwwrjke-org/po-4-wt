@@ -5,13 +5,13 @@ function task1(){
   for(;;) {
     x = prompt('Введите первое число')
     x = Number(x)
-    if (!Number.isInteger(x)) {
+    if (isNaN(x)) {
       alert("первое число – не число")
        break
     }
     y = prompt('Введите второе число')
     y = Number(y)
-    if (!Number.isInteger(y)) {
+    if (isNaN(y)) {
       alert("второе число – не число")
       break
     }
