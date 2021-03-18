@@ -1,21 +1,52 @@
-<!doctype html>
-<html class="no-js" lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="main.css">
-</head>
-
-<body>
-  <main class="grid">
-
-  </main>
-  <script src="task_1.js"></script>
-</body>
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <meta charset="utf-8">
+        <script src="task_1.js"></script>
+        <script src="task_2.js"></script>
+        <script src="task_3.js"></script>
+        <script src="task_4.js"></script>
+        <script src="task_5.js"></script>
+        <script src="task_6.js"></script>
+    </head>
 </html>
+
+<body> 
+    <table>
+        <tr>
+            <th>Задание №1</th>
+            <th>Задание №2</th>
+            <th>Задание №3</th>
+            <th>Задание №4</th>
+        </tr>
+        <tr>
+            <td>В бесконечном цикле делается запрос на ввод двух чисел (два отдельных
+                вызова функции prompt()). Числа сравниваются между собой, и выводится
+                одна из трёх фраз: «числа равны», «первое число меньше», «второе число
+                меньше». Если пользователь ввёл не число, выводится фраза «первый ввод –
+                не число» (или «второй ввод – не число»), и выполнение скрипта
+                прекращается.</td>
+            <td>Многоквартирный дом характеризуется следующими тремя показателями:
+                этажность (1-25), число подъездов (1-10), количество квартир на
+                лестничной площадке (1-20). Скрипт запрашивает эти показатели и номер
+                квартиры. Выводится номер подъезда, в котором находится указанная
+                квартира. При вводе некорректных данных предусмотреть генерацию
+                исключительных ситуаций.</td>
+            <td>Вычисление и вывод i-го числа Фибоначчи, где параметр i вводится
+                пользователем. При вводе некорректного параметра предусмотреть
+                генерацию исключительной ситуации.</td>
+            <td>1 января 2016 была пятница. Скрипт запрашивает номер месяца (1..12) и
+                число в этом месяце (1..31). Выведите имя дня недели (например, «четверг»)
+                для введённого числа и месяца.</td>
+          </tr>
+          <tr>
+            <div class = "buttons">
+                <td align="center" ><input type="button" value="Выполнить" onclick="task_1()"></td>
+                <td align="center"><input type="button" value="Выполнить" onclick="task_2()"></td>
+                <td align="center"><input type="button" value="Выполнить" onclick="task_3()"></td>
+                <td align="center"><input type="button" value="Выполнить" onclick="task_4()"></td>
+                </div>
+          </tr>
+    </table>
+</body>
