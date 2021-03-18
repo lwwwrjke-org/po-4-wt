@@ -1,7 +1,8 @@
+function task_3(){
 var fib1 = 0;
 var fib2 = 1;
 var fib_sum = 0;
-var n = 1;
+var n = 2;
 
 while(true){
 
@@ -27,4 +28,5 @@ while(true){
 		}
 	}
 } 
+}
 
