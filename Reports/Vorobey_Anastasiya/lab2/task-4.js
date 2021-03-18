@@ -1,6 +1,6 @@
 // Неделя в JavaScript начинается с воскресенья, так что результат будет числом от 0(воскресенье) до 6(суббота).
     let button = document.querySelector('.button');
-    const YEAR = 2021;
+    const YEAR = 2016;
     let month, day, date;
   
     let get = () => {
