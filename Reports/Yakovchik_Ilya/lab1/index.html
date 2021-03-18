@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <img src="image/pencil.png" class="pencil">
+    </header>
+
+        <div class="container">
+            <div class="top">
+            </div>
+
+            <div class="title">
+                <h1>Password request form</h1>
+            </div>
+
+            <div class="text-control">
+                <p>The name and photo associated with your Google account will be recorded when you upload files and submit this form. Not spas.work@gmail.com? <span style="color: blue; text-decoration: underline;">Switch account</span></p>
+                <span class="stars">*</span> <span style="font-size: 0.9em; color: red;">Required</span>
+            </div>
+
+            <form action="/" method="POST">
+                <!-- name -->
+                <div class="form-group">
+                    <h3>Please fill your name <span class="stars">*</span></h3>
+                    <input type="text" id="text1" class="form-control" placeholder="Your name" style="width: 50%;">
+                </div>
+                <!-- Radiobutton -->
+                <div class="form-group">
+                    <h3>What color you like <span class="stars">*</span></h3>
+                    <input type="radio" name="color_select" id="radio1" value="red"><label for="radio1">Red</label><br>
+                    <input type="radio" name="color_select" id="radio2" value="green"><label for="radio2">Green</label><br>
+                    <input type="radio" name="color_select" id="radio3" value="blue"><label for="radio3">Blue</label><br>
+                    <input type="radio" name="color_select" id="radio4" value="black"><label for="radio4">Black</label><br>
+                    <input type="radio" name="color_select" id="radio5" value="white"><label for="radio5">White</label><br>
+                    <input type="radio" name="color_select" id="radio6" value="other"><label for="other">Other:</label>&nbsp;<input type="text" id="other"><br>
+                </div>
+                <!-- select -->
+                <div class="form-group"> 
+                    <h3>What town you like more <span class="stars">*</span></h3>
+                    <select name="" id="text1" style="border: 0;width: 75px; color: gray;">
+                        <option>Choose</option>
+                    </select>
+                </div>
+                <!-- Describe -->
+                <div class="form-group">
+                    <h3>Please describe (at least 50 symbols on symbols) your favorite programming language <span class="stars">*</span></h3>
+                    <input type="text" id="text1" class="form-control" placeholder="Your answer" maxlength="50" style="width: 95%;">
+                </div>
+                <!-- CheckBox -->
+                <div class="form-group">
+                    <h3>What year of education did you really like? <span class="stars">*</span></h3>
+                    <input type="checkbox" name="one"  id="check1" value="first"><label for="check1">First</label><br>
+                    <input type="checkbox" name="two"  id="check2" value="second"><label for="check2">Second</label><br>
+                    <input type="checkbox" name="tree" id="check3" value="third"><label for="check3">Third</label><br>
+                    <input type="checkbox" name="four" id="check4" value="forth"><label for="check4">Forth</label><br>
+                </div>
+                <!-- Image -->
+                <div class="form-group">
+                    <h3>Please send any image <span class="stars">*</span></h3>
+                    <label for="myfile" style="color: blue; cursor: pointer;">ADD FILE</label>
+                    <input type="file" id="myfile">
+                </div>
+                <!-- Data -->
+                <div class="form-group">
+                    <h3>Set last Monday Monday <span class="stars">*</span></h3>
+                    <label for="date" style="color: gray; font-size: smaller;">Date</label><br><br>
+                    <input type="date" id="date" placeholder="mm/dd/yyyy" style="width: 20%;">
+                </div>
+
+                <div class="form-group">
+                    <div style="float:left;">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="clearfix"></div>
+            <!-- text after button submit -->
+            <div class="text-control">
+                <p style="color: gray;">Never submit your password through Google Forms</p>
+            </div>        
+        </div>
+
+    <footer class="footer">
+        <p>This content is neither created nor endorsed by Google. Report Abused - Terms of Service - Additional Terms</p>
+        <h3>Google Forms</h3>
+    </footer>
+    <img src="image/exclamation.png" class="exclamation" >
+</body>
+</html> 
