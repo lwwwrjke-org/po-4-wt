@@ -7,7 +7,7 @@ while(true) {
     if (month < 1 || month > 12)
     {
     alert("Oшибка");
-    continue;
+    break;
     }
     
     if (month == 2)
@@ -17,7 +17,7 @@ while(true) {
     if (month == 2 && day > 29)
     {
     alert("Oшибка");
-    continue;
+    breake;
     }
     }
     else
@@ -30,14 +30,14 @@ while(true) {
     if (day < 1 || day > 31)
     {
     alert("Oшибка");
-    continue;
+    break;
     }
     } else
     {
     if (day < 1 || day > 30)
     {
     alert("Oшибка");
-    continue;
+    break;
     }
     }
     }
@@ -45,10 +45,10 @@ while(true) {
     if ((month || day) === null)
     {
     alert("Oшибка");
-    continue;
+    break;
     }
     
-    let date = new Date(YEAR, month - 1, day);
+    let date = new Date(YEAR, month - 1, day-1);
     
     switch (date.getDay())
     {

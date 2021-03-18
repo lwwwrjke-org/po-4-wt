@@ -1,37 +1,18 @@
-function task3()
-{
-var a = 0;
-var b = 1;
-var sum = 0;
-var n = 1;
+function task3() {
+    function fib(n) 
+    {
+        return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+    }
 
-while(true){
+    while (true) {
+        var number = prompt("Номер числа Фибоначчи: ");
 
-var i = prompt("Введите № числа Фибоначчи:");
-if (!parseInt(i))
-{
-alert("Oшибка");
-}
-
-else {
-while(n < i)
-{
-sum = a + b;
-a = b;
-b = sum;
-n++;
-}
-
-if (i == 0)
-{
-alert("resalt= " + 0);
-break;
-}
-else
-{
-alert("resalt= " + (b+a));
-break;
-}
-}
-}
+        if (parseInt(number) && number >= 0)
+            alert(fib(number));
+        else
+        {
+            alert("Ошибка ввода");
+          break;
+        }
+    }
 }

@@ -16,9 +16,12 @@ alert("второй ввод - не число");
 break;
 }
 
-if(number1 < number2)
+var a = parseInt(number1);
+var b = parseInt(number2); 
+
+if(a < b)
 alert("Второе число больше");
-else if(number1 > number2)
+else if(a > b)
 alert("Первое число больше");
 else
 alert("Числа равны, как 2 капли воды");
