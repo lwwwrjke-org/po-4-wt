@@ -1,31 +1,30 @@
 function lab2_2(){
 while(1){
-var n = prompt("Введите количество квартир в доме(1-20):");
-n = Number.parseInt(n);
-if(n < 1 || n > 20 || isNaN(n)){
+var s = prompt("Введите количество квартир(1-20):");
+s = Number(s);
+if(s < 1 || s > 20 || isNaN(s)){
 alert("Неверные данные");
 throw "Error";
 }	
-var q = prompt("Введите количество этажей в подъездах(1-25):");
-q = Number.parseInt(q);
+var q = prompt("Введите количество этажей(1-25):");
+q = Number(q);
 if(q < 1 || q > 25 || isNaN(q)){
 	alert("Неверные данные");
 	throw "Error";
 }
 var p = prompt("Введите количество подъездов(1-10):");
-p = Number.parseInt(p);
+p = Number(p);
 if(p < 1 || p > 10 || isNaN(p)){
 	alert("Неверные данные");
 	throw "Error";
 }
+var n = s * q * p; // все квартиры
 var k = prompt("Введите номер квартиры(1-"+n+"):");
-k = Number.parseInt(k);
+k = Number(k);
 if(k < 1 || k > n || isNaN(k)){
 	alert("Неверные данные");
 	throw "Error";
 }
-var s = n/(p*q);// количество квартир на этаже
-s=Math.ceil(s);
 var sp = n/p;// количество квартир в одном подъезде
 sp=Math.ceil(sp);
 var np = 1+(k-1)/sp;//в каком подъезде эта квартира
