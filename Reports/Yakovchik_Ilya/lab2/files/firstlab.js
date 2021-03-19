@@ -7,13 +7,13 @@ const task4 = document.querySelector('#task4');
 function comparison(){
 
     while(true){
-        var fnumber = prompt("Enter first number: ");
+        let fnumber = prompt("Enter first number: ");
         if (isNaN(fnumber)){
             alert("Первый ввод не число");
             break;
         }
         fnumber = Number(fnumber);
-        var secnumber = prompt("Enter second number: ");
+        let secnumber = prompt("Enter second number: ");
         if (isNaN(secnumber)){
             alert("Второй ввод не число");
             break;
@@ -38,43 +38,46 @@ function comparison(){
 function house(){
 
     while(true){
-        var floors = prompt("Введите количество этажей от 1 до 25: ");
+        let floors = prompt("Введите количество этажей от 1 до 25: ");
         if (floors < 1 || floors > 25)
         {
             alert("Неверное количество этажей,нужно от 1 до 25:");
             break;                                                                                                                               
         }
+        floors = Number(floors);
 
-        var entrances = prompt("Введите количество подъездов от 1 до 10: ");
+        let entrances = prompt("Введите количество подъездов от 1 до 10: ");
         if(entrances < 1 || entrances > 10)
         {
             alert("Неверное количество подъездов,нужно от 1 до 10:");
             break;
         }
-
-        var flats = prompt("Введите количество квартир от 1 до 20: ");
-        if (flats < 1 || flats > 20){
-            alert("Неверное количество квартир,нужно от 1 до 20:");
-            break;
-        }
+        entrances = Number(entrances);
         
-        var FlatsOnTheFloor = prompt("Введите количество квартир на этаже: ");
-        if (flats < 1 || flats > 20){
+        let Flats = prompt("Введите количество квартир на этаже: ");
+        if (Flats < 1 || Flats > 20){
             alert("Неверное количество квартир,нужно от 1 до 20:");
             break;
         }
+        Flats = Number(Flats);
 
-        var FindFlat = prompt("Введите номер квартиры которую хотите найти: ");
-
-        var result = FindFlat / floors / FlatsOnTheFloor;
-        result = Math.ceil(result);
-
-        if(result <= entrances){
-            alert(`Квартира ${FindFlat} находится на ${result} этаже` );
-        }else {
-            alert(`Квартира ${FindFlat} находится на этаже ${result}\n` 
-            + `Но этаж: ${result} не существует`);
+        let allflats = Flats * floors * entrances;
+        let NeedFlat = prompt("Введите номер нужной квартиры от 1 до  " + allflats); 
+        if(NeedFlat < 1 || NeedFlat > allflats){
+            alert("Неверное количество квартир! ");
+            break;
         }
+        NeedFlat = Number(NeedFlat);
+
+        if(NeedFlat <= allflats || NeedFlat > 0){
+            let FindFlat = NeedFlat / Flats / floors;
+            FindFlat = Math.ceil(FindFlat);
+            alert(`Ваша квартира находидся на ${FindFlat} этаже`);
+        }else {
+            alert("Такой квартиры не существует");
+            return;
+        }
+
 
     }
 }
@@ -82,12 +85,14 @@ function house(){
 
 function calendar(){
     while(true){
-        var month = prompt("Введите номер месяца: ");
+        let month = prompt("Введите номер месяца: ");
+        month = Number(month);
         if(month < 1 || month > 12 || isNaN(month)){
             alert("Некорректные данные! ");
             break;
         }
-        var date = prompt("Введите число месяца: ");
+        let date = prompt("Введите число месяца: ");
+        date = Number(date);
         if(date < 1 || date > 31 || isNaN(date)){
             alert("Некорректные данные! ");
             break;
@@ -124,7 +129,8 @@ function fib(){
     }
 
     while(true) {
-        n = prompt("Введите n: ", 0);
+        let n = prompt("Введите n: ", 0);
+        n = Number(n);
         alert("Результат = " + Fibbonachi(n));
     }
 }
