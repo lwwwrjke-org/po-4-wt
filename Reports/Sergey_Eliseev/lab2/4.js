@@ -1,44 +1,59 @@
-let day = prompt("input day");
+while (true) {
+    const YEAR = 2016
+    let month = prompt('Enter number of month(1-12)');
+    let day;
+    month = Number(month);
+    if (month < 1 || month > 12) {
+        alert("Invalid input!");
+        continue;
+    }
 
-day = parseInt(day);
+    if (month == 2) {
+        day = prompt('Enter day of the month(1-29)');
+        day = Number(day);
+        if (month == 2 && day > 29) {
+            alert("Invalid input!");
+            continue;
+        }
+    } else {
+        day = prompt('Enter day of the month(1-31)');
+        day = Number(day);
+        if (day < 1 || day > 31) {
+            alert("Invalid input!");
+            continue;
+        }
+    }
 
-if (isNaN(day)) {
-    throw "unexpected number";
-}
+    if ((month || day) === null) {
+        alert("Invalid input!");
+        continue;
+    }
 
-let month = prompt("input month");
+    let date = new Date(YEAR, month - 1, day);
 
-month = parseInt(month);
-
-function day31() {
-    if (day < 1 || 31 < day) {
-        throw "unexpected number";
+    switch (date.getDay()) {
+        case 0:
+            alert('Sunday');
+            break;
+        case 1:
+            alert('Monday');
+            break;
+        case 2:
+            alert('Tuesday');
+            break;
+        case 3:
+            alert('Wednesday');
+            break;
+        case 4:
+            alert('Thursday');
+            break;
+        case 5:
+            alert('Friday');
+            break;
+        case 6:
+            alert('Saturday');
+            break;
+        default:
+            alert('Invalid date!');
     }
 }
-
-if (month == 1 || 3 || 5 || 7 || 9 || 11) {
-    day31(day);
-}
-
-function day30() {
-    if (day < 1 || 30 < day) {
-        throw "unexpected number";
-    }
-}
-
-if (month == 4 || 6 || 8 || 10 || 12) {
-    day30(day);
-}
-
-if (isNaN(month) || month < 1 || month > 12) {
-    throw "unexpected number";
-}
-
-if (month == 2 && day > 29) {
-    throw "unexpected number";
-}
-
-let date = new Date(2016, month - 1, day);
-let options = { weekday: 'long' };
-let answer = new Intl.DateTimeFormat('ru-RU', options).format(date)
-alert(answer);
