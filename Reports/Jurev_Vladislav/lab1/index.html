@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+</head>
+<body>
+<button class="edit">
+    <img src="img/edit.svg" alt="Edit">
+</button>
+<main>
+    <hr>
+    <div class="container">
+        <article>
+            <h1>Password request form</h1>
+            <p>The name and photo associated with your Google account will be recorded when you upload files and submit
+                this form. Not <b>spas.work@gmail.com</b>? <a href="">Switch account</a></p>
+            <p class="required">*Required</p>
+        </article>
+        <form>
+            <label for="name"><b>Please fill your name <span class="letter">*</span></b></label><br>
+            <input type="text" name="name" id="name" placeholder="Your answer"><br>
+
+            <label><b>What color you like <span class="letter">*</span></b></label>
+            <div class="container_radio">
+                <input type="radio" name="color" id="color1" value="red"><label for="color1">Red</label><br>
+                <input type="radio" name="color" id="color2" value="green"><label for="color2">Green</label><br>
+                <input type="radio" name="color" id="color3" value="blue"><label for="color3">Blue</label><br>
+                <input type="radio" name="color" id="color4" value="black"><label for="color4">Black</label><br>
+                <input type="radio" name="color" id="color5" value="white"><label for="color5">White</label><br>
+                <input type="radio" name="color" id="other" value="other"><label for="other">Other: <input type="text" name="other"></label>
+            </div>
+
+            <label for="town"><b>What town you like more? <span class="letter">*</span></b></label><br>
+            <select name="town" id="town" class="select">
+                <option disabled selected>Choose</option>
+                <option value="Brest">Gomel</option>
+                <option value="Brest">Vitebsk</option>
+                <option value="Brest">Mogilev</option>
+                <option value="Brest">Grodno</option>
+                <option value="Brest">Brest</option>
+                <option value="Brest">Minsk</option>
+            </select>
+
+            <label for="ProgramLang"><b>Please describe (at least 50 symbols on symbols) your favourite programming
+                language <span class="letter">*</span></b></label><br>
+            <input type="text" name="ProgramLang" id="ProgramLang" placeholder="Your answer" maxlength="50"><br>
+
+            <label class="zero"><b>What years of education did you really like? <span class="letter">*</span></b></label><br>
+            <input type="checkbox" name="years_like" id="first"><label for="first"> First</label><br>
+            <input type="checkbox" name="years_like" id="second"><label for="second"> Second</label><br>
+            <input type="checkbox" name="years_like" id="third"><label for="third"> Third</label><br>
+            <input type="checkbox" name="years_like" id="fourth"><label for="fourth"> Fourth</label><br>
+
+            <label for="file">
+                <b>Please send any image <span class="letter">*</span></b>
+                <span class="input_file">Add file</span>
+            </label>
+            <input type="file" name="file" id="file" class="add_file">
+
+            <label for="date">
+                <b>Set last Monday <span class="letter">*</span></b>
+                <span class="span_date">Date</span>
+            </label>
+            <input type="date" name="date" id="date" class="input_date"><br>
+
+            <label for="submit"></label>
+            <input type="submit" name="submit" id="submit" value="SUBMIT">
+        </form>
+        <p class="paragraph">Never submit passwords though Google Forms</p>
+    </div>
+</main>
+<footer>
+    <article>
+        <p>This content is neither created nor endorsed by Google. Report Abuse - Terms of Service - Additional Terms</p>
+        <p class="names"><b>Google</b> Forms</p>
+    </article>
+    <button class="info">
+        <img src="img/info.svg" alt="info">
+    </button>
+</footer>
+</body>
+</html>
