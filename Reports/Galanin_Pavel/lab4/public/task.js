@@ -8,12 +8,19 @@ class lab4 {
         let url = `https://api.github.com/users/${this.GH_login}`;
         console.log(`url = ${url}`);
         fetch(url)
+            // JSON to JS object
             .then(response => response.json())
+            // Save JS object
             .then((data) => {
+                if (data.message) {
+                    alert(data.message);
+                }
+
                 this.data = data;
                 console.log(`this.data = ${this.data} =`);
                 console.log(this.data);
             })
+            // Get info about number followers
             .then(() => {
                 let followers = this.data.followers;
                 console.log(`followers = ${followers}`);
@@ -23,13 +30,19 @@ class lab4 {
                 } else {
                     alert(`Not found id="lab4__number_followers"`);
                 }
-
+            })
+            // Get info about followers
+            .then(() => {
                 let followers_url = this.data.followers_url;
                 console.log(`followers_url = ${followers_url}`);
 
                 fetch(followers_url)
                     .then(response => response.json())
                     .then(data => {
+                        if (data.message) {
+                            alert(data.message);
+                        }
+
                         console.log(data)
 
                         let html = '';
@@ -48,9 +61,49 @@ class lab4 {
                             html += `<tr>` + img + username + `</tr>`;
                         }
 
-                        document.getElementById('lab4__tbody-followers').innerHTML = html;
+                        if (document.getElementById('lab4__tbody-followers') != undefined) {
+                            document.getElementById('lab4__tbody-followers').innerHTML = html;
+                        } else {
+                            alert(`Not found id="lab4__tbody-followers"`);
+                        }
+
                     })
             })
+            //Get info about repositories
+            .then(() => {
+                let repos_url = this.data.repos_url;
+                console.log(`repos_url = ${repos_url}`);
+                fetch(repos_url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message) {
+                            alert(data.message);
+                        }
+
+                        console.log(data);
+
+                        let html = '';
+
+                        for (let i = 0; i < data.length; i++) {
+                            let name = `<td>` +
+                                `<a href="${data[i]['html_url']}">${data[i]['name']}</a>` +
+                                `</td>`;
+
+                            let description = `<td>` +
+                                `${data[i]['description']}` +
+                                `</td>`;
+
+                            html += `<tr>` + name + description + `</tr>`;
+                        }
+
+                        if (document.getElementById('lab4__tbody-repos') != undefined) {
+                            document.getElementById('lab4__tbody-repos').innerHTML = html;
+                        } else {
+                            alert(`Not found id="lab4__tbody-repos"`);
+                        }
+
+                    })
+            });
     }
 }
 
