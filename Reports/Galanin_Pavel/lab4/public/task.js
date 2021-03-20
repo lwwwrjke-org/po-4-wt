@@ -49,7 +49,7 @@ class lab4 {
 
                         for (let i = 0; i < data.length; i++) {
                             let img = `<td>` +
-                                `<a href="${data[i]['html_url']}">` +
+                                `<a href="${data[i]['avatar_url']}">` +
                                 `<img width="64" src="${data[i]['avatar_url']}" alt="GitHub img ${data[i]['login']}">` +
                                 `</a>` +
                                 `</td>`;
