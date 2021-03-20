@@ -3,11 +3,19 @@ class lab4 {
         console.log("Constructor lab4 run");
         this.GH_login = GH_login;
         this.GH_token = GH_token;
+        if (this.GH_token != '') {
+            this.headers = {
+                "Authorization": `Token ${this.GH_token}`
+            }
+        }
     }
     get() {
         let url = `https://api.github.com/users/${this.GH_login}`;
         console.log(`url = ${url}`);
-        fetch(url)
+        fetch(url, {
+                "method": "GET",
+                "headers": this.headers
+            })
             // JSON to JS object
             .then(response => response.json())
             // Save JS object
@@ -36,7 +44,10 @@ class lab4 {
                 let followers_url = this.data.followers_url;
                 console.log(`followers_url = ${followers_url}`);
 
-                fetch(followers_url)
+                fetch(followers_url, {
+                        "method": "GET",
+                        "headers": this.headers
+                    })
                     .then(response => response.json())
                     .then(data => {
                         if (data.message) {
@@ -73,7 +84,10 @@ class lab4 {
             .then(() => {
                 let repos_url = this.data.repos_url;
                 console.log(`repos_url = ${repos_url}`);
-                fetch(repos_url)
+                fetch(repos_url, {
+                        "method": "GET",
+                        "headers": this.headers
+                    })
                     .then(response => response.json())
                     .then(data => {
                         if (data.message) {
