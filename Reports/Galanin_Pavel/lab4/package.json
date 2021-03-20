@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "dev": "live-server"
+        "dev": "live-server public"
     },
     "dependencies": {
         "live-server": "^1.2.1"
