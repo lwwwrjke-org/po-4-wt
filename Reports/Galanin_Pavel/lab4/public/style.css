@@ -1,0 +1,4 @@
+.add_star::after {
+    content: " *";
+    color: #DB473F;
+}
