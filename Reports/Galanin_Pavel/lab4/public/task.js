@@ -7,7 +7,8 @@ class lab4 {
         let url = `https://api.github.com/users/${this.GH_login}`;
         console.log(url);
         fetch(url)
-            .then(response => { console.log(response) });
+            .then(response => response.json())
+            .then(data => { console.log(data) })
     }
 }
 
