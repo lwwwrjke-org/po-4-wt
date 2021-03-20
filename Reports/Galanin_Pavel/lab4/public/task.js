@@ -1,13 +1,15 @@
 class lab4 {
-    constructor() {
+    constructor(GH_login = "") {
         console.log("Constructor lab4 run");
+        this.GH_login = GH_login;
     }
-    alert_fetch() {
-        fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
-            .then(response => response.json())
-            .then(commits => alert(commits[0].author.login));
+    get() {
+        let url = `https://api.github.com/users/${this.GH_login}`;
+        console.log(url);
+        fetch(url)
+            .then(response => { console.log(response) });
     }
 }
 
-let obj = new lab4();
-obj.alert_fetch();
+let obj = new lab4('Pavel-Innokentevich-Galanin');
+obj.get();
