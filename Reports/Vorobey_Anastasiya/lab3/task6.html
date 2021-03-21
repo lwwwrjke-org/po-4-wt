@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        Функция принимает на вход массив или объект, подобный массиву. Функция возвращает массив, полученный из аргумента удалением триплов. Триплом будем считать элемент, которые повторяется 3 и более раз.
+        <p> 
+        Пример:<br>
+          <code>var a = f([1, 2, 1, 3, 1, 3, 1, 4]); // a = [2, 3, 4]</code><br>
+          <code>var b = f("mama ramu"); // b = [" ", "r", "u"];</code>
+        </p>
+        <p> Пусть даны :<br> Массив: [1, 2, 3, 4, 5, 2, 2, 3, 3, 4];<br>
+            Строка: aaaaanbbbbbccccefgdh;<br>
+            Словарь: { 0: "a", 1: "a", 2: "a", 3: "b", 4: "b"}.</p>
+      <center>
+          <button class="btn btn--primary button">Поиск</button>
+          <div>
+            <span id="info"></span>
+          </div>
+      </center>
+      <a class="btn" href="index.html">Главная</a>
+      <script src="task6.js"></script>
+</body>
+</html>

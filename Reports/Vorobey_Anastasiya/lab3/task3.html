@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <p>
+        Создать функцию createMatrix(), принимающую количество строк и количество столбцов матрицы и возвращающее матрицу (массив массивов), заполненную случайными числами в диапазоне от 0 до 100. Написать функцию, выполняющую суммирование двух таких «матриц»
+      </p>
+      <center> 
+        <h4>Размер матриц:</h4>
+          <p><input  type="number" placeholder="Количество строк" id="rows"></p>
+          <p><input  type="number" placeholder="Количество столбцов" id="cols"></p>
+          <p><button class="btn btn--primary button">Посчитать</button></p>
+          <div class="result" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div style="text-align: left;">
+             <h5>Первая матрица:</h5>
+             <span id="matr1"></span>
+            </div>
+            <div style="margin: 0 20px 20px; text-align: left;">
+             <h5>Вторая матрица:</h5>
+             <span id="matr2"></span>
+            </div>
+            <div style="text-align: left;">
+             <h5>Сумма:</h5>
+             <span id="matrSum"></span>
+            </div>
+          </div>
+      </center>
+      <div>
+        <span id="info"></span>
+      </div>
+    <a class="btn" href="index.html">Главная</a>
+  <script src="task3.js"></script>
+</body>
+</html>
