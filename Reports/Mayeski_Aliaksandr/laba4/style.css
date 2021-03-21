@@ -1,0 +1,43 @@
+.main__profile-key{
+    padding: 0;
+    margin: 0;
+}
+
+.main__profile-img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 45%;
+}
+
+.main__profile-name{
+    font-size: 26px;
+    line-height: 1.25;
+}
+.main__profile-username{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: gray;
+}
+
+.main__profile-followers{
+    font-size: 14px;
+    line-height: 1.5;
+    color: grey;
+}
+
+.table11 td{
+    border: solid grey;
+    width: 340px;
+    height: 70px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #3f51b5
+}
+.main__profile-repos_Show{
+    justify-content: center;
+    width: 100%;
+}
