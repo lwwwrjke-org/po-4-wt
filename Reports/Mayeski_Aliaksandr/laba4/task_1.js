@@ -25,10 +25,9 @@ const showData = () => {
 
 
         var HTML = "<table class=\"table11 \">";
-        for (let i = 0; i < res.data1.length; i+=2) {
+        for (let i = 0; i < res.data1.length; i++) {
             HTML += `<tr>`
-            HTML += `<td> ${res.data1[i].name} <br><br> ${res.data1[i].description}</td>
-            <td> ${res.data1[i + 1].name} <br><br> ${res.data1[i+1].description}</td>`   
+            HTML += `<td> ${res.data1[i].name} <br><br> ${res.data1[i].description}</td>` 
             HTML += `</tr>`  
         }
         HTML += "</table>";
