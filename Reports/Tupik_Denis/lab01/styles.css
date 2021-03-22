@@ -1,0 +1,48 @@
+.forma{
+  background-color: white;
+  border-top: 15px solid #b113d4;
+  margin: -125px 400px 0px 400px;
+  padding: 5px 30px 15px 25px;
+  line-height: 25px;
+}
+
+.head{
+  background-color: purple;
+  height: 250px;
+}
+
+.request{
+  color: red;
+}
+
+body{
+  background-color: #E6B9E5;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.send{
+  background-color: #00BFFF;
+  color: white;
+  font-size: 18px;
+  height: 40px;
+  padding: 8px 25px 10px 25px;
+}
+
+.google_down{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  opacity: 0.6;
+  color: gray;
+  font-size: 20px;
+}
+
+input, select{
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+fieldset {
+    border: none;
+}

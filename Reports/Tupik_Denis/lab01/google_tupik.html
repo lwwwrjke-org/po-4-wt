@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Google Forms</title>
+  </head>
+  <body>
+      <div class="head"></div>
+      <div class="forma">
+        <h1>Password Request Form</h1>
+        <p>Please, add some information about you!) <a href="#">Change account</a></p>
+        <p class="request">*Must</p>
+        <form action="#" method="post">
+          <h2>Please fill your name<font color="red">*</font></h2>
+            <input сlass="field" type="text" name="name" placeholder="Your name">
+          <h2>What color you like<font color="red">*</font></h2>
+            <input type="radio" name="color" value="Green"> Green<br>
+            <input type="radio" name="color" value="Red"> Red<br>
+            <input type="radio" name="color" value="Blue"> Blue<br>
+            <input type="radio" name="color" value="white"> White<br>
+            <input type="radio" name="color" value="black"> Black<br>
+            <input type="radio" name="color" value="other"> Other: 
+            <input type="text" сlass="field" name="color_other"><br>
+          <h2>What town you like more<font color="red">*</font></h2>
+            <select name="towns" сlass="field">
+	            <option>Brest</option>
+	            <option>Gomel</option>
+	            <option>Grodno</option>
+	            <option>Minsk</option>
+              <option>Vitebsk</option>
+	            <option>Gomel</option>
+            </select>
+          <h2>Please, describe (at least 50 symbols on symbols) your favourite programming language<font color="red">*</font></h2>
+            <input сlass="field" type="text" name="description" placeholder="Your description" minlength="50" size="95">
+          <h2>What years of education you really like <font color="red">*</font></h2>
+            <input type="checkbox" name="first" value="first"> First<br>
+            <input type="checkbox" name="second" value="second"> Second<br>
+            <input type="checkbox" name="third" value="third"> Third<br>
+            <input type="checkbox" name="fourth" value="fourth"> Fourth<br>
+          <h2>Please send me any image<font color="red">*</font></h2>
+          <input type="image" name="image" id="image" value="">
+          <label for="image" style="color:blue; cursor:pointer;" required> ADD FILE </label>
+          <h2>Set last Monday Monday<font color="red">*</font></h2>
+            <input type="date" сlass="field" name="date"><br><br>
+          <input class="send" type="submit" name="btn-scs" value="SUBMIT">
+        </form>
+      </div>
+      <div class="google_down" align="center"> <b>Google</b> Forms</div>
+  </body>
+</html>
