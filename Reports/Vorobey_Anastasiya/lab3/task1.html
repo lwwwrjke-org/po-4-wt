@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <p>
+        Напишите функцию range(), принимающую два аргумента: начало и конец диапазона, и
+        возвращающую массив, который содержит все числа из диапазона, включая начальное и конечное. Третий
+        необязательный аргумент функции range() – шаг для построения массива. Убедитесь, что функция range()
+        работает с отрицательным шагом: например, range(5, 2, -1) возвращает [5, 4, 3, 2].
+      </p>
+    <center>
+           Начало диапазона: <br>
+          <input  type="number" id="first" required />
+          <p>
+           Конец диапазона:<br>
+          <input  type="number" id="second" required />
+          </p>
+           Шаг:<br>
+          <input  type="number" id="step" />
+          <p><button class="btn btn--primary button">Результат</button></p>
+          <div>
+            <span id="massiv"></span>
+          </div>
+    </center>
+    <a class="btn" href="index.html">Главная</a>
+    <script src="task1.js"></script>
+</body>
+</html>
