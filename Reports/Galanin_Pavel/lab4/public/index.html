@@ -14,24 +14,26 @@
 
 <body>
     <div class="lab4__container">
-        <hr />
+        <!-- b-login -->
+        <div class="lab4__b-login">
+            <div class="mb-3">
+                <label class="form-label add_star">GitHub login</label>
+                <input type="text" class="form-control" id="lab4__login-input" name="GH_login"
+                    placeholder="GitHub login" required />
+                <div class="form-text">For example: Pavel-Innokentevich-Galanin</div>
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label add_star">GitHub login</label>
-            <input type="text" class="form-control" id="lab4__login-input" name="GH_login" placeholder="GitHub login"
-                required />
-            <div class="form-text">For example: Pavel-Innokentevich-Galanin</div>
+            <div class="mb-3">
+                <label class="form-label">GitHub token</label>
+                <input type="text" class="form-control" id="lab4__token-input" name="GH_token"
+                    placeholder="GitHub token" />
+                <div class="form-text">For example: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+            </div>
+
+            <button class="b-login__button btn btn-success" id="lab4__button">Get info</button>
         </div>
+        <!-- end b-login -->
 
-        <div class="mb-3">
-            <label class="form-label">GitHub token</label>
-            <input type="text" class="form-control" id="lab4__token-input" name="GH_token" placeholder="GitHub token" />
-            <div class="form-text">For example: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-        </div>
-
-        <button class="btn btn-success" id="lab4__button">Start lab4</button>
-
-        <hr />
         <!-- b-profile -->
         <div class="lab4__b-profile">
             <div class="b-profile__img" id="GH__avatar_url">

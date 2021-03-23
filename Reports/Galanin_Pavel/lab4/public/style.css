@@ -9,6 +9,21 @@
     margin: 0 auto;
 }
 
+
+/* b-login */
+.lab4__b-login
+{
+    background-color: #f8f9fa;
+    padding: 8px 8px;
+}
+
+.b-login__button
+{
+    width: 100%;
+}
+/* end b-login */
+
+
 /* b-profile */
 .lab4__b-profile
 {
@@ -47,6 +62,7 @@
     color: #586069
 }
 /* end b-profile */
+
 
 /* b-stats */
 .lab4__b-stats
