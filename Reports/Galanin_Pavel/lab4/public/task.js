@@ -13,9 +13,9 @@ class lab4 {
         let url = `https://api.github.com/users/${this.GH_login}`;
         console.log(`url = ${url}`);
         fetch(url, {
-                "method": "GET",
-                "headers": this.headers
-            })
+            "method": "GET",
+            "headers": this.headers
+        })
             // JSON to JS object
             .then(response => response.json())
             // Save JS object
@@ -29,14 +29,31 @@ class lab4 {
                 console.log(this.data);
             })
             .then(() => {
-                let img_url = this.data.avatar_url;
-                let html = `<img width="200px" src="${img_url}" alt="" />`;
-                if(document.getElementById('lab4__profile-img'))
-                {
-                    document.getElementById('lab4__profile-img').innerHTML = html;
+                // b-profile
+                let avatar_url_html_class = 'GH__avatar_url';
+                if (document.getElementById(avatar_url_html_class)) {
+                    document.getElementById(avatar_url_html_class).innerHTML
+                        = `<img src="${this.data['avatar_url']}" alt="" />`;
                 } else {
-                    alert(`Not found id="lab4__profile-img"`);
+                    console.error(`Not found id="${avatar_url_html_class}"`);
                 }
+
+                let name_html_class = 'GH__name';
+                if (document.getElementById(name_html_class)) {
+                    document.getElementById(name_html_class).innerHTML
+                        = this.data['name'];
+                } else {
+                    console.error(`Not found id="${name_html_class}"`);
+                }
+
+                let login_html_class = 'GH__login';
+                if (document.getElementById(login_html_class)) {
+                    document.getElementById(login_html_class).innerHTML
+                        = this.data['login'];
+                } else {
+                    console.error(`Not found id="${login_html_class}"`);
+                }
+                // end b-profile
             })
             // Get info about number followers
             .then(() => {
@@ -55,9 +72,9 @@ class lab4 {
                 console.log(`followers_url = ${followers_url}`);
 
                 fetch(followers_url, {
-                        "method": "GET",
-                        "headers": this.headers
-                    })
+                    "method": "GET",
+                    "headers": this.headers
+                })
                     .then(response => response.json())
                     .then(data => {
                         if (data.message) {
@@ -95,9 +112,9 @@ class lab4 {
                 let repos_url = this.data.repos_url;
                 console.log(`repos_url = ${repos_url}`);
                 fetch(repos_url, {
-                        "method": "GET",
-                        "headers": this.headers
-                    })
+                    "method": "GET",
+                    "headers": this.headers
+                })
                     .then(response => response.json())
                     .then(data => {
                         if (data.message) {
@@ -132,7 +149,7 @@ class lab4 {
 }
 
 if (document.getElementById('lab4__button') != undefined) {
-    document.getElementById('lab4__button').onclick = function() {
+    document.getElementById('lab4__button').onclick = function () {
         //get login
         let GH_login = '';
         if (document.getElementById('lab4__login-input') != undefined) {

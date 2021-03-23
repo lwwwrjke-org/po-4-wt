@@ -2,3 +2,44 @@
     content: " *";
     color: #DB473F;
 }
+
+.lab4__container
+{
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.lab4__b-profile
+{
+    width: 100%;
+    display: flex;
+}
+
+.b-profile__img
+{
+    width: 64px;
+    margin: 0 8px;
+}
+
+.b-profile__img img
+{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px lightgray;
+}
+
+.b-profile__info
+{
+    width: 100%;
+}
+
+.b-profile__name
+{
+    height: 50%;
+}
+
+.b-profile__login
+{
+    height: 50%;
+    color: #586069
+}
