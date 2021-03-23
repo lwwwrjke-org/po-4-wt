@@ -1,3 +1,18 @@
+body
+{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:hover
+{
+    color:#0a58ca;
+}
+
 .add_star::after {
     content: " *";
     color: #DB473F;
@@ -20,6 +35,38 @@
 .b-login__button
 {
     width: 100%;
+    color: white;
+    background-color: #157347;
+    border: 1px solid #157347;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.b-login__button:hover
+{
+    color:#157347;
+    background-color: transparent;
+}
+
+.b-login__label
+{
+    padding: 8px 0;
+    display: block;
+}
+
+.b-login__input
+{
+    display: block;
+    width: calc(100% - 8px * 2);
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: 8px;
+}
+
+.b-login__text
+{
+    color: #6c757d;
+    margin: 8px 0;
 }
 /* end b-login */
 
