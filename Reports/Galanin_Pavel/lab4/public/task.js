@@ -1,19 +1,19 @@
 function lab4(GH_login = "", GH_token = "") {
     let url = `https://api.github.com/users/${GH_login}`;
     fetch(url)
-        .then(response => response.json())
-        .then((data) => {
-            if (data.message) {
-                alert(data.message);
+        .then(responseUsers => responseUsers.json())
+        .then((dataUsers) => {
+            if (dataUsers['message']) {
+                alert(dataUsers['message']);
             }
-            return data;
+            return dataUsers;
         })
-        .then((data) => {
+        .then((dataUsers) => {
             // b-profile
             let avatar_url_html_id = 'GH__avatar_url';
             if (document.getElementById(avatar_url_html_id)) {
                 document.getElementById(avatar_url_html_id).innerHTML
-                    = `<img src="${data['avatar_url']}" alt="" />`;
+                    = `<img src="${dataUsers['avatar_url']}" alt="" />`;
             } else {
                 console.error(`Not found id="${avatar_url_html_id}"`);
             }
@@ -21,7 +21,7 @@ function lab4(GH_login = "", GH_token = "") {
             let name_html_id = 'GH__name';
             if (document.getElementById(name_html_id)) {
                 document.getElementById(name_html_id).innerHTML
-                    = data['name'];
+                    = dataUsers['name'];
             } else {
                 console.error(`Not found id="${name_html_id}"`);
             }
@@ -29,49 +29,49 @@ function lab4(GH_login = "", GH_token = "") {
             let login_html_id = 'GH__login';
             if (document.getElementById(login_html_id)) {
                 document.getElementById(login_html_id).innerHTML
-                    = data['login'];
+                    = dataUsers['login'];
             } else {
                 console.error(`Not found id="${login_html_id}"`);
             }
             // end b-profile
-            return data;
+            return dataUsers;
         })
-        .then((data) => {
+        .then((dataUsers) => {
             // b-stats
             let followers_html_id = 'GH__followers';
             if (document.getElementById(followers_html_id) != undefined) {
-                document.getElementById(followers_html_id).innerHTML = data['followers'];
+                document.getElementById(followers_html_id).innerHTML = dataUsers['followers'];
             } else {
                 console.error(`Not found id="${followers_html_id}"`);
             }
 
             let following_html_id = 'GH__following';
             if (document.getElementById(following_html_id) != undefined) {
-                document.getElementById(following_html_id).innerHTML = data['following'];
+                document.getElementById(following_html_id).innerHTML = dataUsers['following'];
             } else {
                 console.error(`Not found id="${following_html_id}"`);
             }
             // end b-stats
-            return data;
+            return dataUsers;
         })
         // Get info about followers
-        .then((data) => {
-            fetch(data['followers_url'])
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message) {
-                        alert(data.message);
+        .then((dataUsers) => {
+            fetch(dataUsers['followers_url'])
+                .then(responseFollowersUrl => responseFollowersUrl.json())
+                .then(dataFollowersUrl => {
+                    if (dataFollowersUrl['message']) {
+                        alert(dataFollowersUrl['message']);
                     }
 
                     let html = '';
-                    for (let i = 0; i < data.length; i++) {
+                    for (let i = 0; i < dataFollowersUrl.length; i++) {
                         html +=
                             `<div class="b-followers__b-follower">`
                             + `<div class="b-followers__img">`
-                            + `<img src="${data[i]['avatar_url']}" alt="${data[i]['login']}" />`
+                            + `<img src="${dataFollowersUrl[i]['avatar_url']}" alt="${dataFollowersUrl[i]['login']}" />`
                             + `</div>`
                             + `<div class="b-followers__info">`
-                            + `<a href="${data[i]['html_url']}">${data[i]['login']}</a>`
+                            + `<a href="${dataFollowersUrl[i]['html_url']}">${dataFollowersUrl[i]['login']}</a>`
                             + `</div>`
                             + `</div>`
                             + `</div>`;
@@ -84,29 +84,28 @@ function lab4(GH_login = "", GH_token = "") {
                         console.error(`Not found id="${followers_html_id}"`);
                     }
 
-                    return data;
+                    return dataFollowersUrl;
                 })
-            return data;
+            return dataUsers;
         })
         //Get info about repositories
-        .then((data) => {
-            let repos_url = data.repos_url;
-            fetch(repos_url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message) {
-                        alert(data.message);
+        .then((dataUsers) => {
+            fetch(dataUsers['repos_url'])
+                .then(responseReposUrl => responseReposUrl.json())
+                .then(dataReposUrl => {
+                    if (dataReposUrl['message']) {
+                        alert(dataReposUrl['message']);
                     }
 
                     let html = '';
-                    for (let i = 0; i < data.length; i++) {
+                    for (let i = 0; i < dataReposUrl.length; i++) {
                         html +=
                             `<div class="b-repos__repository">`
                             + `<div class="b-repos__name">`
-                            + `<a href="${data[i]['html_url']}">${data[i]['name']}</a>`
+                            + `<a href="${dataReposUrl[i]['html_url']}">${dataReposUrl[i]['name']}</a>`
                             + `</div>`
                             + `<div class="b-repos__description">`
-                            + `${data[i]['description'] == null ? '' : data[i]['description']}`
+                            + `${dataReposUrl[i]['description'] == null ? '' : dataReposUrl[i]['description']}`
                             + `</div>`
                             + `</div>`;
                     }
@@ -118,8 +117,9 @@ function lab4(GH_login = "", GH_token = "") {
                         alert(`Not found id="${repos_html_id}"`);
                     }
 
-                    return data;
+                    return dataReposUrl;
                 })
+            return dataUsers;
         });
 }
 
