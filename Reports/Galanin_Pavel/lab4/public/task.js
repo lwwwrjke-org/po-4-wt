@@ -28,6 +28,16 @@ class lab4 {
                 console.log(`this.data = ${this.data} =`);
                 console.log(this.data);
             })
+            .then(() => {
+                let img_url = this.data.avatar_url;
+                let html = `<img width="200px" src="${img_url}" alt="" />`;
+                if(document.getElementById('lab4__profile-img'))
+                {
+                    document.getElementById('lab4__profile-img').innerHTML = html;
+                } else {
+                    alert(`Not found id="lab4__profile-img"`);
+                }
+            })
             // Get info about number followers
             .then(() => {
                 let followers = this.data.followers;
