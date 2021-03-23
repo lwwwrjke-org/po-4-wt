@@ -9,10 +9,12 @@
     margin: 0 auto;
 }
 
+/* b-profile */
 .lab4__b-profile
 {
     width: 100%;
     display: flex;
+    margin: 8px 0;
 }
 
 .b-profile__img
@@ -43,3 +45,18 @@
     height: 50%;
     color: #586069
 }
+/* end b-profile */
+
+/* b-stats */
+.lab4__b-stats
+{
+    margin: 8px 0;
+}
+
+.b-stats__followers,
+.b-stats__following,
+.b-stats__stars
+{
+    font-weight: bold;
+}
+/* end b-stats */

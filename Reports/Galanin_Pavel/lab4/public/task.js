@@ -55,16 +55,22 @@ class lab4 {
                 }
                 // end b-profile
             })
-            // Get info about number followers
             .then(() => {
-                let followers = this.data.followers;
-                console.log(`followers = ${followers}`);
-
-                if (document.getElementById('lab4__number_followers') != undefined) {
-                    document.getElementById('lab4__number_followers').innerHTML = `Number followers: ${followers}`;
+                // b-stats
+                let followers_html_id = 'GH__followers';
+                if (document.getElementById(followers_html_id) != undefined) {
+                    document.getElementById(followers_html_id).innerHTML = this.data['followers'];
                 } else {
-                    alert(`Not found id="lab4__number_followers"`);
+                    console.error(`Not found id="${followers_html_id}"`);
                 }
+
+                let following_html_id = 'GH__following';
+                if (document.getElementById(following_html_id) != undefined) {
+                    document.getElementById(following_html_id).innerHTML = this.data['following'];
+                } else {
+                    console.error(`Not found id="${following_html_id}"`);
+                }
+                // end b-stats
             })
             // Get info about followers
             .then(() => {
