@@ -29,16 +29,17 @@ function range()
         }
         let arr = [];
         
-        for (i = start; i <= end; i += step){
-            arr.push(i);
-        }
+        if (step > 0) {
+            for (let i = start; i <= end; i += step)
+              arr.push(i);
+          } else {
+            for (let i = start; i >= end; i += step)
+              arr.push(i);
+          }
         alert('Массив: [' + arr + ']');
         break;
 
     }
-        
-    
-
 }
 
 function Sort(){
@@ -153,7 +154,6 @@ function union(){
 
 }
 
-
 function flatten() {
     let res = flatten([1, [2], [3, [4]]]);
     alert(res);
@@ -193,15 +193,6 @@ function deliting_tripls(argument){
     return arr;
 
 }
-
-
-
-
-
-
-
-
-
 
 task1.addEventListener("click", function(){
     range();
