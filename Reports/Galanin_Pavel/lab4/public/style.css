@@ -25,7 +25,8 @@
 
 .b-profile__img img
 {
-    width: 100%;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     box-shadow: 0 0 0 1px lightgray;
 }
