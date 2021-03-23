@@ -120,26 +120,24 @@ class lab4 {
                             alert(data.message);
                         }
 
-                        console.log(data);
-
                         let html = '';
-
                         for (let i = 0; i < data.length; i++) {
-                            let name = `<td>` +
-                                `<a href="${data[i]['html_url']}">${data[i]['name']}</a>` +
-                                `</td>`;
-
-                            let description = `<td>` +
-                                `${data[i]['description']}` +
-                                `</td>`;
-
-                            html += `<tr>` + name + description + `</tr>`;
+                            html +=
+                                `<div class="b-repos__repository">`
+                                + `<div class="b-repos__name">`
+                                + `<a href="${data[i]['html_url']}">${data[i]['name']}</a>`
+                                + `</div>`
+                                + `<div class="b-repos__description">`
+                                + `${data[i]['description'] == null ? '' : data[i]['description']}`
+                                + `</div>`
+                                + `</div>`;
                         }
 
-                        if (document.getElementById('lab4__tbody-repos') != undefined) {
-                            document.getElementById('lab4__tbody-repos').innerHTML = html;
+                        let repos_html_id = 'GH__repos_url';
+                        if (document.getElementById(repos_html_id) != undefined) {
+                            document.getElementById(repos_html_id).innerHTML = html;
                         } else {
-                            alert(`Not found id="lab4__tbody-repos"`);
+                            alert(`Not found id="${repos_html_id}"`);
                         }
 
                     })
