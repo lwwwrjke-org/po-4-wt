@@ -77,3 +77,39 @@
     font-weight: bold;
 }
 /* end b-stats */
+
+/* b-followers */
+.b-followers__b-follower
+{
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.b-followers__img
+{
+    width: 64px;
+    margin: 0 8px;
+}
+
+.b-followers__img img
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px lightgray;
+}
+
+.b-followers__info
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.b-followers__info a
+{
+    text-decoration: none;
+    color: #586069;
+}
+/* end b-followers */

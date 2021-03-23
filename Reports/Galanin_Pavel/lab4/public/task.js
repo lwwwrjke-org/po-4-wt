@@ -74,10 +74,7 @@ class lab4 {
             })
             // Get info about followers
             .then(() => {
-                let followers_url = this.data.followers_url;
-                console.log(`followers_url = ${followers_url}`);
-
-                fetch(followers_url, {
+                fetch(this.data['followers_url'], {
                     "method": "GET",
                     "headers": this.headers
                 })
@@ -87,30 +84,26 @@ class lab4 {
                             alert(data.message);
                         }
 
-                        console.log(data)
-
                         let html = '';
-
                         for (let i = 0; i < data.length; i++) {
-                            let img = `<td>` +
-                                `<a href="${data[i]['avatar_url']}">` +
-                                `<img width="64" src="${data[i]['avatar_url']}" alt="GitHub img ${data[i]['login']}">` +
-                                `</a>` +
-                                `</td>`;
-
-                            let username = `<td>` +
-                                `<a href="${data[i]['html_url']}">${data[i]['login']}</a>` +
-                                `</td>`;
-
-                            html += `<tr>` + img + username + `</tr>`;
+                            html +=
+                                `<div class="b-followers__b-follower">`
+                                + `<div class="b-followers__img">`
+                                + `<img src="${data[i]['avatar_url']}" alt="${data[i]['login']}" />`
+                                + `</div>`
+                                + `<div class="b-followers__info">`
+                                + `<a href="${data[i]['html_url']}">${data[i]['login']}</a>`
+                                + `</div>`
+                                + `</div>`
+                                + `</div>`;
                         }
 
-                        if (document.getElementById('lab4__tbody-followers') != undefined) {
-                            document.getElementById('lab4__tbody-followers').innerHTML = html;
+                        let followers_html_id = 'GH__followers_url';
+                        if (document.getElementById(followers_html_id) != undefined) {
+                            document.getElementById(followers_html_id).innerHTML = html;
                         } else {
-                            alert(`Not found id="lab4__tbody-followers"`);
+                            console.error(`Not found id="${followers_html_id}"`);
                         }
-
                     })
             })
             //Get info about repositories
