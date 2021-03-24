@@ -18,16 +18,26 @@ const showData = () => {
     fetchUsers(inputValue.value).then((res) => {
         console.log(res)
 
-        nameContainer.innerHTML = `<span class="main__profile-value">${res.data.name}</span>`
+        if (res.data.name == null) { }
+        else {
+            nameContainer.innerHTML = `<span class="main__profile-value">${res.data.name}</span>`
+        }
+        
         unContainer.innerHTML = `<span class="main__profile-value">${res.data.login}</span>`
         followerContainer.innerHTML = `<span class="main__profile-value" >${res.data.followers}</span> followers`
-        imgContainer.innerHTML = `<img class="main__profile-img"  src="${res.data.avatar_url}"/>`
+        imgContainer.innerHTML = `<img class="main__profile-img" src="${res.data.avatar_url}"/>`
 
 
-        var HTML = "<table class=\"table11 \">";
-        for (let i = 0; i < res.data1.length; i++) {
+        var HTML = "<table class=\"table  \">";
+        for (let i = 0; i < res.data1.length && i < 6; i++) {
             HTML += `<tr>`
-            HTML += `<td> ${res.data1[i].name} <br><br> ${res.data1[i].description}</td>` 
+            HTML += `<td> ${res.data1[i].name} <br><br>`
+            if (res.data1[i].description == null) {
+
+            }
+            else{
+                HTML += ` ${res.data1[i].description}</td>`
+            }
             HTML += `</tr>`  
         }
         HTML += "</table>";
