@@ -1,0 +1,84 @@
+body {
+    background: url(bg.jpg);
+    background-size: 100%;
+}
+
+.col1 {
+    vertical-align: top;
+}
+
+.btn {
+    font-size: 100%;
+    font-weight: 700;
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    text-shadow: #430552 -1px 1px, #4c0552 1px 1px, #470552 1px -1px, #490552 -1px -1px;
+    background: #3c0552 repeating-linear-gradient(135deg, #3c0552, #400552 10px, #8a16ad 10px, #8f16ad 20px, #3c0552 20px);
+    box-shadow:
+     inset -2px -2px rgba(0,0,0,.3),
+     inset 2px 2px rgba(255,255,255,.3);
+  }
+  .btn:hover {
+    text-shadow: #0175b1 -1px 1px, #0175b1 1px 1px, #0175b1 1px -1px, #0175b1 -1px -1px;
+    background: #0175b1 repeating-linear-gradient(135deg, #0175b1, #0175b1 10px, #8fd2f5 10px, #8fd2f5 20px, #0175b1 20px);
+  }
+
+.userInfoName {
+    font-family: Yu Gothic UI Semibold; 
+    font-size: 30px; 
+    color: black
+}
+
+.userInfoLogin {
+   font-size: 22px; 
+   line-height: 1.25; 
+   color: grey;
+}
+
+.mainImg {
+    padding: 50px;
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%; 
+}
+
+.text {
+    color: white;
+    text-shadow: 2px 2px black, 4px 4px white;
+    font-size: 60px;
+}
+
+.repo {
+    font-size: 13px;
+    color: black;
+}
+
+.lang {
+    font-size: 13px;
+    color: black;
+}
+
+.info {
+    padding-left: 50px;
+    font-size: 14px;
+    font-family:  Microsoft YaHei Light;
+    line-height: 1.5;
+    color: black;
+}
+
+.mainTable {
+    border-spacing: 18px 15px; /* Расстояние между ячейками */ 
+}
+
+.mainTable td{
+    background-color: rgba(255, 255, 255, 0.342);
+    border: solid rgb(189, 189, 189);
+    border-width: 1px;
+    border-radius: 8px;
+    width: 400px;
+    height: 110px;
+    font-size: 18px;
+    font-family: Arial;
+    color: #2a0f4e
+}
