@@ -1,7 +1,10 @@
 function flatten(obj) {
-    var str = obj.toString();
-    var arr = str.split(',');
+    // var str = obj.toString().split(',');
+    // var arr = str;
+    let arr = obj.flat(Infinity);
+
     console.log(arr);
+
     return arr;
 }
 
