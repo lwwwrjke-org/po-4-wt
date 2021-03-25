@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab4</title>
+</head>
+<body>
+    <center>
+        <input type="text" placeholder="Username" style="width: 25%;" id="search" value="NeitLC"><br><br>
+        <button class="btn-search" id="btn-search">Submit</button>
+    </center>
+    <hr>
+    <div id="view" class="container" style="display: none;">
+        <div class="box sidebar">
+            <p id="avatar-img"></p>
+            <p class="name"  id="name"></p>
+            <p class="login" id="login"></p>
+            <button class="btn-follow">Follow</button>
+            <button class="btn-follow" style="width: 10%;">...</button>
+            <p class="bio"  id="bio"></p>
+            <p class="followers" id="followers"></p>
+            <p class="text" id="company"></p>
+            <p class="text" id="location"></p>
+            <p class="text" id="email"></p>
+        </div>
+        <div class="box content" id="repo">
+        </div>
+    </div>
+    <script src="lab4.js"></script>
+</body>
+</html>
