@@ -1,0 +1,72 @@
+.input{
+    margin: 20px 45% 0 45%;
+}
+
+.repos{
+    margin: 0 0 0 30%;
+}
+
+th{
+    font-size: 20px;
+    width: 50%;
+    color: rgb(100, 101, 102);
+    font-weight: 600;
+    border: 2px solid #c1c1c1;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    width: 215%;
+    border-spacing: 20px;
+    margin: -15px 0px 0 0;
+}
+
+.searchButton{
+    margin: 5px 0 0 50px;
+    background-color: rgb(90, 146, 248);
+    color: white;
+    height: 31px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.profile{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-name{
+    font-size: 26px;
+    line-height: 1.25px;
+}
+
+.profile-uname{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5px;
+}
+
+.profile-sub{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.main__profile-img{
+    height: 250px;
+    border-radius: 50%;
+}
+
+.info{
+    margin: 100px 0 0 30px;
+    width: 35%;
+    display: flex; 
+}
+
+.description{
+    font-size: 15px;
+    font-weight: 500;
+}
