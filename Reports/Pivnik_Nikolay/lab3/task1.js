@@ -1,23 +1,20 @@
 function range (leftNumber,rightNumber,step){
-  if( leftNumber >= rightNumber){
-    alert("Некорректный ввод данных! (левое значение больше правого!)" );
+  if( (leftNumber <= rightNumber && step <=0) || (leftNumber >= rightNumber && step >=0)){
+    alert("Некорректный ввод данных! " );
     return 0;
   }
 
-  if( step == 0){
-    alert("Некорректный ввод данных! (шаг не может быть равен нулю)" );
-    return 0;
-  }
 
   var array = new Array();
 
 
-  if (step > 0){
-      for(leftNumber ; leftNumber <= rightNumber; leftNumber+=step)
+  if (step < 0){
+      step =+ step;
+      for(leftNumber ; leftNumber >= rightNumber; leftNumber+=step)
       array.push(leftNumber);
     }else {
-      for(rightNumber ; rightNumber >= leftNumber; rightNumber+= step)
-      array.push(rightNumber);
+      for(leftNumber ; leftNumber <= rightNumber; leftNumber+= step)
+      array.push(leftNumber);
     }
 
 
