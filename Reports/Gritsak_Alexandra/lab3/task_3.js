@@ -1,40 +1,49 @@
 function task_3(){
-    function create_matrix (row, column){
-        if (row <= 0 || column <= 0){ //проверка на корректность ввода данных
-            console.log ('Неккоректный ввод данных!!Попробуйте снова:)');
-        }
-        else {
-            let matrix = [];
-            for (let i=0; i<row; i++){
-                matrix [i]=[];
-                for (let j=0; j<column; j++){
-                    matrix [i] [j] = Math.floor(Math.random() * 100);
-                }
+function create_matrix(rows, cols) { // генерируем матрицу, содержащую рандомные числа
+        let array = [];
+        for (let i = 0; i < rows; i++) {
+            array[i] = [];
+            for (let j = 0; j < cols; j++) {
+                array[i][j] = Math.round(Math.random() * 100);
             }
-            return matrix;
         }
+        return array;
     }
 
-    function sum_matrix(a,b){ //функция суммирования
-        if (a.length!=b.length || a[0].length!=b[0].length ){
-            console.log ("Матрицы не равны, суммирование невозможно.");
-        }
-        else {
-            let array=[]
-            for (let i=0;i<a.length;i++){
-                c [i]=[];
-                 for (let j=0; j<a[0].length; j++){
-                 array [i] [j] = a[i][j]+b[i][j];
+    function print_matrix(array, rows, cols) { //вывод матрицы
+        let str = "";
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                str += `${array[i][j]}` + " ";
             }
-    }
-    return array;
+            str += "\n";
         }
-        
+        return str;
     }
 
-    let matrix1 = create_matrix(1, 5);
-    let matrix2 = create_matrix(1, 5);
-    console.log (matrix1, matrix2);
-    console.log (sum_matrix (matrix1, matrix2));
-    return 0;
-}
+    let rows1 = prompt("Введите количество строк 1-ой матрицы: ");
+    let cols1 = prompt("Введите количество столбцов 1-ой матрицы: ");
+    let rows2 = prompt("Введите количество строк 2-ой матрицы: ");
+    let cols2 = prompt("Введите количество столбцов 2-ой матрицы: ");
+
+    let matrix1  = create_matrix(rows1, cols1);
+    alert("Первая матрица: \n" + print_matrix(matrix1, rows1, cols1));
+
+    let matrix2 = create_matrix(rows2, cols2);
+    alert( "Вторая матрица: \n" + print_matrix(matrix2, rows2, cols2));
+    
+    if ((cols1 == cols2) && (rows1 == rows2)) { //проверка условия сложения матриц
+        let sum = [];
+        for (let i = 0; i < rows1; i++) {
+            sum[i] = [];
+            for (let j = 0; j < cols1; j++) {
+                sum[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+    
+        let summ = print_matrix(sum, rows1, cols2);
+        alert("Результат суммирования: \n" +  print_matrix(sum, rows1, rows2) );
+    } else {
+        alert("Матрицы не могут быть сложены! ");
+    }
+} 
