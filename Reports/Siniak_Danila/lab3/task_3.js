@@ -52,5 +52,4 @@ function summ(nr, nc){
 	}
 	alert("SumMatrix"); alert(MatrixForPrint(arr, nr));
 }
- alert("SumMatrix",summ(a,b));
 }
