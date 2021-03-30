@@ -1,11 +1,14 @@
-function TASK_3()
-{
-    function randomInteger(min, max) {
-        var max =Math.floor(Math.random() * 50);
-        rand = Math.round(max);
-        return rand;
-    }
-
+function TASK_3(){
+    while(1){
+    
+    var a = prompt("Введите количество строк: "); 
+    if(isNaN(a)){ alert("Неверные данные"); throw "Error"; }
+    a = Number.parseInt(a);
+    
+    var b = prompt("Введите количество столбцов: "); 
+    if(isNaN(b)){ alert("Неверные данные"); throw "Error"; }
+    b = Number.parseInt(b);
+    
     function MatrixForPrint(matr, rows) {
         let str = "[";
         for(i = 0; i < rows; i++) {
@@ -17,39 +20,44 @@ function TASK_3()
         str += "]";
         return str;
     }
-
-    function createMatrix(rows, columns) {
-        var a = [];
-        for (var i = 0; i < rows; i++) {
-            var b = [];
-            for (var j = 0; j < columns; j++) {
-                b.push(randomInteger(0, 10));
-            }
-            a.push(b);
-        }
-        alert(MatrixForPrint(a,rows));
-    }
-
-    createMatrix(5,5);
     
-function summ(nr, nc){
-	var arr1 = [];
-	var arr2 = [];
-	for(var i = 0; i < nr; i++){
-		arr1[i] = [];
-		arr2[i] = [];
-		for(var j = 0; j < nc; j++){
-			arr1[i][j] = Math.floor(Math.random()*100);
-			arr2[i][j] = Math.floor(Math.random()*100);
-		}
-	}
-	var arr = [];
-	for(var i = 0; i < nr; i++){
-		arr[i] = [];
-		for(var j = 0; j < nc; j++){
-          	arr[i][j] = arr1[i][j] + arr2[i][j];
-		}
-	}
-	alert("SumMatrix"); alert(MatrixForPrint(arr, nr));
-}
-}
+    function createMatrix(nrow, ncol){
+        var A = [];
+        for(var i = 0; i < nrow; i++){
+            A[i] = [];
+            for(var j = 0; j < ncol; j++){
+                A[i][j] = Math.floor(Math.random()*100);
+            }
+        }
+        alert(MatrixForPrint(A, nrow));
+    }
+    createMatrix(a, b);
+    
+    function summ(nr, nc){
+        var arr1 = [];
+        var arr2 = [];
+        for(var i = 0; i < nr; i++){
+            arr1[i] = [];
+            arr2[i] = [];
+            for(var j = 0; j < nc; j++){
+                arr1[i][j] = Math.floor(Math.random()*100);
+                arr2[i][j] = Math.floor(Math.random()*100);
+            }
+        }
+        alert("First Matrix"); alert(MatrixForPrint(arr1, nr));
+        alert("Second Matrix"); alert(MatrixForPrint(arr2, nr));
+        var arr = [];
+        for(var i = 0; i < nr; i++){
+            arr[i] = [];
+            for(var j = 0; j < nc; j++){
+                  arr[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        alert("SumMatrix"); alert(MatrixForPrint(arr, nr));
+        
+    }
+    summ(a, b);
+    break;
+    
+    }
+    } 
