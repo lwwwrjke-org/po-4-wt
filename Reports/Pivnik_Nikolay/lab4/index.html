@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="SHORTCUT ICON" href="gitHub_logo.jpg" type="image/x-icon">
+    <link href = "styles.css" rel="stylesheet" type ="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+</head>
+<body>
+    
+    <div class = "blockWithSearch">
+        <div class="child"> <img src="git_logo1.jpg" width="50px" height="50px"/> </div>
+        <div class="child"> <h1 id = "font">Web lab4 Pivnik </h1> </div>
+        <div class = "childInputUserName">  
+            <form  id ="searching" autocomplete="off">
+            <input  type="text" id = "search" class ="inputStyle" placeholder="Search for name..." 
+              onBlur="this.value=this.value.toUpperCase()" required  >  
+              <button id = 'search' class="searchButton">Search</button>
+            </form>
+        </div>
+
+
+    </div>
+    
+    
+    <div id= "avatar" class="avatar">  </div>
+    <div id = "overView" class="overView"> </div>
+    <div id = "repositories" class="repositories"> </div>
+    <div id = "projects" class="projects"> </div>
+    <div id = "packages" class="packages"> </div>
+    
+    <div id= "fullName" class="fullName">  </div>
+    <div id= "login" class="login">  </div>
+    <div id="classDivFollowButton" class="classDivFollowButton"> </div> 
+    <div id="classDivThreeDotsButton" class="classDivThreeDotsButton"></div>
+    <div id="bio" class="bio"></div>
+    <div id="statistic" class="statistic"></div>
+    <div id="location" class="location"></div>
+    <div id = "email" class="email"></div>
+    
+
+
+    <script type="text/javascript" src="js.js"></script>
+</body>
+</html>
