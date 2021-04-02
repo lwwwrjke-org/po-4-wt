@@ -1,0 +1,83 @@
+body {
+    background:rgb(241, 170, 64);
+    background-size: 100%;
+}
+
+.col1 {
+    vertical-align: top;
+}
+.search{
+    border-radius: 14px;
+    padding: 7px;
+    font-size: 60px;
+    text-shadow: 2px 2px black, 4px 4px white;
+}
+
+.button {
+    font-size: 100%;
+    font-weight: 700;
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    background: #e6851e ;
+     }
+ 
+
+.userInfoName {
+    font-family: Yu Gothic UI Semibold; 
+    font-size: 30px; 
+    color: black
+}
+
+.userInfoLogin {
+   font-size: 22px; 
+   line-height: 1.25; 
+   color: grey;
+}
+
+.mainImg {
+    padding: 50px;
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%; 
+}
+
+.text {
+    color: black;
+    text-shadow: 2px 2px black, 4px 4px white;
+    font-size: 60px;
+}
+
+.repo {
+    font-size: 13px;
+    color: black;
+}
+
+.lang {
+    font-size: 13px;
+    color: black;
+}
+
+.info {
+    padding-left: 50px;
+    font-size: 14px;
+    font-family:  Microsoft YaHei Light;
+    line-height: 1.5;
+    color: black;
+}
+
+.mainTable {
+    border-spacing: 18px 15px; /* Расстояние между ячейками */ 
+}
+
+.mainTable td{
+    background-color: rgba(255, 255, 255, 0.342);
+    border: solid rgb(189, 189, 189);
+    border-width: 1px;
+    border-radius: 8px;
+    width: 400px;
+    height: 110px;
+    font-size: 18px;
+    font-family: Arial;
+    color: #2a0f4e
+}
