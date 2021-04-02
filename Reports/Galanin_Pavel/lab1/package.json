@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "dev": "live-server src"
+    },
+    "dependencies": {
+        "live-server": "^1.2.1"
+    }
+}
