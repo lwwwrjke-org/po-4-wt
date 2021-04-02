@@ -5,6 +5,10 @@
 
 ## Дерево проекта
 
+```bash
+tree --charset ascii -I "node_modules"
+```
+
 ```
 .
 |-- README*.md          // Файл с информацией

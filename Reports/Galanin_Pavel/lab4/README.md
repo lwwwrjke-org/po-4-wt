@@ -3,7 +3,11 @@
 - [English](README.md)
 - [Русский](README-ru.md)
 
-## Дерево проекта
+## Project tree
+
+```bash
+tree --charset ascii -I "node_modules"
+```
 
 ```
 .
