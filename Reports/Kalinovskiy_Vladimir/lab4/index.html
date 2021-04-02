@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content = "width=device-width, initial-scale=1.0"> 
+<meta http-equiv="X-UA-Compatible" content="ie=edje">
+<title> Git API </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <h1 style="text-align: center;">
+        Github Search User App</h1>
+        <form id="myForm" autocomplete="off">
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" placeholder="Search Username" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block">
+                    Search User
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <table class="table table-borderless">
+            <div class="col-sm">
+            <td>
+            <p><div id="image"></div></p>
+            <div id="username"></div>
+            <div id="name"></div>
+            <div id="followers"></div>
+            </td>
+            </div>
+            <td>
+                <div class="col-sm" id="repp">
+                </div>
+            </td>
+
+        </table>
+    </div>
+</body>
+<script src="task.js"></script>
+</html>
