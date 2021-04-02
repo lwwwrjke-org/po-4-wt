@@ -1,11 +1,21 @@
-## Install npm packages
+## Дерево проекта
 
-```bash
-npm i
+```
+.
+|-- README*.md          // Information file
+|-- docker-compose.yml  // Docker settings
+|-- package.json        // Versions of packages to install
+`-- public              // Source code folder
 ```
 
-## Start server
+## Install packages (1 time)
 
 ```bash
-npm run dev
+sudo docker-compose up install
+```
+
+## Server start
+
+```bash
+sudo docker-compose run serve
 ```

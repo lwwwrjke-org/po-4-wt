@@ -1,0 +1,21 @@
+## Дерево проекта
+
+```
+.
+|-- README*.md          // Файл с информацией
+|-- docker-compose.yml  // Настройки Docker
+|-- package.json        // Версии пакетов для установки
+`-- public              // Папка с исходным кодом
+```
+
+## Установка пакетов (1 раз)
+
+```bash
+sudo docker-compose up install
+```
+
+## Запуск сервера
+
+```bash
+sudo docker-compose run serve
+```
