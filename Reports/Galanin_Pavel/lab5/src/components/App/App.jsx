@@ -19,6 +19,7 @@ class App extends React.Component {
             following: 0,
             stars: 0,
             location: "",
+            name: "",
         };
     }
 
@@ -36,6 +37,7 @@ class App extends React.Component {
                             following: result['following'],
                             starred_url: result['starred_url'],
                             location: result['location'],
+                            name: result['name'],
                         }
                     );
                     console.log(result);
@@ -47,43 +49,53 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <div className={styles.container}>
-                    {/* App__header */}
-                    <div className={styles.App__header}>
-                        <div>
-                            <img
-                                className={styles.header__img}
-                                src={this['state']['avatar_url']}
-                                alt={`${this.state.login} avatar_url`}
-                            />
+                <div className={styles.App__block}>
+                    {/* header */}
+                    <header>
+                        <div className={styles.App__b_profile}>
+                            <div className={styles.b_profile__b_avatar}>
+                                <img
+                                    className={styles.b_profile__img}
+                                    src={this['state']['avatar_url']}
+                                    alt={`${this.state.login} avatar_url`}
+                                />
+                            </div>
+                            <div className={styles.b_profile__b_info}>
+                                <div className={styles.b_profile__name}>
+                                    {this['state']['name']}
+                                </div>
+                                <div className={styles.b_profile__login}>
+                                    {this['state']['login']}
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <span className={styles.header__link}>
+                        <div className={styles.App__b_more_info}>
+                            <span className={styles.b_profile__link}>
                                 <FontAwesomeIcon icon={faUserFriends} />
-                                <span className={styles.header__value}>
+                                <span className={styles.b_profile__value}>
                                     {this['state']['followers']}
                                 </span>
                                 followers
                             </span>
-                            <span className={styles.header__link}>
-                                <span className={styles.header__value}>
+                            <span className={styles.b_profile__link}>
+                                <span className={styles.b_profile__value}>
                                     {this['state']['following']}
                                 </span>
                                 following
                             </span>
                         </div>
-                        <div>
-                            <span className={styles.header__link}>
+                        <div className={styles.App__b_more_info}>
+                            <span className={styles.b_profile__link}>
                                 <FontAwesomeIcon icon={faBuilding} /> {this['state']['company']}
                             </span>
                         </div>
-                        <div>
-                            <span className={styles.header__link}>
+                        <div className={styles.App__b_more_info}>
+                            <span className={styles.b_profile__link}>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
                             </span>
                         </div>
-                    </div>
-                    {/* end App__header */}
+                    </header>
+                    {/* end header */}
                 </div>
             </div>
         );
