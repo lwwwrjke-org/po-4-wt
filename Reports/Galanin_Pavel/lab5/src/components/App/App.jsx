@@ -1,21 +1,50 @@
-function App() {
-    function get_login(event) {
-        let login = event.target.value;
-        console.log(login);
-        get_fetch(login);
+import React from 'react';
+import styles from './App.module.css'
+
+class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            avatar_url: ""
+        };
     }
 
-    function get_fetch(login = '') {
+    componentDidMount() {
+        let login = 'Pavel-Innokentevich-Galanin';
         fetch(`https://api.github.com/users/${login}`)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(
+                (result) => {
+                    this.setState({ avatar_url: result['avatar_url'] });
+                    console.log(result);
+                }
+            );
+        console.log(this)
     }
 
-    return (
-        <div className="App">
-            <input type="text" placeholder="GitHub login" onInput={get_login} value="Pavel-Innokentevich-Galanin" />
-        </div>
-    );
+    render() {
+        return (
+            <div className="App">
+                <div className={styles.container}>
+
+
+                    {/* App__header */}
+                    <div className={styles.App__header}>
+                        <img
+                            className={styles.header__img}
+                            src={ this['state']['avatar_url'] }
+                            alt=""
+                        />
+                    </div>
+                    {/* end App__header */}
+
+
+                </div>
+            </div>
+        );
+    };
+    // end render()
 }
 
 export default App;

@@ -1,0 +1,20 @@
+.container
+{
+    max-width: 928px;
+    margin: 0 auto;
+}
+
+.App__header
+{
+    width: 100%;
+    padding: 16px 0;
+}
+
+.header__img
+{
+    background-color: rgba(0, 0,0, 0.1);
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid #e1e4e8;
+}
