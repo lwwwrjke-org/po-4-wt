@@ -18,3 +18,27 @@
     border-radius: 50%;
     border: 1px solid #e1e4e8;
 }
+
+.header__link
+{
+    text-decoration: none;
+    color: #586069;
+    font-size: 14px;
+}
+
+.header__link::after
+{
+    content: ' ';
+}
+
+.header__value
+{
+    font-weight: bold;
+    color: #24292e;
+}
+
+.header__value::after,
+.header__value::before
+{
+    content: ' ';
+}
