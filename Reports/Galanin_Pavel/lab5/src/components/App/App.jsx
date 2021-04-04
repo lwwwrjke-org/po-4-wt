@@ -14,12 +14,14 @@ class App extends React.Component {
         this.state = {
             login: 'Pavel-Innokentevich-Galanin',
             avatar_url: "",
-            company: "",
+            company: "Company",
+            created_at: null,
+            created_at__formated: '0000.00.00 00:00:00',
             followers: 0,
             following: 0,
             stars: 0,
-            location: "",
-            name: "",
+            location: "Location",
+            name: "Name",
         };
     }
 
@@ -33,6 +35,7 @@ class App extends React.Component {
                         {
                             avatar_url: result['avatar_url'],
                             company: result['company'],
+                            created_at: result['created_at'],
                             followers: result['followers'],
                             following: result['following'],
                             starred_url: result['starred_url'],
@@ -40,6 +43,25 @@ class App extends React.Component {
                             name: result['name'],
                         }
                     );
+
+                    // get formated created_at
+                    let obj = new Date(this['state']['created_at']);
+
+                    let year = obj.getFullYear();
+                    let month = obj.getMonth() + 1;
+                    let date = obj.getDate();
+
+                    let hours = obj.getHours();
+                    let minutes = obj.getMinutes();
+                    let seconds = obj.getSeconds();
+
+                    this.setState(
+                        {
+                            created_at__formated: `${year}.${month}.${date} ${hours}:${minutes}:${seconds}`,
+                        }
+                    );
+                    // end get formated created_at
+
                     console.log(result);
                 }
             );
@@ -57,7 +79,7 @@ class App extends React.Component {
                                 <img
                                     className={styles.b_profile__img}
                                     src={this['state']['avatar_url']}
-                                    alt={`${this.state.login} avatar_url`}
+                                    alt=""
                                 />
                             </div>
                             <div className={styles.b_profile__b_info}>
@@ -92,6 +114,11 @@ class App extends React.Component {
                         <div className={styles.App__b_more_info}>
                             <span className={styles.b_profile__link}>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
+                            </span>
+                        </div>
+                        <div className={styles.App__b_more_info}>
+                            <span className={styles.b_profile__link}>
+                                Created {this['state']['created_at__formated']}
                             </span>
                         </div>
                     </header>
