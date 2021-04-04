@@ -1,12 +1,11 @@
 function App() {
-    function hi()
-    {
-        alert("Hi!");
+    function get_login(event) {
+        console.log(event.target.value);
     }
 
     return (
         <div className="App">
-            <button onClick={hi}>Hello!</button>
+            <input type="text" placeholder="GitHub login" onInput={get_login} />
         </div>
     );
 }
