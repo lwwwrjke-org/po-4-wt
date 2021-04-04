@@ -1,7 +1,12 @@
 function App() {
+    function hi()
+    {
+        alert("Hi!");
+    }
+
     return (
         <div className="App">
-            Hello, world!
+            <button onClick={hi}>Hello!</button>
         </div>
     );
 }
