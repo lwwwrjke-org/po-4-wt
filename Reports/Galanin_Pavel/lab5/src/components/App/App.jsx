@@ -16,7 +16,6 @@ class App extends React.Component {
             avatar_url: "",
             company: "Company",
             created_at: null,
-            created_at__formated: '0000.00.00 00:00:00',
             followers: 0,
             following: 0,
             stars: 0,
@@ -28,12 +27,14 @@ class App extends React.Component {
                     description: 'Description 1',
                     created_at: null,
                     updated_at: null,
+                    pushed_at: null,
                 },
                 {
                     name: 'Name 2',
                     description: 'Description 2',
                     created_at: null,
                     updated_at: null,
+                    pushed_at: null,
                 }
             ],
         };
@@ -117,10 +118,23 @@ class App extends React.Component {
                             (this['state']['repos']).map(
                                 (obj, index) => (
                                     <div className={styles.b_repos__repo} key={index}>
-                                        <div>{obj['name']}</div>
-                                        <div>{obj['description']}</div>
-                                        <div>{this.get_formated_date(obj['created_at'])}</div>
-                                        <div>{this.get_formated_date(obj['updated_at'])}</div>
+                                        <div>
+                                            <a href={obj['svn_url']}>
+                                                {obj['name']}
+                                            </a>
+                                        </div>
+                                        <div className={styles.b_repos__description}>
+                                            {obj['description']}
+                                        </div>
+                                        <div className={styles.b_repos__time}>
+                                            Created at {this.get_formated_date(obj['created_at'])}
+                                        </div>
+                                        <div className={styles.b_repos__time}>
+                                            Updated At {this.get_formated_date(obj['updated_at'])}
+                                        </div>
+                                        <div className={styles.b_repos__time}>
+                                            Pushed At {this.get_formated_date(obj['pushed_at'])}
+                                        </div>
                                     </div>
                                 )
                             )
@@ -137,6 +151,7 @@ class App extends React.Component {
     componentDidMount() {
         // React run function componentDidMount automaticl on reload page
         //this.fetch_users();
+        //this.fetch_repos();
     }
     // end componentDidMount()
 
@@ -152,6 +167,7 @@ class App extends React.Component {
 
     start_function() {
         this.fetch_users();
+        this.fetch_repos();
     }
     // end start_function()
 
@@ -160,14 +176,14 @@ class App extends React.Component {
     {
         let obj = new Date(param_date);
         let year = obj.getFullYear();
-        let month = obj.getMonth() + 1;
-        let date = obj.getDate();
+        let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(obj);
+        let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(obj);
 
         let hours = obj.getHours();
         let minutes = obj.getMinutes();
         let seconds = obj.getSeconds();
 
-        return (<span>{year}.{month}.{date} {hours}:{minutes}:{seconds}</span>);
+        return (<span>{year}.{month}.{day} {hours}:{minutes}:{seconds}</span>);
     }
 
     fetch_users() {
@@ -192,6 +208,23 @@ class App extends React.Component {
             );
     }
     // end fetch_users()
+
+
+    fetch_repos() {
+        fetch(`https://api.github.com/users/${this.state.login}/repos`)
+            .then(response => response.json())
+            .then(
+                (result) => {
+                    this.setState(
+                        {
+                            repos: result,
+                        }
+                    );
+                    console.log(result);
+                }
+            );
+    }
+    // end fetch_repos()
 
 }
 

@@ -1,3 +1,9 @@
+a
+{
+    color: #0366d6;
+    text-decoration: none;
+}
+
 .App__block
 {
     width: calc(375px - 16px * 2);
@@ -119,5 +125,18 @@
     padding: 8px;
     margin: 8px;
     border-radius: 4px;
+}
+
+.b_repos__description
+{
+    color: #6d747b;
+    font-size: smaller;
+}
+
+.b_repos__time
+{
+    color: lightgrey;
+    font-size: smaller;
+    text-align: right;
 }
 /* end App__repos */
