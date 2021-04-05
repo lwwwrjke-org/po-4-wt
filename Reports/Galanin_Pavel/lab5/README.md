@@ -20,12 +20,28 @@ tree --charset ascii -I "node_modules"
 
 ## Install packages (1 time)
 
+(1st option. Via Docker)
+
 ```bash
 sudo docker-compose up install
 ```
 
+(2nd option. If NodeJS is installed)
+
+```bash
+npm i
+```
+
 ## Server start
+
+(1st option. Via Docker)
 
 ```bash
 sudo docker-compose run start
+```
+
+(2nd option. If NodeJS is installed)
+
+```bash
+npm run start
 ```
