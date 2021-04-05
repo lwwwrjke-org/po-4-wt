@@ -26,46 +26,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        // fetch users
-        fetch(`https://api.github.com/users/${this.state.login}`)
-            .then(response => response.json())
-            .then(
-                (result) => {
-                    this.setState(
-                        {
-                            avatar_url: result['avatar_url'],
-                            company: result['company'],
-                            created_at: result['created_at'],
-                            followers: result['followers'],
-                            following: result['following'],
-                            starred_url: result['starred_url'],
-                            location: result['location'],
-                            name: result['name'],
-                        }
-                    );
-
-                    // get formated created_at
-                    let obj = new Date(this['state']['created_at']);
-
-                    let year = obj.getFullYear();
-                    let month = obj.getMonth() + 1;
-                    let date = obj.getDate();
-
-                    let hours = obj.getHours();
-                    let minutes = obj.getMinutes();
-                    let seconds = obj.getSeconds();
-
-                    this.setState(
-                        {
-                            created_at__formated: `${year}.${month}.${date} ${hours}:${minutes}:${seconds}`,
-                        }
-                    );
-                    // end get formated created_at
-
-                    console.log(result);
-                }
-            );
-        // end fetch users
+        this.fetch_users();
     }
 
     render() {
@@ -128,6 +89,49 @@ class App extends React.Component {
         );
     };
     // end render()
+
+    fetch_users() {
+        fetch(`https://api.github.com/users/${this.state.login}`)
+            .then(response => response.json())
+            .then(
+                (result) => {
+                    this.setState(
+                        {
+                            avatar_url: result['avatar_url'],
+                            company: result['company'],
+                            created_at: result['created_at'],
+                            followers: result['followers'],
+                            following: result['following'],
+                            starred_url: result['starred_url'],
+                            location: result['location'],
+                            name: result['name'],
+                        }
+                    );
+
+                    // get formated created_at
+                    let obj = new Date(this['state']['created_at']);
+
+                    let year = obj.getFullYear();
+                    let month = obj.getMonth() + 1;
+                    let date = obj.getDate();
+
+                    let hours = obj.getHours();
+                    let minutes = obj.getMinutes();
+                    let seconds = obj.getSeconds();
+
+                    this.setState(
+                        {
+                            created_at__formated: `${year}.${month}.${date} ${hours}:${minutes}:${seconds}`,
+                        }
+                    );
+                    // end get formated created_at
+
+                    console.log(result);
+                }
+            );
+    }
+    // end fetch_users()
+
 }
 
 export default App;
