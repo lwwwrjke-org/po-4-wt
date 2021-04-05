@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faUserFriends,
     faBuilding,
-    faMapMarkerAlt
+    faMapMarkerAlt,
+    faMugHot,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+    faHeart,
+} from '@fortawesome/free-regular-svg-icons';
 
 class App extends React.Component {
     constructor(props) {
@@ -44,113 +48,128 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
-                <div className={styles.App__block}>
-                    {/* button */}
-                    <div align="center">
-                        <input
-                            type="text"
-                            placeholder="Login"
-                            onInput={(event) => { this.change_login(event) }}
-                            className={styles.App__input}
-                        />
-                        <button
-                            type="submit"
-                            onClick={() => { this.start_function() }}
-                            className={styles.App__button}
-                        >
-                            Fetch
+            <div className={styles.App__wrapper}>
+                <div className={styles.App__content}>
+                    <div className={styles.App__block}>
+                        {/* button */}
+                        <div align="center">
+                            <input
+                                type="text"
+                                placeholder="Login"
+                                name="login"
+                                onInput={(event) => { this.change_login(event) }}
+                                className={styles.App__input}
+                            />
+                            <button
+                                type="submit"
+                                onClick={() => { this.start_function() }}
+                                className={styles.App__button}
+                            >
+                                Fetch
                         </button>
-                    </div>
-                    {/* end button */}
-                    {/* header */}
-                    <header>
-                        <div className={styles.App__b_profile}>
-                            <div className={styles.b_profile__b_avatar}>
-                                <img
-                                    className={styles.b_profile__img}
-                                    src={this['state']['avatar_url']}
-                                    alt=""
-                                />
-                            </div>
-                            <div className={styles.b_profile__b_info}>
-                                <div className={styles.b_profile__name}>
-                                    {this['state']['name']}
-                                </div>
-                                <div className={styles.b_profile__login}>
-                                    {this['state']['login']}
-                                </div>
-                            </div>
                         </div>
-                        <div className={styles.App__b_more_info}>
-                            <span className={styles.b_profile__link}>
-                                <FontAwesomeIcon icon={faUserFriends} />
-                                <span className={styles.b_profile__value}>
-                                    {this['state']['followers']}
-                                </span>
+                        {/* end button */}
+                        {/* header */}
+                        <header>
+                            <div className={styles.App__b_profile}>
+                                <div className={styles.b_profile__b_avatar}>
+                                    <img
+                                        className={styles.b_profile__img}
+                                        src={this['state']['avatar_url']}
+                                        alt=""
+                                    />
+                                </div>
+                                <div className={styles.b_profile__b_info}>
+                                    <div className={styles.b_profile__name}>
+                                        {this['state']['name']}
+                                    </div>
+                                    <div className={styles.b_profile__login}>
+                                        {this['state']['login']}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.App__b_more_info}>
+                                <span className={styles.b_profile__link}>
+                                    <FontAwesomeIcon icon={faUserFriends} />
+                                    <span className={styles.b_profile__value}>
+                                        {this['state']['followers']}
+                                    </span>
                                 followers
                             </span>
-                            <span className={styles.b_profile__link}>
-                                <span className={styles.b_profile__value}>
-                                    {this['state']['following']}
-                                </span>
+                                <span className={styles.b_profile__link}>
+                                    <span className={styles.b_profile__value}>
+                                        {this['state']['following']}
+                                    </span>
                                 following
                             </span>
-                        </div>
-                        <div className={styles.App__b_more_info}>
-                            <span className={styles.b_profile__link}>
-                                <FontAwesomeIcon icon={faBuilding} /> {this['state']['company']}
-                            </span>
-                        </div>
-                        <div className={styles.App__b_more_info}>
-                            <span className={styles.b_profile__link}>
-                                <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
-                            </span>
-                        </div>
-                        <div className={styles.App__b_more_info}>
-                            <span className={styles.b_profile__link}>
-                                Created {this.get_formated_date(this['state']['created_at'])}
-                            </span>
-                        </div>
-                    </header>
-                    {/* end header */}
-                    {/* repos */}
-                    <div align="right">
-                        <button
-                            onClick={(event) => this.change_repos_view(event)}
-                            className={styles.App__button}
-                        >
-                            Change view
+                            </div>
+                            <div className={styles.App__b_more_info}>
+                                <span className={styles.b_profile__link}>
+                                    <FontAwesomeIcon icon={faBuilding} /> {this['state']['company']}
+                                </span>
+                            </div>
+                            <div className={styles.App__b_more_info}>
+                                <span className={styles.b_profile__link}>
+                                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
+                                </span>
+                            </div>
+                            <div className={styles.App__b_more_info}>
+                                <span className={styles.b_profile__link}>
+                                    Created {this.get_formated_date(this['state']['created_at'])}
+                                </span>
+                            </div>
+                        </header>
+                        {/* end header */}
+                        {/* repos */}
+                        <div align="right">
+                            <button
+                                onClick={(event) => this.change_repos_view(event)}
+                                className={styles.App__button}
+                            >
+                                Change view
                         </button>
-                    </div>
-                    <div className={ this['state']['repos_view'] ? styles.App__b_repos__active : '' }>
-                        {
-                            (this['state']['repos']).map(
-                                (obj, index) => (
-                                    <div className={styles.b_repos__repo} key={index}>
-                                        <div>
-                                            <a href={obj['svn_url']}>
-                                                {obj['name']}
-                                            </a>
+                        </div>
+                        <div className={this['state']['repos_view'] ? styles.App__b_repos__active : ''}>
+                            {
+                                (this['state']['repos']).map(
+                                    (obj, index) => (
+                                        <div
+                                            className={`${styles.App__wrapper} ${styles.b_repos__repo}`}
+                                            key={index}
+                                        >
+                                            <div className={styles.App__content}>
+                                                <div>
+                                                    <a href={obj['svn_url']}>
+                                                        {obj['name']}
+                                                    </a>
+                                                </div>
+                                                <div className={styles.b_repos__description}>
+                                                    {obj['description']}
+                                                </div>
+                                            </div>
+                                            <div className={styles.App__footer}>
+                                                <div className={styles.b_repos__time}>
+                                                    Created at {this.get_formated_date(obj['created_at'])}
+                                                </div>
+                                                <div className={styles.b_repos__time}>
+                                                    Updated At {this.get_formated_date(obj['updated_at'])}
+                                                </div>
+                                                <div className={styles.b_repos__time}>
+                                                    Pushed At {this.get_formated_date(obj['pushed_at'])}
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className={styles.b_repos__description}>
-                                            {obj['description']}
-                                        </div>
-                                        <div className={styles.b_repos__time}>
-                                            Created at {this.get_formated_date(obj['created_at'])}
-                                        </div>
-                                        <div className={styles.b_repos__time}>
-                                            Updated At {this.get_formated_date(obj['updated_at'])}
-                                        </div>
-                                        <div className={styles.b_repos__time}>
-                                            Pushed At {this.get_formated_date(obj['pushed_at'])}
-                                        </div>
-                                    </div>
+                                    )
                                 )
-                            )
-                        }
+                            }
+                        </div>
+                        {/* end repos */}
                     </div>
-                    {/* end repos */}
+                </div>
+                <div className={styles.App__footer} >
+                    <div className={styles.App__block} align="center">
+                        Made with <FontAwesomeIcon icon={faHeart} color="red" /> & <FontAwesomeIcon icon={faMugHot} color="brown" /> by Pavel Galanin
+                    </div>
                 </div>
             </div>
         );

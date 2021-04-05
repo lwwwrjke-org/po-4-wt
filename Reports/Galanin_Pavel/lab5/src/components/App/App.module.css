@@ -1,13 +1,43 @@
+html
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
 a
 {
     color: #0366d6;
     text-decoration: none;
 }
 
+.App__wrapper
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.App__content
+{
+    flex: 1 0 auto;
+}
+
+.App__footer
+{
+    flex: 0 0 auto;
+}
+
 .App__block
 {
     width: calc(960px - 16px * 2);
-    margin: 0 auto;
+    margin: 8px auto;
     box-shadow: 0 0 8px 1px lightgrey;
     border-radius: 4px;
     padding: 16px;
@@ -128,6 +158,7 @@ a
 
 .b_repos__repo
 {
+    height: inherit;
     border: 1px solid #eaecef;
     padding: 8px;
     margin: 8px;
