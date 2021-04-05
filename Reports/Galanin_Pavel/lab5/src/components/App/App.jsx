@@ -8,10 +8,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
+            repos_view: 1,
             login: 'Login',
             avatar_url: "",
             company: "Company",
@@ -39,23 +39,25 @@ class App extends React.Component {
             ],
         };
     }
+    // end constructor()
+
 
     render() {
         return (
             <div className="App">
                 <div className={styles.App__block}>
                     {/* button */}
-                    <div>
+                    <div align="center">
                         <input
                             type="text"
                             placeholder="Login"
                             onInput={(event) => { this.change_login(event) }}
-                            className={styles.b_button__input}
+                            className={styles.App__input}
                         />
                         <button
                             type="submit"
                             onClick={() => { this.start_function() }}
-                            className={styles.b_button__button}
+                            className={styles.App__button}
                         >
                             Fetch
                         </button>
@@ -113,7 +115,15 @@ class App extends React.Component {
                     </header>
                     {/* end header */}
                     {/* repos */}
-                    <div>
+                    <div align="right">
+                        <button
+                            onClick={(event) => this.change_repos_view(event)}
+                            className={styles.App__button}
+                        >
+                            Change view
+                        </button>
+                    </div>
+                    <div className={ this['state']['repos_view'] ? styles.App__b_repos__active : '' }>
                         {
                             (this['state']['repos']).map(
                                 (obj, index) => (
@@ -148,14 +158,6 @@ class App extends React.Component {
     // end render()
 
 
-    componentDidMount() {
-        // React run function componentDidMount automaticl on reload page
-        //this.fetch_users();
-        //this.fetch_repos();
-    }
-    // end componentDidMount()
-
-
     change_login(event) {
         this.setState(
             {
@@ -163,6 +165,7 @@ class App extends React.Component {
             }
         );
     }
+    // end change_login()
 
 
     start_function() {
@@ -171,9 +174,8 @@ class App extends React.Component {
     }
     // end start_function()
 
-    
-    get_formated_date(param_date)
-    {
+
+    get_formated_date(param_date) {
         let obj = new Date(param_date);
         let year = obj.getFullYear();
         let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(obj);
@@ -185,6 +187,8 @@ class App extends React.Component {
 
         return (<span>{year}.{month}.{day} {hours}:{minutes}:{seconds}</span>);
     }
+    // end get_formated_date()
+
 
     fetch_users() {
         fetch(`https://api.github.com/users/${this.state.login}`)
@@ -226,6 +230,25 @@ class App extends React.Component {
     }
     // end fetch_repos()
 
+
+    change_repos_view(event) {
+        if (this['state']['repos_view'] === 1) {
+            this.setState(
+                {
+                    repos_view: 0,
+                }
+            );
+        }
+        else {
+            this.setState(
+                {
+                    repos_view: 1,
+                }
+            );
+        }
+
+    }
+    // end change_repos_view()
 }
 
 export default App;
