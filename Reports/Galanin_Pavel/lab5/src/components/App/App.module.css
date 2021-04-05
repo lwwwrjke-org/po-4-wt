@@ -7,6 +7,31 @@
     padding: 16px;
 }
 
+
+/* App__b_button */
+.App__b_button
+{
+    margin: 16px 0;
+    text-align: center;
+}
+
+.App__button
+{
+    padding: 8px 32px;
+    background-color: #06c;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid #06c;
+}
+
+.App__button:hover
+{
+    background-color: transparent;
+    color: #06c;
+}
+/* end App__b_button */
+
+
 /* App__b_profile */
 .App__b_profile
 {
@@ -70,6 +95,7 @@
     content: ' ';
 }
 /* end App__b_profile */
+
 
 /* App__b_more_info */
 .App__b_more_info

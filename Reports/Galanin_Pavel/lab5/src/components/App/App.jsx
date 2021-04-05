@@ -25,14 +25,21 @@ class App extends React.Component {
         };
     }
 
-    componentDidMount() {
-        this.fetch_users();
-    }
-
     render() {
         return (
             <div className="App">
                 <div className={styles.App__block}>
+                    {/* button */}
+                    <div className={styles.App__b_button}>
+                        <button
+                            type="submit"
+                            onClick={() => { this.start_function() }}
+                            className={styles.App__button}
+                        >
+                            Start
+                        </button>
+                    </div>
+                    {/* end button */}
                     {/* header */}
                     <header>
                         <div className={styles.App__b_profile}>
@@ -89,6 +96,21 @@ class App extends React.Component {
         );
     };
     // end render()
+
+
+    componentDidMount() {
+        // React run function componentDidMount automaticl on reload page
+        //this.fetch_users();
+    }
+    // end componentDidMount()
+
+
+    start_function()
+    {
+        this.fetch_users();
+    }
+    // end start_function()
+
 
     fetch_users() {
         fetch(`https://api.github.com/users/${this.state.login}`)
