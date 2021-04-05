@@ -12,7 +12,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            login: 'Pavel-Innokentevich-Galanin',
+            login: 'Login',
             avatar_url: "",
             company: "Company",
             created_at: null,
@@ -30,13 +30,19 @@ class App extends React.Component {
             <div className="App">
                 <div className={styles.App__block}>
                     {/* button */}
-                    <div className={styles.App__b_button}>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Login"
+                            onInput={(event) => { this.change_login(event) }}
+                            className={styles.b_button__input}
+                        />
                         <button
                             type="submit"
                             onClick={() => { this.start_function() }}
-                            className={styles.App__button}
+                            className={styles.b_button__button}
                         >
-                            Start
+                            Fetch
                         </button>
                     </div>
                     {/* end button */}
@@ -105,8 +111,16 @@ class App extends React.Component {
     // end componentDidMount()
 
 
-    start_function()
-    {
+    change_login(event) {
+        this.setState(
+            {
+                login: event.target.value,
+            }
+        );
+    }
+
+
+    start_function() {
         this.fetch_users();
     }
     // end start_function()

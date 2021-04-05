@@ -9,25 +9,31 @@
 
 
 /* App__b_button */
-.App__b_button
+.b_button__button
 {
-    margin: 16px 0;
-    text-align: center;
-}
-
-.App__button
-{
+    width: 100%;
     padding: 8px 32px;
+    margin: 8px 0;
     background-color: #06c;
     color: white;
     border-radius: 4px;
     border: 1px solid #06c;
 }
 
-.App__button:hover
+.b_button__button:hover
 {
     background-color: transparent;
     color: #06c;
+}
+
+.b_button__input
+{
+    width: calc(100% - 8px * 2);
+    display: block;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #06c;
+    border-radius: 4px;
 }
 /* end App__b_button */
 
