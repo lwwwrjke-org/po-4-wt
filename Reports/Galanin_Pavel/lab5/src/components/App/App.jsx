@@ -115,7 +115,7 @@ class App extends React.Component {
                             </div>
                             <div className={styles.App__b_more_info}>
                                 <span className={styles.b_profile__link}>
-                                    Created {this.get_formated_date(this['state']['created_at'])}
+                                    Created at {this.get_formated_date(this['state']['created_at'])}
                                 </span>
                             </div>
                         </header>
@@ -152,10 +152,10 @@ class App extends React.Component {
                                                     Created at {this.get_formated_date(obj['created_at'])}
                                                 </div>
                                                 <div className={styles.b_repos__time}>
-                                                    Updated At {this.get_formated_date(obj['updated_at'])}
+                                                    Updated at {this.get_formated_date(obj['updated_at'])}
                                                 </div>
                                                 <div className={styles.b_repos__time}>
-                                                    Pushed At {this.get_formated_date(obj['pushed_at'])}
+                                                    Pushed at {this.get_formated_date(obj['pushed_at'])}
                                                 </div>
                                             </div>
                                         </div>
