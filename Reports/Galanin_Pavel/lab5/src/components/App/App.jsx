@@ -168,7 +168,7 @@ class App extends React.Component {
                 </div>
                 <div className={styles.App__footer} >
                     <div className={styles.App__block} align="center">
-                        Made with <FontAwesomeIcon icon={faHeart} color="red" /> & <FontAwesomeIcon icon={faMugHot} color="brown" /> by Pavel Galanin
+                        Made with <FontAwesomeIcon icon={faHeart} color="red" /> &amp; <FontAwesomeIcon icon={faMugHot} color="brown" /> by Pavel Galanin
                     </div>
                 </div>
             </div>
