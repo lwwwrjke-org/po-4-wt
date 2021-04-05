@@ -110,3 +110,14 @@
     margin: 8px;
 }
 /* end App__b_more_info */
+
+
+/* App__repos */
+.b_repos__repo
+{
+    border: 1px solid #eaecef;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 4px;
+}
+/* end App__repos */
