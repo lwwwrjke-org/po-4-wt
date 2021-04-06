@@ -253,3 +253,35 @@
 
 }
 
+.firstColumnWithRepo{
+    position:absolute;
+    margin-left: 38.85%;
+    margin-top: 124px;
+    width: 23.17%;
+    height: 100%;
+   
+
+}
+
+.secondColumnWithRepo{
+    position: absolute;
+    margin-left: 62.85%;
+    margin-top: 124px;
+    width: 23.17%;
+    height:100%;
+   
+
+}
+
+.repo{
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 95%;
+    height: 106px;
+    margin-top: 20px;
+    border: 2px solid #e1e4e8;
+    border-radius: 5px;
+    font-family: courier;
+
+}
+
