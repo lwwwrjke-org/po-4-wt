@@ -5,7 +5,7 @@ services:
         volumes:
             - ".:/content"
         command: ['npm', 'i', '--prefix', '/content']
-    start:
+    serve:
         image: node
         volumes:
             - ".:/content"

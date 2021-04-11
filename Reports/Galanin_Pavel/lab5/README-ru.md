@@ -20,28 +20,12 @@ tree --charset ascii -I "node_modules"
 
 ## Установка пакетов (1 раз)
 
-(1-ый вариант. Через Docker)
-
 ```bash
-sudo docker-compose up install
-```
-
-(2-ой вариант. Если установлена NodeJS)
-
-```bash
-npm i
+sudo docker-compose run install
 ```
 
 ## Запуск сервера
 
-(1-ый вариант. Через Docker)
-
 ```bash
-sudo docker-compose run start
-```
-
-(2-ой вариант. Если установлена NodeJS)
-
-```bash
-npm run start
+sudo docker-compose up serve
 ```
