@@ -20,11 +20,11 @@ tree --charset ascii -I "node_modules"
 ## Установка пакетов (1 раз)
 
 ```bash
-sudo docker-compose up install
+sudo docker-compose run install
 ```
 
 ## Запуск сервера
 
 ```bash
-sudo docker-compose run serve
+sudo docker-compose up serve
 ```
