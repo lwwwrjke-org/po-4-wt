@@ -1,0 +1,55 @@
+.ianput{
+    margin: 20px 45% 0 45%;
+}
+
+.repos{
+    margin: 0 0 0 30%;
+}
+
+th{
+    font-size: 20px;
+    width: 50%;
+    font-weight: 600;
+    border: 2px solid #c1c1c1;
+}
+
+table{
+    width: 215%;
+    border-spacing: 10px;
+    margin: 0px 0px 0 0;
+}
+
+.searchButton{
+    margin: 5px 0 0 50px;
+    height: 31px;
+    font-size: 14px;
+}
+
+.profile{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.profile-name{
+    font-size: 26px;
+}
+
+.profile-uname{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5px;
+}
+
+
+
+.main__profile-img{
+    height: 250px;
+    border-radius: 50%;
+}
+
+.info{
+    margin: 50px 0 0 30px;
+    width: 35%;
+    display: flex; 
+}
