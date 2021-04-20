@@ -1,11 +1,30 @@
-## Install npm packages
+## README
+
+- [English](README.md)
+- [Русский](README-ru.md)
+
+## Project tree
 
 ```bash
-npm i
+tree --charset ascii -I "node_modules"
 ```
 
-## Start server
+```
+.
+|-- README*.md          // Information file
+|-- docker-compose.yml  // Docker settings
+|-- package.json        // Versions of packages to install
+`-- src                 // Source code folder
+```
+
+## Install packages (1 time)
 
 ```bash
-npm run dev
+sudo docker-compose run install
+```
+
+## Server start
+
+```bash
+sudo docker-compose up serve
 ```
