@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+}
+
+.input{
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    background-color: black;
+}
+
+.search{
+    margin-top: 20px;
+    margin-left: 35%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.GitHub{
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.repos{
+    margin-left: 150px;
+}
+
+td{
+    text-align: left;
+    font-size: 20px;
+    width: 360px;
+    color: rgb(45, 104, 163);
+    border: 1px solid rgb(199, 193, 193);
+    border-radius: 10px;
+    font-family: sans-serif;
+    box-shadow: 2px 3px 5px lightgrey;
+}
+
+table{
+    width: 740px;
+    border-spacing: 15px;
+}
+
+.search-btn{
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    height: 31px;
+    padding: 1px;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+
+}
+
+.profile{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.name{
+    font-size: 20px;
+    color: grey;
+}
+
+.uname{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.follow{
+    font-size: 14px;
+}
+
+.profile-img{
+    height: 250px;
+    border-radius: 50%;
+}
+
+.info{
+    margin: 10px 0 0 100px;
+    width: 35%;
+    display: flex;
+}
+
+.describe{
+    font-size: 15px;
+    color:rgb(129, 120, 120)
+}
+
+.pop{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.name_rep{
+    font-weight: bold;
+}
+
+.input_td{
+    padding: 15px;
+}
