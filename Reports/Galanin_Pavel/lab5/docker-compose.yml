@@ -1,0 +1,19 @@
+version: '3'
+services:
+    install:
+        image: node
+        volumes:
+            - ".:/content"
+        command: ['npm', 'i', '--prefix', '/content']
+    serve:
+        image: node
+        volumes:
+            - ".:/content"
+        ports:
+            - 3000:3000
+        command: ['npm', 'run', 'start', '--prefix', '/content']
+    build:
+        image: node
+        volumes:
+            - ".:/content"
+        command: ['npm', 'run', 'build', '--prefix', '/content']
