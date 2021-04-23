@@ -1,0 +1,193 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "sidebar content";
+    background-color: #fff;
+    color: #444;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/*Search*/
+
+.searching {
+    background-color: blue;
+    padding-top: 30px;
+}
+
+.input-field {
+    height: 25px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.search-button {
+    background-color: white;
+    color: black;
+    height: 29px;
+    border: 1px solid transparent;
+    margin-bottom: 3%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/*buttons*/
+
+.change-view-button {
+    background-color: #0d6efd;
+    color: white;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    margin-bottom: 3%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.follow-button {
+    background-color:whitesmoke;
+    color: black;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    width: 45%;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.follow-button:hover {
+    background-color:rgb(184, 182, 182);
+}
+
+.other-button {
+    background-color:whitesmoke;
+    color: black;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    width: 12%;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.other-button:hover{
+    background-color:rgb(184, 182, 182);
+}
+
+/*sidebar and its views*/
+.sidebar {
+    grid-area: sidebar;
+    margin-left: 200px;
+}
+
+.tiles {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, [col] 55%);
+    grid-template-rows: repeat(3, [row] auto);
+    background-color: #fff;
+    color: #444;
+    margin-right: 200px;
+}
+
+.line_by_line {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, [col] 75%);
+    grid-template-rows: repeat(10, [row] auto);
+    background-color: #fff;
+    color: #444;
+    margin-right: 200px;
+}
+
+.avatar_img {
+    border-radius: 50%;
+    height: 300px;
+    padding-bottom: 7px;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+.login {
+    font-size: 24px;
+    color: grey;
+    padding-bottom: 7px;
+}
+
+.bio {
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    padding-bottom: 15px;
+}
+
+.followers {
+    font-size: 17px;
+    padding-bottom: 7px;
+}
+
+.location{
+    font-size: 15px;
+    color: black;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+.email{
+    font-size: 15px;
+    color: black;
+    font-weight: normal;
+    padding-bottom: 7px;
+}
+
+.email-blue:hover {
+    color: blue;
+}
+
+.flw-black {
+    color: black;
+    font-weight: 100;
+}
+
+.flw-blue:hover {
+    color: blue;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 100%;
+}
+
+.in_box {
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 100%;
+    border: 1px solid lightgray;
+    padding-bottom: 85px;
+}
+
+.repo_lang {
+    position: absolute; 
+    bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.underline-a:hover {
+    text-decoration: underline;
+}
