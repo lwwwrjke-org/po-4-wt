@@ -1,0 +1,100 @@
+.enterField {
+    padding-left: 900px;
+    padding-top:30px;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(209,209,217);
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+    box-shadow:
+     0 1px rgba(255,255,255,.2) inset,
+     0 3px 5px rgba(0,1,6,.5),
+     0 0 1px 1px rgba(0,1,6,.2);
+    transition: .2s ease-in-out;
+  }
+.btn:hover:not(:active) {
+    background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+  }
+
+
+.mainImg { 
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%; 
+}
+
+.repositorii {
+    background-color: rgba(226, 220, 220, 0.521);
+    border: solid rgb(189, 189, 189);
+    border-width: 1px;
+    border-radius: 8px;
+    width: 350px;
+    height: 120px;
+    font-size: 18px;
+    font-family: Arial;
+    color: #2a0f4e;
+    border-spacing: 18px 15px;
+}
+
+.lang {
+    font-size: 15px;
+    color: black;
+    font-weight: lighter;
+    padding-left: 7px;
+}
+
+.repoNames {
+    padding-top: 15px;
+    padding-left: 7px;
+}
+
+.follow {
+    font-family: Arial;
+}
+
+.location {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.information {
+    font-family: Yu Gothic UI Semibold; 
+    font-size: 35px; 
+    color: black
+}
+.secondName {
+    font-size: 22px; 
+    line-height: 1.25; 
+    color: grey;
+}
+
+.language {
+    font-size: 25px;
+    color: black;
+    font-weight: lighter;
+}
+
+.view {
+   padding-top: 20px;
+   padding-left: 100px;
+}
+
+.mainTable td {
+    border-width: 0px;
+    width: 500px;
+    font-size: 18px;
+}
+
+.description {
+    font-size: 10px;
+    padding-left: 8px;
+}
