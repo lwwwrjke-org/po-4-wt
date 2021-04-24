@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUserFriends,
   faMapMarkerAlt,
-  faEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
@@ -15,9 +14,9 @@ class App extends React.Component {
       login: '',
       avatar_url: '',
       followers: 0,
-      location: "Somewhere",
-      name: "",
-      email: "empty",
+      location: '',
+      name: '',
+ 
       repos: [{name: '',}]
     };
   }
@@ -41,13 +40,10 @@ class App extends React.Component {
           </div>
           <FontAwesomeIcon icon={faUserFriends} />
           <span className={style.main__profile_followers}>
-            {this['state']['followers']}
+            {this.state.followers}
           </span> followers
             <p className={style.main__profile_followers}>
             <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
-          </p>
-          <p className={style.main__profile_followers}>
-            <FontAwesomeIcon icon={faEnvelope} /> {this['state']['email']}
           </p>
           <div >
             <button
@@ -108,6 +104,7 @@ class App extends React.Component {
               followers: res['followers'],
               following: res['following'],
               name: res['name'],
+              location: res['location'],
             }
           );
           console.log(res);
