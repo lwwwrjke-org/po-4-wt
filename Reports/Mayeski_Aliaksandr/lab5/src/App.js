@@ -40,7 +40,7 @@ class App extends React.Component {
           </div>
           <FontAwesomeIcon icon={faUserFriends} />
           <span className={style.main__profile_followers}>
-            {this.state.followers}
+            {this['state']['followers']}
           </span> followers
             <p className={style.main__profile_followers}>
             <FontAwesomeIcon icon={faMapMarkerAlt} /> {this['state']['location']}
