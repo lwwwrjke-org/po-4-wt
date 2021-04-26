@@ -1,0 +1,81 @@
+.input {
+    padding-left: 500px;
+    padding-top:30px;
+}
+
+.btn {
+    padding : 15px 32px;
+            border : none; 
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            transition-duration: 0.3s;
+            background: linear-gradient(rgb(94, 94, 207), rgb(46, 61, 134)) rgb(112, 112, 197);
+  }
+.btn:hover:not(:active) {
+    background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+  }
+
+.Img { 
+    width: 250px; 
+    height: 250px;
+    border-radius: 10%; 
+}
+
+.but {
+    padding-left: 40px;
+}
+
+.repos {
+    background-color: ivory;
+    border: 1px double rgb(46, 61, 134);
+    width: 350px;
+    height: 80px;
+    font-size: 14px;
+    border-radius: 70px;
+    font-family: Century Gothic;
+}
+
+.repoNames {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.language {
+    font-size: 15px;
+    color: black;
+    font-weight: lighter;
+}
+
+.language2 {
+padding-left: 15px;
+}
+
+.follow {
+    font-family: Century Gothic;
+}
+
+.location {
+    font-family: Century Gothic;
+    font-size: 15px;
+}
+
+.info {
+    font-family: Century Gothic; 
+    font-size: 35px; 
+    color: black;
+}
+.SpeakNow {
+    font-family: Century Gothic; 
+    font-size: 20px; 
+    color: rgba(97, 88, 88, 0.651);
+}
+
+.v {
+    padding-top: 10px;
+    padding-left: 120px;
+ } 
+
+.mainTable td {
+    font-family: Century Gothic; 
+    font-size: 15px;
+}
