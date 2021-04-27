@@ -1,0 +1,155 @@
+html {
+  background-color: rgba(32, 29, 29, 0.651);
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "sidebar content";
+  background-color: rgb(109 107 107);
+  color: black;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.btn_search {
+  background-color: #0d6efd;
+  color: white;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  margin-bottom: 3%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn_change_view {
+  background-color: #0d6efd;
+  color: white;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  margin-bottom: 3%;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+.box {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 100%;
+}
+
+.box2 {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 100%;
+  border: 1px rgb(109 107 107);
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, [col] 48%);
+  grid-template-rows: repeat(3, [row] 120px);
+  background-color: rgb(109 107 107);
+  color: #444;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1, [col] 75%);
+  grid-template-rows: repeat(10, [row] auto);
+  background-color: rgb(109 107 107);
+  color: #444;
+}
+
+.avatar_img {
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login {
+  font-size: 24px;
+  color: grey;
+}
+
+.bio {
+  font-size: 18px;
+  font-weight: lighter;
+  color: black;
+}
+
+.company,.location,.email{
+  font-size: 15px;
+  color: black;
+  font-weight: lighter;
+}
+
+.followers {
+  font-size: 17px;
+}
+
+.padding-bottom-10 {
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+.search_button {
+  padding-top: 30px;
+}
+
+.grey {
+  color: black;
+  font-weight: 100;
+}
+
+.blue-a:hover {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-follow {
+  background-color:whitesmoke;
+  color: black;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  width: 40%;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+.btn-follow:hover {
+  background-color:rgb(184, 182, 182);
+}
+
+.point {
+  width: 10%;
+}
+
+.underline-a:hover {
+  text-decoration: underline;
+}
+
+.repo_lang {
+  padding-top: 30px;
+}
