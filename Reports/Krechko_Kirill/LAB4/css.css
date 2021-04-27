@@ -1,0 +1,236 @@
+.head_band{
+    position: relative;
+    background-color: lightpink;
+    height:80px;
+    border: 2px solid deeppink;
+}
+
+.input_position{
+    position: absolute;
+    display: inline-block;
+    margin-top: 30px;
+    left:40%;
+}
+
+.input_style{
+    width: 280px;
+    font-size: 20px;
+    border: 2px solid  black;
+    border-radius: 5px;
+    background-color: black;
+    color: deeppink;
+}
+
+.search_button{
+    background-color: black;
+    border: 2px solid  black;
+    color: deeppink;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.round_avatar{
+    border-radius: 260px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid deeppink;
+}
+
+.ava{
+    margin-top: 64px;
+    margin-left: 17%;
+    display:inline-block;
+}
+
+.full_name{
+    width: 260px;
+    height: 26px;
+    margin-left: 17%;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Helvetica,Arial,sans-serif;
+    color: deeppink;
+}
+
+.login{
+    width: 260px;
+    height: 22px;
+    margin-left: 17%;
+    margin-top: 0;
+    font-size: 21px;
+    color: pink;
+}
+
+.follow_button{
+    border: 1px solid  deeppink;
+    background-color: white;
+    color: deeppink;
+    border-radius: 5px;
+    font-size: 19px;
+    height: 30px;
+    width: 189px;
+}
+.threeDotsButton{
+    border: 1px solid  deeppink;
+    background-color: white;
+    color: deeppink;
+    border-radius: 5px;
+    font-size: 19px;
+    height: 30px;
+    width: 63px;
+}
+
+.classDivFollowButton{
+    margin-top: 25px;
+    width: 189px;
+    margin-left: 17%;
+    height: 19px;
+    display: inline-block;
+}
+
+.classDivThreeDotsButton{
+    margin-left: 4px;
+    width: 63px;
+    height: 19px;
+    display: inline-block;
+}
+
+.bio{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 260px;
+    margin-left: 17%;
+    font-weight: 600;
+    font-size: 17px;
+    color: deeppink;
+}
+
+.statistic{
+    margin-left: 17%;
+    color: deeppink;
+    width: 260px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.location{
+    margin-top: 25px;
+    width: 260px;
+    margin-left: 17%;
+    font-size: 17px;
+    font-weight: 600;
+    color: deeppink;
+}
+
+.followersImage{
+    width: 18px;
+    height: 13px;
+    border: 1px solid deeppink;
+    margin-right: 4px;
+}
+
+.locationImage{
+    width: 15px;
+    height: 15px;
+    border: 1px solid deeppink
+}
+
+.emailImage{
+    width: 22px;
+    height: 15px;
+    border: 1px solid deeppink
+}
+
+.email{
+    width: 260px;
+    margin-left: 17%;
+    color: deeppink;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.overView{
+    color: pink;
+    height: 17px;
+    font-size: 17px;
+    width: 120px;
+    padding-left: 60px ;
+    display: inline-block;
+    vertical-align: 236px;
+}
+
+.button-overView {
+    width: 120px;
+    font-size: 19px;
+    border: 0;
+    border-bottom: 1px solid white;
+    background-color:white;
+    color: deeppink;
+}
+
+.button-overView:hover{
+    border-bottom: 2px solid pink;
+}
+
+.button-overView:focus{
+    outline: none !important;
+    border-bottom: 2px solid pink;
+}
+
+.repositories{
+    color: green;
+    height: 17px;
+    font-size: 17px;
+    width: 120px;
+    padding-left: 0 ;
+    display: inline-block;
+    vertical-align: 236px;
+}
+
+.projects{
+    color:#444d56;
+    height: 17px;
+    font-size: 17px;
+    width: 120px;
+    padding-left: 0 ;
+    display: inline-block;
+    vertical-align: 236px;
+}
+
+.packages{
+    color:#444d56;
+    height: 17px;
+    font-size: 17px;
+    width: 120px;
+    padding-left: 0 ;
+    display: inline-block;
+    vertical-align: 236px;
+}
+
+.first_rep_col{
+    position:absolute;
+    margin-left: 38.85%;
+    margin-top: 124px;
+    width: 23.17%;
+    height: 100%;
+    color: pink;
+}
+
+.second_rep_col{
+    position: absolute;
+    margin-left: 62.85%;
+    margin-top: 124px;
+    width: 23.17%;
+    height:100%;
+    color: pink;
+}
+
+.reposit{
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 95%;
+    height: 106px;
+    margin-top: 20px;
+    border: 2px solid deeppink;
+    border-radius: 5px;
+}
+
