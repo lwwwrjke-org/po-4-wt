@@ -1,0 +1,127 @@
+
+.image{
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+}
+
+.inputStyle {
+
+  border: 2px solid #444d56;
+  border-radius: 5px;
+  background-color: hsl(210, 12.2%, 16.1%);
+  color: #c8c9ca;
+}
+
+.headingAddButton{
+  margin: 3px;
+  background-color: hsl(210, 12.2%, 16.1%);
+  border: 2px solid  #444d56;
+  color:hsl(210, 11%, 40%);
+  border-radius: 5px;
+
+}
+
+.avatarImage{
+  border-radius: 260px;
+  width: 260px;
+  height:260px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+p{
+  font-size: 26px;
+  font-weight: 500;
+  margin-left:10px ;
+
+}
+
+.login{
+  font-size: 21px;
+  color: hsl(210,11%,40%);
+  margin-left: 10px;
+
+}
+
+.followButton{
+  border: 1px solid hsl(214,7%,79%);
+  color: hsl(210,12.2%,16.1%);
+  border-radius: 5px;
+  font-size: 19px;
+  width: 180px;
+  margin-left: 10px;
+}
+
+.threeDotsButton{
+  border: 1px solid hsl(214,7%,79%);
+  color: hsl(210,12.2%,16.1%);
+  border-radius: 5px;
+  font-size: 19px;
+  width: 60px;
+  margin-left: 5px;
+
+}
+
+.followButton:hover{
+  background-color: hsl(210,12.2%,16.1%);
+  color: white;
+}
+
+.threeDotsButton:hover{
+  background-color: hsl(210,12.2%,16.1%);
+  color: white;
+}
+
+.userStat{
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+
+.UserCompany{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: hsl(210,11%,40%);
+}
+
+.iconButtons{
+  width: 120px;
+  font-size: 19px;
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: white;
+  color: #444d56;
+  margin-top: 10px;
+}
+
+.iconButtons:hover{
+  border-bottom: 2px solid #444d56;
+}
+
+.iconButtons:focus{
+  outline: none !important;
+  border-bottom: 2px solid rgb(236,152,41);
+}
+
+.changeView{
+  width: 120px;
+  font-size: 19px;
+  border: 2px;
+  background-color: #444d56;
+  color: white;
+  margin-top: 15px;
+}
+
+.changeView:hover{
+  background-color: darkgreen;
+}
+
+.repo{
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 2px solid #e1e4e8;
+  border-radius: 5px;
+
+}
