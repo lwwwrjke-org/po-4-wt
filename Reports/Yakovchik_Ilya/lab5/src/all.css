@@ -1,0 +1,133 @@
+.enterField {
+    text-align: center;
+}
+
+.sbtn{
+    padding-top: 30px;
+    left:0;
+    right:0;
+    margin:auto;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(136, 138, 145), rgb(8, 253, 192)) rgb(219, 221, 226);
+    box-shadow:
+     0 1px rgba(255,255,255,.2) inset,
+     0 3px 5px rgba(0,1,6,.5),
+     0 0 1px 1px rgba(0,1,6,.2);
+    transition: .2s ease-in-out;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(136, 138, 145), rgb(8, 253, 192)) rgb(219, 221, 226);
+    box-shadow:
+     0 1px rgba(255,255,255,.2) inset,
+     0 3px 5px rgba(0,1,6,.5),
+     0 0 1px 1px rgba(0,1,6,.2);
+    transition: .2s ease-in-out;
+  }
+.btn:hover:not(:active) {
+    background: linear-gradient(rgb(255, 255, 255), rgb(245, 55, 96)) rgb(100, 9, 21);
+  }
+
+.sbtn:hover:not(:active) {
+    background: linear-gradient(rgb(255, 255, 255), rgb(245, 55, 96)) rgb(100, 9, 21);
+  }
+
+.mainImg { 
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%; 
+}
+
+.repositorii {
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 0, 0);
+    border-width: 1px;
+    border-radius: 8px;
+    width: 350px;
+    height: 130px;
+    font-size: 18px;
+    font-family: Arial;
+    color: #2a0f4e;
+    border-spacing: 18px 15px;
+    margin-top: 100px;
+}
+
+.lang {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    padding-left: 7px;
+}
+
+.repoNames {
+    padding-top: 15px;
+    padding-left: 7px;
+}
+
+.follow {
+    font-family: Arial;
+    color: rgb(253, 171, 141);
+}
+
+.location {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.information {
+    font-family: Yu Gothic UI Semibold; 
+    font-size: 35px; 
+    color: rgb(112, 255, 245);
+}
+
+.secondName {
+    font-size: 22px; 
+    line-height: 1.25; 
+    color: rgb(192, 188, 188);
+}
+
+.language {
+    font-size: 25px;
+    color: black;
+    font-weight: lighter;
+}
+
+.view {
+    padding-top: 50px;
+}
+
+.mainTable td {
+    border-width: 0px;
+    width: 500px;
+    font-size: 18px;
+    padding-right: 70px;
+    color: chartreuse;
+}
+
+.description {
+    font-size: 10px;
+    padding-left: 8px;
+}
+
+.folimg{
+    width: 25px;
+    height: 25px;
+}
