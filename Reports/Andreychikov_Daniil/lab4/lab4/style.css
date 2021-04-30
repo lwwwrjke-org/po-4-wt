@@ -1,0 +1,188 @@
+body
+{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:hover
+{
+    color:#0a58ca;
+}
+
+.add_star::after {
+    content: " *";
+    color: #DB473F;
+}
+
+.lab4__container
+{
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+
+/* b-login */
+.lab4__b-login
+{
+    background-color: #f8f9fa;
+    padding: 8px 8px;
+}
+
+.b-login__button
+{
+    width: 100%;
+    color: white;
+    background-color: #157347;
+    border: 1px solid #157347;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.b-login__button:hover
+{
+    color:#157347;
+    background-color: transparent;
+}
+
+.b-login__label
+{
+    padding: 8px 0;
+    display: block;
+}
+
+.b-login__input
+{
+    display: block;
+    width: calc(100% - 8px * 2);
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: 8px;
+}
+
+.b-login__text
+{
+    color: #6c757d;
+    margin: 8px 0;
+}
+/* end b-login */
+
+
+/* b-profile */
+.lab4__b-profile
+{
+    width: 100%;
+    display: flex;
+    margin: 16px 0;
+}
+
+.b-profile__img
+{
+    width: 64px;
+    margin: 0 8px;
+}
+
+.b-profile__img img
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px lightgray;
+}
+
+.b-profile__info
+{
+    width: 100%;
+}
+
+.b-profile__name
+{
+    height: 50%;
+}
+
+.b-profile__login
+{
+    height: 50%;
+    color: #586069
+}
+/* end b-profile */
+
+
+/* b-stats */
+.lab4__b-stats
+{
+    margin: 8px 0;
+}
+
+.b-stats__followers,
+.b-stats__following,
+.b-stats__stars
+{
+    font-weight: bold;
+}
+/* end b-stats */
+
+
+/* b-followers */
+.b-followers__b-follower
+{
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.b-followers__img
+{
+    width: 64px;
+    margin: 0 8px;
+}
+
+.b-followers__img img
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px lightgray;
+}
+
+.b-followers__info
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.b-followers__info a
+{
+    text-decoration: none;
+    color: #586069;
+}
+/* end b-followers */
+
+
+/* b-repos */
+.lab4_b-repos
+{
+    margin: 16px 0;
+}
+
+.b-repos__repository
+{
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.b-repos__name a
+{
+    text-decoration: none;
+}
+
+.b-repos__description
+{
+    color: #586069;
+}
+/* end b-repos */
