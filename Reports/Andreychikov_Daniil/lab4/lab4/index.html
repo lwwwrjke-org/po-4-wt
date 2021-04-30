@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="..." />
+    <title>Lab 4 | Web Technologies</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="lab4__container">
+        <!-- b-login -->
+        <div class="lab4__b-login">
+            <div>
+                <label class="b-login__label add_star">GitHub login</label>
+                <input type="text" class="b-login__input" id="lab4__login-input" name="GH_login"
+                    placeholder="GitHub login" required />
+                <div class="b-login__text">For example: ZdarovaAtec228</div>
+            </div>
+            <button class="b-login__button" id="lab4__button">Get info</button>
+        </div>
+        <!-- end b-login -->
+
+        <!-- b-profile -->
+        <div class="lab4__b-profile">
+            <div class="b-profile__img" id="GH__avatar_url">
+                <img src="" alt="" />
+            </div>
+            <div class="b-profile__info">
+                <div class="b-profile__name" id="GH__name">
+                    Name
+                </div>
+                <div class="b-profile__login" id="GH__login">
+                    Login
+                </div>
+            </div>
+        </div>
+        <!-- end b-profile -->
+
+        <!-- b-stats -->
+        <div class="lab4__b-stats">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                </svg>
+                <span class="b-stats__followers" id="GH__followers">0</span> followers
+                <span class="b-stats__following" id="GH__following">0</span> following
+            </span>
+            <!--
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                </svg>
+                <span class="b-stats__stars" id="GH__stared_url">0</span>
+            </span>
+            -->
+        </div>
+        <!-- end b-stats -->
+
+        <!-- b-followers -->
+        <div class="lab4__b-followers">
+            <h3>Followers</h3>
+            <div id="GH__followers_url">
+                <div class="b-followers__b-follower">
+                    <div class="b-followers__img">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="b-followers__info">
+                        <a href="#">Name</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end b-followers -->
+
+        <!-- b-repos -->
+        <div class="lab4_b-repos">
+            <h3>Repositories</h3>
+            <div id="GH__repos_url">
+                <div class="b-repos__repository">
+                    <div class="b-repos__name">
+                        <a href="#">Name</a>
+                    </div>
+                    <div class="b-repos__description">
+                        Description...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end b-repos -->
+    </div>
+    <!-- end lab4__container -->
+    <script src="task.js"></script>
+</body>
+
+</html>
