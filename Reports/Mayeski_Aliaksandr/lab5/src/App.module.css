@@ -1,0 +1,46 @@
+.main__profile_key{
+    padding: 0;
+    margin: 0;
+    margin-left: 7px;
+}
+
+.main__profile_img{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 45%;
+}
+
+.main__profile_name{
+    margin-top: 6px;
+    font-size: 26px;
+    line-height: 1.25;
+    
+}
+.main__profile_username{
+    margin-top: 5px;
+    font-size: 20px;
+
+    line-height: 24px;
+    color: gray;
+}
+
+.main__profile_followers{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: grey;
+}
+
+.change_view
+{
+    display: flex;
+}
+
+
+.repos
+{
+    margin-right: 8px;
+}
