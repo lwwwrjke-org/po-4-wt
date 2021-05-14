@@ -1,13 +1,23 @@
-function task1() 
-{
-    function range(start, finish, step) {
-        if (typeof step !== 'number') step = 1;
-        if ((start > finish && step > 0) || (start < finish && step < 0) || step === 0) return;
-        var a = [];
-        if (step > 0) for (var i = start; i <= finish; i += step) a.push(i);
-        else for (var i = start; i >= finish; i += step) a.push(i);
-        return a;
+function task1(){
+
+    function range(start, end, alp = 1){
+        if ((alp == 0) || (start < end && alp < 0) || (start > end && alp > 0)){
+            return null;
+        }
+        let arr = new Array();
+        if (alp > 0){
+            for(let i=start; i <= end; i += alp){
+                arr.push(i);
+            }
+        }
+        else{
+            for(let i=start; i >= end; i += alp){
+                arr.push(i);
+            }
+        }
+        return arr;
     }
 
-    alert(range(5, 2, -1));
+    let arr = range(1, 6, -1);
+    alert(arr);
 }
