@@ -1,0 +1,21 @@
+.navBar{
+  padding: 20px;
+  color:white;
+  background-color: black;
+}
+
+.search{
+  display: flex;
+  padding: 45px 0;
+  justify-content: center;
+}
+
+.card{
+  margin-left: 50px;
+  justify-content: left;
+}
+
+.repos{
+  margin-left: 750px;
+  margin-top: -500px;
+}
