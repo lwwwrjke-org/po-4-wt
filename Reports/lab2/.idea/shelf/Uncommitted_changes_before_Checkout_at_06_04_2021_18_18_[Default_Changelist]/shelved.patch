@@ -1,0 +1,563 @@
+Index: ../lab3/JS/script5.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script5.js b/../lab3/JS/script5.js
+new file mode 100644
+--- /dev/null	(date 1617007306509)
++++ b/../lab3/JS/script5.js	(date 1617007306509)
+@@ -0,0 +1,20 @@
++function task5()
++{
++    function flatten(array)
++    {
++        if (!(array instanceof Array) || (array === [])) return "Массив пустой или отсутствует"
++        else
++            {
++                let result = []
++
++                for (let i = 0; i <= array.length; i++)
++                {
++                    for (let j = 0; j <= array[i].length; j++)
++                        result = array[i][j]
++                    return result
++                }
++            }
++    }
++
++    console.log(flatten([1, [2], [3, [4]]]))
++}
+\ No newline at end of file
+Index: ../lab3/JS/script6.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script6.js b/../lab3/JS/script6.js
+new file mode 100644
+--- /dev/null	(date 1616504730785)
++++ b/../lab3/JS/script6.js	(date 1616504730785)
+@@ -0,0 +1,4 @@
++function task6()
++{
++
++}
+\ No newline at end of file
+Index: JS/script4.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JS/script4.js b/JS/script4.js
+new file mode 100644
+--- /dev/null	(date 1616504261750)
++++ b/JS/script4.js	(date 1616504261750)
+@@ -0,0 +1,41 @@
++function task4()
++{
++    let number_month = Number(prompt("Введите номер месяца (1-12):", null))
++    let number_day = Number(prompt("Введите день месяца (1-31):", null))
++    const year = 2016
++
++    while (isNaN(number_day)
++    || isNaN(number_month)
++    || number_day === null
++    || number_month === null
++    || 1 >= number_day >= 31
++    || 1 >= number_month >= 12)
++    {
++        alert("Введите данные заново.");
++        number_month = prompt("Введите номер месяца (1-12):", null)
++        number_day = prompt("Введите день месяца (1-31):", null)
++    }
++
++    let date = new Date(`${year}, ${number_month}, ${number_day}`)
++    let day = date.getDay()
++    let result
++    switch (day)
++    {
++        case 0:
++        {result = "Воскресенье";break;}
++        case 1:
++        {result = "Понедельник";break;}
++        case 2:
++        {result = "Вторник";break;}
++        case 3:
++        {result = "Среда";break;}
++        case 4:
++        {result = "Четверг";break;}
++        case 5:
++        {result = "Пятница";break;}
++        case 6:
++        {result = "Суббота";break;}
++        default: {  result= "Error"; break; }
++    }
++    alert(result);
++}
+\ No newline at end of file
+Index: JS/script3.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JS/script3.js b/JS/script3.js
+new file mode 100644
+--- /dev/null	(date 1616503827990)
++++ b/JS/script3.js	(date 1616503827990)
+@@ -0,0 +1,21 @@
++function task3()
++{
++    function callPrompt()
++    {
++        let n = prompt("Введите число");
++        alert("Число Фибоначчи: " + fib(n));
++    }
++    callPrompt()
++    function fib(n)
++    {
++        let a = 1;
++        let b = 1;
++        for (let i = 3; i <= n; i++)
++        {
++            let c = a + b;
++            a = b;
++            b = c;
++        }
++        return b;
++    }
++}
+\ No newline at end of file
+Index: JS/script2.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JS/script2.js b/JS/script2.js
+new file mode 100644
+--- /dev/null	(date 1616503827791)
++++ b/JS/script2.js	(date 1616503827791)
+@@ -0,0 +1,58 @@
++function task2()
++{
++    let number_of_apartment
++    let Flat =
++        {
++            number_of_storeys: 0,//этажность
++            number_of_entrances: 0,//количество подъездов
++            number_of_apartments_staircase: 0,//количество квартир подъезд
++        };
++
++    function enter()
++    {
++        Flat.number_of_storeys = Number(prompt("Введите этажность (от 1-25):", null))
++        Flat.number_of_entrances = Number(prompt("Введите число подъездов (от 1-10):", null))
++        Flat.number_of_apartments_staircase = Number(prompt("Введите кол-во квартир на лест. площадке (от 1-20):", null))
++        number_of_apartment = Number(prompt("Введите номер квартиры:"))
++    } enter();
++
++    if (isNaN(Flat.number_of_storeys)
++        || isNaN(Flat.number_of_entrances)
++        || isNaN(Flat.number_of_apartments_staircase)
++        || isNaN(number_of_apartment)
++        || 1 <= Flat.number_of_storeys <= 25
++        || 1 <= Flat.number_of_entrances <= 10
++        || 1 <= Flat.number_of_apartments_staircase <= 20)
++    {
++        alert("Ошибка ввода, попробуйте еще раз!");
++        enter();
++    }
++
++    function search(index, NumberOfEntrances)
++    {
++        if (index === number_of_apartment)
++        {
++            alert(`Номер подъезда в котором находиться квартира (${index}): ${NumberOfEntrances}`)
++            return true;
++        }
++        else return false;
++    }
++
++    function create()
++    {
++        let number_array = new Array
++        let index = 1
++        for (let NumberOfEntrances = 1; NumberOfEntrances <= Flat.number_of_entrances; NumberOfEntrances++) //генерация всех подъездов
++        {
++            for (let NumberOfStoreys = 1; NumberOfStoreys <= Flat.number_of_storeys; NumberOfStoreys++) //генерация одного подъезда
++            {
++                for (let NumberOfApartmentsStaircase = 1; NumberOfApartmentsStaircase <= Flat.number_of_apartments_staircase; NumberOfApartmentsStaircase++, index++)
++                {
++                    number_array[NumberOfEntrances[NumberOfStoreys[NumberOfApartmentsStaircase]]] = index
++                    if (search(index, NumberOfEntrances)) return
++                }
++            }
++        }
++    }
++    create()
++}
+\ No newline at end of file
+Index: JS/script1.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JS/script1.js b/JS/script1.js
+new file mode 100644
+--- /dev/null	(date 1616503827851)
++++ b/JS/script1.js	(date 1616503827851)
+@@ -0,0 +1,30 @@
++function task1()
++{
++    while (true)
++    {
++        let number1, number2
++        number1 = prompt("Введите 1 число для сравнения:", null)
++        number2 = prompt("Введите 2 число для сравнения:", null)
++
++        number1 = Number(number1)
++        number2 = Number(number2)
++
++        if (isNaN(number1))
++        {alert("Первый ввод - не число."); return 0;}
++
++        else if (isNaN(number2))
++        {alert("Второй ввод - не число."); return 0;}
++
++        else
++        {
++            let result
++            if (number1 == number2)
++                alert("Числа равны")
++            else
++            {
++                result = number1 > number2 ? "Второе число меньше" : "Первое число меньше"
++                alert(result)
++            }
++        }
++    }
++}
+\ No newline at end of file
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+new file mode 100644
+--- /dev/null	(date 1616503827956)
++++ b/index.html	(date 1616503827956)
+@@ -0,0 +1,17 @@
++<!DOCTYPE html>
++<html lang="ru">
++<head>
++    <meta charset="UTF-8">
++    <title>Lab 2</title>
++    <script src="JS/script1.js"></script>
++    <script src="JS/script2.js"></script>
++    <script src="JS/script3.js"></script>
++    <script src="JS/script4.js"></script>
++</head>
++<body>
++<input type="button" value="Task1" onclick="task1()">
++<input type="button" value="Task2" onclick="task2()">
++<input type="button" value="Task3" onclick="task3()">
++<input type="button" value="Task4" onclick="task4()">
++</body>
++</html>
+\ No newline at end of file
+Index: ../lab3/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/index.html b/../lab3/index.html
+new file mode 100644
+--- /dev/null	(date 1617003526198)
++++ b/../lab3/index.html	(date 1617003526198)
+@@ -0,0 +1,21 @@
++<!DOCTYPE html>
++<html lang="ru">
++<head>
++    <meta charset="UTF-8">
++    <title>Lab 3</title>
++    <script src="JS/script1.js"></script>
++    <script src="JS/script2.js"></script>
++    <script src="JS/script3.js"></script>
++    <script src="JS/script4.js"></script>
++    <script src="JS/script5.js"></script>
++    <script src="JS/script6.js"></script>
++</head>
++<body>
++<input type="button" value="Task1" onclick="task1()">
++<input type="button" value="Task2" onclick="task2()">
++<input type="button" value="Task3" onclick="task3()">
++<input type="button" value="Task4" onclick="task4()">
++<input type="button" value="Task5" onclick="task5()">
++<input type="button" value="Task6" onclick="task6()">
++</body>
++</html>
+\ No newline at end of file
+Index: ../lab3/JS/script1.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script1.js b/../lab3/JS/script1.js
+new file mode 100644
+--- /dev/null	(date 1616684259221)
++++ b/../lab3/JS/script1.js	(date 1616684259221)
+@@ -0,0 +1,33 @@
++function task1()
++{
++    let start = Number(prompt("Начало диапазона:", 0))
++    let end = Number(prompt("Конец диапазона:", 0))
++    let step = Number(prompt("Шаг диапазона:", 1))
++
++    function range(start, end, step)
++    {
++        let array = new Array()
++        if (isNaN(start) || isNaN(end) || isNaN(step) || step === 0)
++        {
++            alert("Error")
++            return
++        }
++        let index = start
++        let length = end - start
++        if (start > end && step > 0 || start < end && step < 0)
++        {
++            return alert("Error")
++        }
++        if (length < 0)
++        {
++            length = length - (length * 2)
++        }
++        for (let i = 0; i <= length; i++)
++        {
++            array[i] = index
++            index += step
++        }
++        return array
++    }
++    console.log(range(start, end, step))
++}
+\ No newline at end of file
+Index: ../lab3/JS/script2.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script2.js b/../lab3/JS/script2.js
+new file mode 100644
+--- /dev/null	(date 1616511020516)
++++ b/../lab3/JS/script2.js	(date 1616511020516)
+@@ -0,0 +1,22 @@
++function task2()
++{
++    let array = ["Привет", 5, 6, 7, "{th", 90, 0, 983, 456]
++    console.log(array)
++    function quickSort(array)
++    {
++        if (array.length < 2) return array;
++        let pivot = array[0];
++        const left = [];
++        const right = [];
++
++        for (let i = 1; i < array.length; i++)
++        {
++            if (pivot > array[i])
++                left.push(array[i]);
++            else
++                right.push(array[i]);
++        }
++        return quickSort(left).concat(pivot, quickSort(right));
++    }
++    console.log(quickSort(array))
++}
+\ No newline at end of file
+Index: ../lab3/JS/script3.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script3.js b/../lab3/JS/script3.js
+new file mode 100644
+--- /dev/null	(date 1617002063603)
++++ b/../lab3/JS/script3.js	(date 1617002063603)
+@@ -0,0 +1,44 @@
++function task3()
++{
++    const _MIN = 0
++    const _MAX = 100
++    function getRandomInt(min, max)
++    {
++        min = Math.ceil(min);
++        max = Math.floor(max);
++        return Math.floor(Math.random() * (max - min + 1)) + min;
++    }
++    function createMatrix(line, column)
++    {
++        let number = 0
++        let matrix = []
++
++        for (let i = 0; i <= line-1; i++)
++        {
++            matrix[i] = new Array(column)
++            for (let j = 0; j <= column-1; j++)
++            {
++                number = getRandomInt(_MIN, _MAX)
++                matrix[i][j] = number
++            }
++        }
++        return matrix
++    }
++    function summ_matrix()
++    {
++        let array1 = [], array2 = [], result = []
++
++        array1 = createMatrix(3, 3)
++        array2 = createMatrix(3, 2)
++        console.log(array1)
++        console.log(array2)
++        for (let i = 0; i < array1.length; i++)
++        {
++            result[i] = new Array
++            for (let j = 0; j < array1[i].length; j++)
++                result[i][j] = array1[i][j] + array2[i][j]
++        }
++        return console.log(result)
++    }
++    summ_matrix()
++}
+Index: .idea/lab2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/lab2.iml b/.idea/lab2.iml
+new file mode 100644
+--- /dev/null	(date 1616502962079)
++++ b/.idea/lab2.iml	(date 1616502962079)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: ../lab3/JS/script4.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/JS/script4.js b/../lab3/JS/script4.js
+new file mode 100644
+--- /dev/null	(date 1617005200680)
++++ b/../lab3/JS/script4.js	(date 1617005200680)
+@@ -0,0 +1,24 @@
++function task4()
++{
++    function union()
++    {
++        let result = []
++
++        if (!arguments || arguments.length <= 1) return "Нечего объединить!!!"
++        else
++        {
++            for (let i = 0; i < arguments.length; i++)
++            {
++                if (arguments[i] instanceof Array)
++                {
++                    for (let j = 0; j < arguments[i].length; j++)
++                        result.push(arguments[i][j])
++                }
++            }
++
++            return result
++        }
++    }
++
++    console.log(union([1, 2, 2, 3], [101, 2, 1, 10], [2, 1], [4, 7, 4, 2, 5, 7, 8, 54565, 32343535, 8080876453]))
++}
+\ No newline at end of file
+Index: ../lab3/.idea/lab3.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/.idea/lab3.iml b/../lab3/.idea/lab3.iml
+new file mode 100644
+--- /dev/null	(date 1616504500292)
++++ b/../lab3/.idea/lab3.iml	(date 1616504500292)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: ../lab3/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/.idea/modules.xml b/../lab3/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1616504500326)
++++ b/../lab3/.idea/modules.xml	(date 1616504500326)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/lab3.iml" filepath="$PROJECT_DIR$/.idea/lab3.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../lab3/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/.idea/vcs.xml b/../lab3/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1616504500359)
++++ b/../lab3/.idea/vcs.xml	(date 1616504500359)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/../../.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../lab3/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lab3/.idea/.gitignore b/../lab3/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1616504500725)
++++ b/../lab3/.idea/.gitignore	(date 1616504500725)
+@@ -0,0 +1,5 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
