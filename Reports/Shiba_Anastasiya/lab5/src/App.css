@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 0px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: white; 
+  color: black;
+  border: 2px solid #000000;
+}
+
+.btn:hover {
+  background-color: #640764;
+  color: white;
+}
