@@ -1,0 +1,45 @@
+.img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 70%;
+}
+
+.avatar{
+    font-weight: bold;
+    padding-right: 1em;
+    font-size: 15px;
+}
+
+.name{
+    margin-top: 4px;
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+.info{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+
+.follow{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+
+.change_view
+{
+    display: flex;
+}
+
+
+.repos
+{
+    margin-right: 8px;
+}
