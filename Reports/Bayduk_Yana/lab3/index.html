@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lab 3..." />
+    <title>Lab 3 | Web Technologies</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="lab3__container">
+        <div class="lab3__cards">
+            <!-- 1 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Напишите функцию <code>range()</code>, принимающую два аргумента: начало и конец диапазона, и
+                    возвращающую
+                    массив, который содержит все числа из диапазона, включая начальное и конечное. Третий необязательный
+                    аргумент функции <code>range()</code> - шаг для построения массива. Убедитесь, что функция
+                    <code>range()</code>
+                    работает с
+                    отрицательным шагом: например, <code><pre>range(5, 2, -1)</pre></code> возвращает
+                    <code><pre>[5, 4, 3, 2]</pre></code>
+                </div>
+                <div class="cards__text">
+                    range(a, b [, step])
+                </div>
+                <button class="cards__button" id="task1">Run task 1</button>
+            </div>
+            <!-- 2 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Самостоятельно реализуйте любой алгоритм сортировки массива. Желательно, чтобы ваша функция
+                    сортировки могла принимать компаратор для сравнения элементов (как это делает стандартный метод
+                    <code>sort()</code>).
+                </div>
+                <div class="cards__text">
+                    sort(arr [, func])
+                </div>
+                <button class="cards__button" id="task2">Run task 2</button>
+            </div>
+            <!-- 3 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Создать функцию <code>createMatrix()</code>, принимающую количество строк и количество столбцов
+                    матрицы и
+                    возвращающее матрицу (массив массивов), заполненную случайными числами в диапазоне от 0 до 100.
+                    Написать функцию, выполняющую суммирование двух таких «матриц».
+                </div>
+                <div class="cards__text">
+                    createMatrix(numRow, numCol)
+                </div>
+                <button class="cards__button" id="task3">Run task 3</button>
+            </div>
+            <!-- 4 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Реализуйте функцию <code>union()</code>, которая объединит уникальные элементы всех массивов,
+                    переданных ей.
+                    Пример: <code><pre>union([1, 2, 2, 3], [101, 2, 1, 10], [2, 1])</pre></code> вернёт
+                    <code><pre>[1, 2, 3, 101, 10]</pre></code>
+                </div>
+                <div class="cards__text">
+                    union([arr [,arr [,arr]]])
+                </div>
+                <button class="cards__button" id="task4">Run task 4</button>
+            </div>
+            <!-- 5 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Реализуйте функцию <code>flatten()</code>, которая в случае, если массив обладает уровнями
+                    вложенности, приведёт его к элементарному виду (вложенность может быть любой глубины). Пример:
+                    <code><pre>flatten([1, [2], [3, [4]]])</pre></code> вернёт <code><pre>[1, 2, 3, 4]</pre></code>
+                </div>
+                <div class="cards__text">
+                    flatten(obj)
+                </div>
+                <button class="cards__button" id="task5">Run task 5</button>
+            </div>
+            <!-- 6 -->
+            <div class="cards__card">
+                <div class="cards__description">
+                    Функция принимает на вход массив или объект, подобный массиву. Функция возвращает массив, полученный
+                    из аргумента удалением триплов. Триплом будем считать элемент, которые повторяется 3 и более раз.
+                    Пример:
+                    <code><pre>var a = f([1, 2, 1, 3, 1, 3, 1, 4]); // a = [2, 3, 4]
+var b = f("mama ramu"); // b = [" ", "r", "u"];</pre></code>
+                </div>
+                <div class="cards__text">
+                    f(obj)
+                </div>
+                <button class="cards__button" id="task6">Run task 6</button>
+            </div>
+        </div>
+        <!-- end lab3__cards -->
+    </div>
+    <!-- end lab3__container -->
+    <script src="task-1.js"></script>
+    <script src="task-2.js"></script>
+    <script src="task-3.js"></script>
+    <script src="task-4.js"></script>
+    <script src="task-5.js"></script>
+    <script src="task-6.js"></script>
+</body>
+
+</html>
